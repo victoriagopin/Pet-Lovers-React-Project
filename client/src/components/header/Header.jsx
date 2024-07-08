@@ -2,6 +2,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Catalog from "../catalog/Catalog";
 import Home from "../home/Home";
+import About from "../about/About"
+import Register from "../register/Register";
+import LogIn from "../register/login/LogIn";
+import CreatePet from "../create/Create";
+
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
@@ -15,6 +20,14 @@ export default function Header(){
         return <Catalog pets={pets}/>;
       case 'home':
         return <Home />;
+        case 'about':
+          return <About />;
+          case 'register':
+            return <Register />;
+            case 'login':
+            return <LogIn />;
+            case 'create':
+            return <CreatePet />
       default: 
         return <Home />
     }
@@ -40,7 +53,7 @@ export default function Header(){
         <header className="header_section">
         <div className="container-fluid">
           <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
-            <a className="navbar-brand" href="index.html">
+            <a className="navbar-brand" href="/" onClick={(e) => handleNavClick(e,'home')}>
               <span>
                 PetLovers
               </span>
@@ -57,16 +70,16 @@ export default function Header(){
                     <a className="nav-link" href="/catalog" onClick={(e) => handleNavClick(e,'catalog')}> Catalog </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#"> Add Dogs </a>
+                    <a className="nav-link" href="/create" onClick={(e) => handleNavClick(e,'create')}> Add Pet </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#"> Log In </a>
+                    <a className="nav-link" href="logIn" onClick={(e) => handleNavClick(e,'login')}> Log In </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Register</a>
+                    <a className="nav-link" href="register" onClick={(e) => handleNavClick(e,'register')}>Register</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">About</a>
+                    <a className="nav-link" href="about" onClick={(e) => handleNavClick(e,'about')}>About</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#">Log Out</a>

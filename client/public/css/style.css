@@ -89,6 +89,9 @@ body {
   width: 225px;
   height: 110px;
 }
+.header_section{
+  border-bottom: 2px solid #e7d619;
+}
 
 .header_section .container-fluid {
   padding-right: 25px;
@@ -1167,9 +1170,14 @@ form input {
 }
 .catalog-heading{
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  font-weight: bold;
+    margin-top: 71px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(127deg, #ffc107 0%, rgba(255, 246, 1, 1) 22%, #ffc107 95%, #fdea11 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
 }
 span.make-yellow {
   color: #e7d619;
