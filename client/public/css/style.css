@@ -1226,3 +1226,22 @@ span.make-yellow {
 .pet-info-details h2, .pet-info-details p {
   margin: 10px 0;
 }
+.details-btn {
+  display: inline-block;
+  background-color: #e7d619;
+  color: #fff;
+  border: 1px solid #e7d619;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+.details-btn:hover {
+  background-color: #fff;
+  color: #e7d619;
+  border: 1px solid #e7d619
+}
