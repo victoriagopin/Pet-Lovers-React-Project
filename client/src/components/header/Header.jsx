@@ -1,5 +1,42 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import Catalog from "../catalog/Catalog";
+import Home from "../home/Home";
+
+const baseUrl = 'http://localhost:3030/jsonstore'
+
 export default function Header(){
+  const [pets, setPets] = useState([]);
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch(currentPage){
+      case 'catalog':
+        return <Catalog pets={pets}/>;
+      case 'home':
+        return <Home />;
+      default: 
+        return <Home />
+    }
+  }
+
+  const handleNavClick = (e, page) => {
+    e.preventDefault();
+    setCurrentPage(page)
+  }
+
+  useEffect(() => {
+    (async function getPets(){
+      const response = await fetch(`${baseUrl}/pets`);
+      const data = await response.json();
+      const petsResult =  Object.values(data);
+      
+      setPets(petsResult);
+    })();
+  },[]);
+
     return(
+      <>
         <header className="header_section">
         <div className="container-fluid">
           <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
@@ -17,7 +54,7 @@ export default function Header(){
                 <ul className="navbar-nav">
                   
                   <li className="nav-item">
-                    <a className="nav-link" href="#"> Catalog </a>
+                    <a className="nav-link" href="/catalog" onClick={(e) => handleNavClick(e,'catalog')}> Catalog </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#"> Add Dogs </a>
@@ -40,5 +77,9 @@ export default function Header(){
           </nav>
         </div>
       </header>
+      <main>
+      {renderPage()}
+      </main>
+      </>
     );
 }

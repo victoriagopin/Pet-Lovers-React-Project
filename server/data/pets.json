@@ -1,0 +1,42 @@
+[
+    {
+        "_id": 1,
+        "name": "Bella",
+        "breed": "Golden Retriever",
+        "origin": "United States",
+        "imageUrl": "https://pamipe.com/wp-content/uploads/2022/09/Golden-Retriever-3-800x780.png",
+        "age": 3,
+        "eye_color": "Brown",
+        "fun_story": "Bella loves to swim in the lake near our house. One time, she found an old tennis ball floating and proudly brought it back to us like she had discovered treasure."
+    },
+    {
+        "_id": 2,
+        "name": "Max",
+        "breed": "Siamese",
+        "origin": "Thailand",
+        "imageUrl":"https://www.litter-robot.com/media/blog/alex-meier-siamese.jpg",
+        "age": 4,
+        "eye_color": "Blue",
+        "fun_story": "Max has a knack for opening doors. We once came home to find him lounging in the pantry, having snacked on his favorite treats."
+    },
+    {
+        "_id": 3,
+        "name": "Luna",
+        "breed": "Maine Coon",
+        "imageUrl": "https://image.petmd.com/files/styles/863x625/public/2023-04/Maine-coon-cat.jpg",
+        "origin": "United States",
+        "age": 2,
+        "eye_color": "Green",
+        "fun_story": "Luna loves to play hide and seek. One evening, we couldn't find her anywhere until we heard a gentle purring coming from inside a drawer. She had found the perfect hiding spot."
+    },
+    {
+        "_id": 4,
+        "name": "Charlie",
+        "breed": "Beagle",
+        "origin": "England",
+        "imageUrl": "https://www.thesprucepets.com/thmb/slg48hln7ejv_3XYrcdLG8ooKwE=/2119x0/filters:no_upscale():strip_icc()/GettyImages-475324140-292c4ecfd73c4c8483efe31193f8189a.jpg",
+        "age": 5,
+        "eye_color": "Hazel",
+        "fun_story": "Charlie has an incredible sense of smell. Once, he led us on a mini adventure through the park to find a hidden picnic basket someone had left behind."
+    }
+]
