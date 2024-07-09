@@ -1,0 +1,17 @@
+{
+    "1a2b3c4d5e": {
+        "_id": "1a2b3c4d5e",
+        "email": "user1@example.com",
+        "password": "password123"
+    },
+    "6f7g8h9i0j":{
+        "_id": "6f7g8h9i0j",
+        "email": "user2@example.com",
+        "password": "password456"
+    },
+    "k1l2m3n4o5":{
+        "_id": "k1l2m3n4o5",
+        "email": "user3@example.com",
+        "password": "password789"
+    }
+}

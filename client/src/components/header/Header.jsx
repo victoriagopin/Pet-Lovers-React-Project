@@ -32,7 +32,7 @@ export default function Header(){
             case 'login':
             return <LogIn />;
             case 'create':
-            return <CreatePet />;
+            return <CreatePet onCreate={createPet}/>;
             case 'details':
               return <Details 
                       pet={showDetails}
@@ -80,6 +80,24 @@ export default function Header(){
       } catch (error) {
         console.error('Failed to fetch pet details:', error);
       }
+   }
+
+   const createPet = async (e) => {
+    e.preventDefault();
+      const formData = new FormData(e.target);
+      const petData = Object.fromEntries(formData);
+      
+      const response = await fetch(`${baseUrl}/pets`,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        } ,
+        body: JSON.stringify(petData)
+    });
+
+    const createdPet = await response.json();
+
+    setPets([...pets, createPet]);
    }
 
     return(
