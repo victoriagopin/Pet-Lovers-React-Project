@@ -1,7 +1,8 @@
 import CatalogItem from "./catalog-item/CatalogItem";
 
 export default function Catalog({
-    pets
+    pets,
+    onDetailsClick
 }){
      return (
         <>
@@ -11,6 +12,8 @@ export default function Catalog({
             <CatalogItem 
                 key={pet._id}
                 pet={pet}
+                onDetailsClick={onDetailsClick}
+              
             />
             )}
         </section>

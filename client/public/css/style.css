@@ -50,6 +50,7 @@ body {
 
 .heading_container h2 {
   font-weight: bold;
+  margin-top: 24px;
 }
 
 /*header section*/
@@ -1223,8 +1224,10 @@ span.make-yellow {
 
 .pet-card-details img {
   width: 100%;
-  height: auto;
+  height: 265px;
+  display: block;
   border-bottom: 2px solid #ffd700;
+  margin: 0 auto;
 }
 
 .pet-info-details {

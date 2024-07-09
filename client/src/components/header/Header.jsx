@@ -6,6 +6,7 @@ import About from "../about/About"
 import Register from "../register/Register";
 import LogIn from "../register/login/LogIn";
 import CreatePet from "../create/Create";
+import Details from "../catalog/details/Details";
 
 
 const baseUrl = 'http://localhost:3030/jsonstore'
@@ -13,11 +14,15 @@ const baseUrl = 'http://localhost:3030/jsonstore'
 export default function Header(){
   const [pets, setPets] = useState([]);
   const [currentPage, setCurrentPage] = useState('home');
+  const [showDetails, setShowDetails] = useState(null);
 
   const renderPage = () => {
     switch(currentPage){
       case 'catalog':
-        return <Catalog pets={pets}/>;
+        return  <Catalog 
+                 pets={pets}
+                 onDetailsClick={onDetailsClickHandler}
+               />;
       case 'home':
         return <Home />;
         case 'about':
@@ -27,7 +32,12 @@ export default function Header(){
             case 'login':
             return <LogIn />;
             case 'create':
-            return <CreatePet />
+            return <CreatePet />;
+            case 'details':
+              return <Details 
+                      pet={showDetails}
+              />
+
       default: 
         return <Home />
     }
@@ -35,7 +45,8 @@ export default function Header(){
 
   const handleNavClick = (e, page) => {
     e.preventDefault();
-    setCurrentPage(page)
+    setCurrentPage(page);
+    setShowDetails(null);
   }
 
   useEffect(() => {
@@ -47,6 +58,29 @@ export default function Header(){
       setPets(petsResult);
     })();
   },[]);
+
+  const onDetailsClickHandler = (pet) => {
+    setShowDetails(pet);
+    onDetailsShow(pet);
+  }
+
+  const onDetailsShow = async (pet) => {
+      const petId = pet._id;
+      
+      try {
+        const response = await fetch(`${baseUrl}/pets/${petId}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setShowDetails(data);
+        setCurrentPage('details');
+        renderPage();
+      } catch (error) {
+        console.error('Failed to fetch pet details:', error);
+      }
+   }
 
     return(
       <>
