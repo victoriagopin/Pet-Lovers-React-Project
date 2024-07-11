@@ -4,7 +4,7 @@ import Catalog from "../catalog/Catalog";
 import Home from "../home/Home";
 import About from "../about/About"
 import Register from "../register/Register";
-import LogIn from "../register/login/LogIn";
+import LogIn from "../login/LogIn";
 import CreatePet from "../create/Create";
 import Details from "../catalog/details/Details";
 
@@ -99,7 +99,6 @@ export default function Header(){
     setCurrentPage('catalog');
    }
 
-
   const  onDeleteClick = async (pet) => {
     const id = pet._id;
       const response = await fetch(`${baseUrl}/pets/${id}`,{
@@ -109,6 +108,13 @@ export default function Header(){
       setPets(oldPets => oldPets.filter(pet => pet._id !== id));
       setCurrentPage('catalog');
    }
+
+   const onRegister = async (e, userData) => {
+      e.preventDefault();
+
+      console.log(userData);
+   }
+
     return(
       <>
         <header className="header_section">
