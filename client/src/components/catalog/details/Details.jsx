@@ -1,5 +1,6 @@
 export default function Details({
-    pet
+    pet,
+    onDelete={onDelete}
 }){
     return (
         <section className="catalog-details">
@@ -14,7 +15,7 @@ export default function Details({
                 <p><span className="make-yellow">Fun Story with your Furry Friend:</span> {pet.funStory}</p>
             </div>
             <button type="submit" className="edit-delete submit">Edit</button>
-            <button type="submit" className="edit-delete submit">Delete</button>
+            <button type="submit" className="edit-delete submit" onClick={() => {onDelete(pet)}}>Delete</button>
         </div>
     </section>
     )

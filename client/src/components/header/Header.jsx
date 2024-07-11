@@ -25,19 +25,19 @@ export default function Header(){
                />;
       case 'home':
         return <Home />;
-        case 'about':
-          return <About />;
-          case 'register':
-            return <Register />;
-            case 'login':
-            return <LogIn />;
-            case 'create':
-            return <CreatePet onCreate={createPet}/>;
-            case 'details':
-              return <Details 
-                      pet={showDetails}
+      case 'about':
+        return <About />;
+      case 'register':
+        return <Register />;
+      case 'login':
+        return <LogIn />;
+      case 'create':
+        return <CreatePet onCreate={createPet}/>;
+      case 'details':
+        return <Details 
+                  pet={showDetails}
+                  onDelete={onDeleteClick}
               />
-
       default: 
         return <Home />
     }
@@ -96,8 +96,19 @@ export default function Header(){
     const createdPet = await response.json();
 
     setPets([...pets, createPet]);
+    setCurrentPage('catalog');
    }
 
+
+  const  onDeleteClick = async (pet) => {
+    const id = pet._id;
+      const response = await fetch(`${baseUrl}/pets/${id}`,{
+        method: 'DELETE'
+      });
+
+      setPets(oldPets => oldPets.filter(pet => pet._id !== id));
+      setCurrentPage('catalog');
+   }
     return(
       <>
         <header className="header_section">
