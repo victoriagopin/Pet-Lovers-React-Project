@@ -57,7 +57,7 @@ export default function Header(){
       
       setPets(petsResult);
     })();
-  },[]);
+  },[pets]);
 
   const onDetailsClickHandler = (pet) => {
     setShowDetails(pet);
@@ -82,10 +82,8 @@ export default function Header(){
       }
    }
 
-   const createPet = async (e) => {
+   const createPet = async (e,petData) => {
     e.preventDefault();
-      const formData = new FormData(e.target);
-      const petData = Object.fromEntries(formData);
       
       const response = await fetch(`${baseUrl}/pets`,{
         method: 'POST',
