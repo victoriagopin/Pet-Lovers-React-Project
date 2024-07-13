@@ -1,4 +1,38 @@
+import { useContext, useState } from "react";
+import { UserContext } from "../UserContext";
+import { useNavigate, useSearchParams } from "react-router-dom";
+
+const baseUrl = 'http://localhost:3030/jsonstore/users';
+
 export default function LogIn(){
+  const {setUser} = useContext(UserContext);
+  const [formValues, setFormValues] = useState({
+    email:'',
+    password: ''
+  })
+
+  const navigate = useNavigate();
+
+  const changeValues = (e) => {
+    setFormValues(oldValues => ({
+      ...oldValues,
+      [e.target.name] : e.target.value
+    }))
+  }
+
+  const onLoginClick = async (e, userData) => {
+    e.preventDefault();
+
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+   
+    if(!data){
+      console.log('Incorrect email or password');
+    }
+    setUser(data);
+    navigate('/catalog');
+  }
+
     return (
         <section className="contact_section layout_padding">
         <div className="container">
@@ -15,14 +49,14 @@ export default function LogIn(){
                   <div className="contact-form">
                     <form action="">
                       <div>
-                        <input type="text" placeholder="Email"/>
+                        <input type="email" name="email" placeholder="Email" value={formValues.email} onChange={(e) => changeValues(e)}/>
                       </div>
                       <div>
-                        <input type="text" placeholder="Password"/>
+                        <input type="password" name="password" placeholder="Password" value={formValues.password} onChange={(e) => changeValues(e)}/>
                       </div>
                       <div className="d-flex justify-content-center">
-                        <button type="submit" className="btn_on-hover submit">
-                          Log In
+                        <button type="submit" className="btn_on-hover submit" onClick={(e) => onLoginClick(e,formValues)}>
+                          Login
                         </button>
                       </div>
                     </form>
