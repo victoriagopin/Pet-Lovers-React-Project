@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function OwnerForm(){
-
+  const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
         firstName: '',
         lastName: '',
@@ -18,6 +21,22 @@ export default function OwnerForm(){
         }));
     
       }
+
+      const onCreateProfile = async (e, userData) => {
+        e.preventDefault();
+
+        const response = await fetch(`${baseUrl}/profiles`, {
+          method: 'POST',
+          headers: {
+            'Content-Type' : 'application/json'
+          },
+          body : JSON.stringify(userData)
+        }) 
+
+        const data = await response.json();
+        navigate(`/profile/${data._id}`);
+      }
+
     return (
         <section className="contact_section layout_padding">
     <div className="container">
@@ -52,7 +71,7 @@ export default function OwnerForm(){
                     <input type="text" placeholder="Tell somethnig about yourself..." name="aboutYou" value={formValues.aboutYou} onChange={changeValues}/>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn_on-hover submit" onClick={(e) => onRegisterClick(e, formValues)}>
+                    <button type="submit" className="btn_on-hover submit" onClick={(e) => onCreateProfile(e, formValues)}>
                       Ready!
                     </button>
                   </div>

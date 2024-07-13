@@ -1269,3 +1269,49 @@ span.make-yellow {
   font-size: large;
   text-decoration: underline;
 }
+.owner-card-details {
+  background-color: #ffffff;
+  border: 2px solid #e7d619;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 500px; /* Adjusted width */
+  display: flex;
+}
+
+.owner-photo {
+  width: 168px; /* Adjusted size for circular photo */
+  height: 120px; /* Adjusted size for circular photo */
+  margin-right: 20px; /* Space between photo and info */
+}
+
+.owner-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+}
+
+.owner-info-details {
+  flex: 1; /* Allows the details to take remaining width */
+  padding: 15px;
+}
+
+.owner-info-details h2,
+.owner-info-details p {
+  margin: 10px 0;
+}
+
+.owner-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; /* Space between info and buttons */
+}
+
+
+.owner-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
