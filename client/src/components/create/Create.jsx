@@ -1,7 +1,9 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+
+const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function CreatePet({
-    onCreate={onCreate}
 }){
     const [formVaules, setFormValues] = useState({
       name:'',
@@ -13,6 +15,8 @@ export default function CreatePet({
       funStory: ''
     });
 
+    const navigate = useNavigate();
+
     const changeValues = (e) => {
         setFormValues(oldValues => ({
           ...oldValues,
@@ -21,6 +25,21 @@ export default function CreatePet({
     }
 
 
+   const createPet = async (e,petData) => {
+      e.preventDefault();
+     
+      const response = await fetch(`${baseUrl}/pets`,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        } ,
+        body: JSON.stringify(petData)
+    });
+
+    const createdPet = await response.json();
+    navigate(`/catalog/${createdPet._id}`);
+
+   }
     return (
         <section className="contact_section" >
       <div className="container">
@@ -35,7 +54,7 @@ export default function CreatePet({
             <div className="row">
               <div className="col-md-9 mx-auto">
                 <div className="contact-form">
-                  <form onSubmit={(e) => onCreate(e, formVaules)}>
+                  <form>
                     <div>
                       <input type="text" name="name" placeholder="Name" value={formVaules.name}  onChange={changeValues}/>
                     </div>
@@ -58,7 +77,7 @@ export default function CreatePet({
                       <input type="text" name="funStory" placeholder="Fun story with your furry friend..." value={formVaules.funStory} onChange={changeValues}/>
                     </div>
                     <div className="d-flex justify-content-center">
-                      <button type="submit" className="btn_on-hover submit">
+                      <button type="submit" className="btn_on-hover submit" onClick={(e)=> createPet(e,formVaules)}>
                         Create
                       </button>
                     </div>

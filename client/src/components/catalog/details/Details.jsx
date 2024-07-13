@@ -1,7 +1,33 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+const baseUrl = 'http://localhost:3030/jsonstore'
+
 export default function Details({
-    pet,
-    onDelete={onDelete}
 }){
+    const {petId} = useParams();
+    const [pet, setPet] = useState({});
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch(`${baseUrl}/pets/${petId}`);
+            const data = await response.json();
+
+            setPet(data);
+        })()
+    },[]);
+
+    const onDeleteClick = async (pet) => {
+    const id = pet._id;
+      const response = await fetch(`${baseUrl}/pets/${id}`,{
+        method: 'DELETE'
+      });
+
+      navigate('/catalog');
+   }
     return (
         <section className="catalog-details">
         <div className="pet-card-details">
@@ -15,7 +41,7 @@ export default function Details({
                 <p><span className="make-yellow">Fun Story with your Furry Friend:</span> {pet.funStory}</p>
             </div>
             <button type="submit" className="edit-delete submit">Edit</button>
-            <button type="submit" className="edit-delete submit" onClick={() => {onDelete(pet)}}>Delete</button>
+            <button type="submit" className="edit-delete submit" onClick={()=> onDeleteClick(pet)}>Delete</button>
         </div>
     </section>
     )

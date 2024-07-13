@@ -1,130 +1,18 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import Catalog from "../catalog/Catalog";
-import Home from "../home/Home";
-import About from "../about/About"
-import Register from "../register/Register";
-import LogIn from "../login/LogIn";
-import CreatePet from "../create/Create";
-import Details from "../catalog/details/Details";
-
+import { Link, NavLink, Navigate } from "react-router-dom";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function Header(){
-  const [pets, setPets] = useState([]);
-  const [currentPage, setCurrentPage] = useState('home');
-  const [showDetails, setShowDetails] = useState(null);
-
-  const renderPage = () => {
-    switch(currentPage){
-      case 'catalog':
-        return  <Catalog 
-                 pets={pets}
-                 onDetailsClick={onDetailsClickHandler}
-               />;
-      case 'home':
-        return <Home />;
-      case 'about':
-        return <About />;
-      case 'register':
-        return <Register />;
-      case 'login':
-        return <LogIn />;
-      case 'create':
-        return <CreatePet onCreate={createPet}/>;
-      case 'details':
-        return <Details 
-                  pet={showDetails}
-                  onDelete={onDeleteClick}
-              />
-      default: 
-        return <Home />
-    }
-  }
-
-  const handleNavClick = (e, page) => {
-    e.preventDefault();
-    setCurrentPage(page);
-    setShowDetails(null);
-  }
-
-  useEffect(() => {
-    (async function getPets(){
-      const response = await fetch(`${baseUrl}/pets`);
-      const data = await response.json();
-      const petsResult =  Object.values(data);
-      
-      setPets(petsResult);
-    })();
-  },[pets]);
-
-  const onDetailsClickHandler = (pet) => {
-    setShowDetails(pet);
-    onDetailsShow(pet);
-  }
-
-  const onDetailsShow = async (pet) => {
-      const petId = pet._id;
-      
-      try {
-        const response = await fetch(`${baseUrl}/pets/${petId}`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        setShowDetails(data);
-        setCurrentPage('details');
-        renderPage();
-      } catch (error) {
-        console.error('Failed to fetch pet details:', error);
-      }
-   }
-
-   const createPet = async (e,petData) => {
-    e.preventDefault();
-      
-      const response = await fetch(`${baseUrl}/pets`,{
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        } ,
-        body: JSON.stringify(petData)
-    });
-
-    const createdPet = await response.json();
-
-    setPets([...pets, createPet]);
-    setCurrentPage('catalog');
-   }
-
-  const  onDeleteClick = async (pet) => {
-    const id = pet._id;
-      const response = await fetch(`${baseUrl}/pets/${id}`,{
-        method: 'DELETE'
-      });
-
-      setPets(oldPets => oldPets.filter(pet => pet._id !== id));
-      setCurrentPage('catalog');
-   }
-
-   const onRegister = async (e, userData) => {
-      e.preventDefault();
-
-      console.log(userData);
-   }
-
     return(
       <>
         <header className="header_section">
         <div className="container-fluid">
           <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
-            <a className="navbar-brand" href="/" onClick={(e) => handleNavClick(e,'home')}>
+            <NavLink className="navbar-brand" to="/" >
               <span>
                 PetLovers
               </span>
-            </a>
+            </NavLink>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -134,22 +22,22 @@ export default function Header(){
                 <ul className="navbar-nav">
                   
                   <li className="nav-item">
-                    <a className="nav-link" href="/catalog" onClick={(e) => handleNavClick(e,'catalog')}> Catalog </a>
+                    <NavLink className="nav-link" to="/catalog" > Catalog </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/create" onClick={(e) => handleNavClick(e,'create')}> Add Pet </a>
+                    <NavLink className="nav-link" to="/create" > Add Pet </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="logIn" onClick={(e) => handleNavClick(e,'login')}> Log In </a>
+                    <NavLink className="nav-link" to="/logIn" > Log In </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="register" onClick={(e) => handleNavClick(e,'register')}>Register</a>
+                    <NavLink className="nav-link" to="/register" >Register</NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="about" onClick={(e) => handleNavClick(e,'about')}>About</a>
+                    <NavLink className="nav-link" to="/about" >About</NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Log Out</a>
+                    <NavLink className="nav-link" to="#">Log Out</NavLink>
                   </li>
                 </ul>
               </div>
@@ -157,9 +45,9 @@ export default function Header(){
           </nav>
         </div>
       </header>
-      <main>
+      {/* <main>
       {renderPage()}
-      </main>
+      </main> */}
       </>
     );
 }

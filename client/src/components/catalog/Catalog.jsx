@@ -2,7 +2,7 @@ import CatalogItem from "./catalog-item/CatalogItem";
 
 export default function Catalog({
     pets,
-    onDetailsClick
+    
 }){
      return (
         <>
@@ -12,7 +12,7 @@ export default function Catalog({
             <CatalogItem 
                 key={pet._id}
                 pet={pet}
-                onDetailsClick={onDetailsClick}
+                // onDetailsClick={onDetailsClick}
               
             />
             )}
