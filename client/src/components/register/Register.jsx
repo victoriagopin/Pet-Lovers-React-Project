@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore/users';
+const baseUrl = 'http://localhost:3030/jsonstore';
 
 export default function Register(){
 
@@ -26,7 +26,7 @@ export default function Register(){
   const onRegisterClick = async (e, userData) => {
     e.preventDefault();
 
-    const response = await fetch(`${baseUrl}`,{
+    const response = await fetch(`${baseUrl}/users`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

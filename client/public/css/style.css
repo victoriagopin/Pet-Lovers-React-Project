@@ -56,6 +56,8 @@ body {
 .heading_container h2 {
   font-weight: bold;
   margin-top: 24px;
+  text-decoration: underline;
+  text-decoration-color: #e7d619;
 }
 
 /*header section*/
@@ -1214,6 +1216,7 @@ span.make-yellow {
     color: #fff;
     margin-bottom: 30px;
     margin-left: 66px;
+    margin-top: 15px;
 }
 .edit-delete:hover{
   background-color: white;

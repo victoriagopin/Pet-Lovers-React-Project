@@ -1,4 +1,4 @@
-import { Link, NavLink, Navigate } from "react-router-dom";
+import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../UserContext";
 
@@ -6,6 +6,13 @@ const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function Header(){
     const {user, setUser} = useContext(UserContext);
+
+    const navigate = useNavigate();
+
+    const logout = ()=> {
+      setUser(null);
+      navigate('/');
+    }
 
     return(
       <>
@@ -36,7 +43,7 @@ export default function Header(){
                     <NavLink className="nav-link" to="/about" >About</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="#">Log Out</NavLink>
+                    <NavLink className="nav-link" to="#" onClick={logout}>Log Out</NavLink>
                   </li>
                   </>
                   : <>

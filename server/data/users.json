@@ -1,24 +1,15 @@
 {
-    "1a2b3c4d5e": {
-        "_id": "1a2b3c4d5e",
-        "firstName": "John",
-        "lastName": "Harrison",
-        "email" : "john@abv.bg",
-        "password": "123456",
-        "age": 24,
-        "occupation": "Software Engineer",
-        "imageUrl": "https://i.pinimg.com/originals/68/cb/63/68cb6307c215e7af6fbf80a0c187c1a3.jpg",
-        "aboutYou": "Hey there! I'm John, a 24-year-old dog owner with a passion for my Golden Retriever. My furry friend isn't just a pet; he's family. We love exploring the outdoors together, hanging out at home, and taking leisurely walks around the neighborhood. Every moment with my Golden Retriever is special to me, and I'm committed to providing him with all the love and care he deserves."
+   
+    "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038": {
+        "email": "viki@abv.bg",
+        "password": "123",
+        "repass": "123",
+        "_id": "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038"
     },
-    "6f7g8h9i0j":{
-            "_id": "6f7g8h9i0j",
-            "firstName": "Ann",
-            "lastName": "Solis",
-            "email" : "ann@abv.bg",
-            "password": "123456",
-            "age": 19,
-            "occupation": "HR",
-            "imageUrl": "https://img.freepik.com/premium-vector/happy-cute-little-kid-boy-girl-play-with-pet-dog_97632-2981.jpg",
-            "aboutYou": "Hi, I'm Ann, a girl who adores her Beagle companion. My Beagle isn't just a pet; he's my best friend. Whether we're playing fetch in the park, cuddling on lazy afternoons, or going on adventurous walks, every moment with my Beagle brings joy and companionship into my life. I'm dedicated to ensuring he's happy and healthy, and our bond grows stronger with each passing day."
+    "770df3cd-e190-46cc-b681-40f5df00abf7": {
+        "email": "john@abv.bg",
+        "password": "123456",
+        "repass": "12345",
+        "_id": "770df3cd-e190-46cc-b681-40f5df00abf7"
     }
 }

@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../UserContext";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function Details({
 }){
+    const {user} = useContext(UserContext);
     const {petId} = useParams();
     const [pet, setPet] = useState({});
 
@@ -15,10 +17,11 @@ export default function Details({
         (async () => {
             const response = await fetch(`${baseUrl}/pets/${petId}`);
             const data = await response.json();
-
-            setPet(data);
+            if (JSON.stringify(data) !== JSON.stringify(pet)) {
+                setPet(data); // Only update state if data has changed
+            }
         })()
-    },[]);
+    },[petId]);
 
     const onDeleteClick = async (pet) => {
     const id = pet._id;
@@ -40,9 +43,15 @@ export default function Details({
                 <p><span className="make-yellow">Eye Color:</span> {pet.eyeColor}</p>
                 <p><span className="make-yellow">Fun Story with your Furry Friend:</span> {pet.funStory}</p>
             </div>
-            <Link className="owner-btn" to={'/setup-owner-profile'}>Set Up Owner's Profile</Link>
-            {/* <button type="submit" className="edit-delete submit">Edit</button>
-            <button type="submit" className="edit-delete submit" onClick={()=> onDeleteClick(pet)}>Delete</button> */}
+
+            {user._id == pet._ownerId ? 
+                <>
+                     <Link className="owner-btn" to={'/setup-owner-profile'}>Set Up Owner's Profile</Link>
+            <button type="submit" className="edit-delete submit">Edit</button>
+            <button type="submit" className="edit-delete submit" onClick={()=> onDeleteClick(pet)}>Delete</button>
+                </> : <Link className="owner-btn" to={`/profile/${pet._ownerId}`}>See Owner's Profile</Link>
+            }
+           
         </div>
     </section>
     )
