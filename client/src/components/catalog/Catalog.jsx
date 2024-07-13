@@ -4,6 +4,7 @@ export default function Catalog({
     pets,
     
 }){
+    
      return (
         <>
         <h2 className="catalog-heading">All Of Your Furry Friends</h2>

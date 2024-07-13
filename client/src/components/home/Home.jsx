@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home(){
     return (
         <section className="pet_section layout_padding">
@@ -19,12 +21,12 @@ export default function Home(){
                 Here, you can share adorable photos of your furry friend and explore a vibrant gallery of animals from fellow pet lovers around the world.
               </p>
               <div className="btn-box">
-                <a href="">
+                <Link to="/catalog">
                   <span>
                     Show Pets
                   </span>
                   <img src="images/link-arrow.png" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -8,8 +8,8 @@ export default function LogIn(){
               Log In
             </h2>
           </div>
-          <div className="">
-            <div className="">
+          <div>
+            <div>
               <div className="row">
                 <div className="col-md-9 mx-auto">
                   <div className="contact-form">
