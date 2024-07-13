@@ -7,7 +7,15 @@
         "imageUrl": "https://pamipe.com/wp-content/uploads/2022/09/Golden-Retriever-3-800x780.png",
         "age": 3,
         "eyeColor": "Brown",
-        "funStory": "Bella loves to swim in the lake near our house. One time, she found an old tennis ball floating and proudly brought it back to us like she had discovered treasure."
+        "funStory": "Bella loves to swim in the lake near our house. One time, she found an old tennis ball floating and proudly brought it back to us like she had discovered treasure.",
+        "owner": {
+            "firstName": "John",
+            "lastName": "Harrison",
+            "email" : "john@abv.bg",
+            "age": 24,
+            "occupation": "Software Engineer",
+            "aboutYou": "Hey there! I'm John, a 24-year-old dog owner with a passion for my Golden Retriever. My furry friend isn't just a pet; he's family. We love exploring the outdoors together, hanging out at home, and taking leisurely walks around the neighborhood. Every moment with my Golden Retriever is special to me, and I'm committed to providing him with all the love and care he deserves."
+        }
     },
     "G5hI6789Jk" : {
         "_id": "G5hI6789Jk",
@@ -17,7 +25,15 @@
         "imageUrl":"https://www.litter-robot.com/media/blog/alex-meier-siamese.jpg",
         "age": 4,
         "eyeColor": "Blue",
-        "funStory": "Max has a knack for opening doors. We once came home to find him lounging in the pantry, having snacked on his favorite treats."
+        "funStory": "Max has a knack for opening doors. We once came home to find him lounging in the pantry, having snacked on his favorite treats.",
+        "owner": {
+            "firstName": "John",
+            "lastName": "Harrison",
+            "email" : "john@abv.bg",
+            "age": 24,
+            "occupation": "Software Engineer",
+            "aboutYou": "Hey there! I'm John, a 24-year-old dog owner with a passion for my Golden Retriever. My furry friend isn't just a pet; he's family. We love exploring the outdoors together, hanging out at home, and taking leisurely walks around the neighborhood. Every moment with my Golden Retriever is special to me, and I'm committed to providing him with all the love and care he deserves."
+        }
     },
     "LmN0123Opq" : {
         "_id": "LmN0123Opq",
@@ -27,7 +43,15 @@
         "origin": "United States",
         "age": 2,
         "eyeColor": "Green",
-        "funStory": "Luna loves to play hide and seek. One evening, we couldn't find her anywhere until we heard a gentle purring coming from inside a drawer. She had found the perfect hiding spot."
+        "funStory": "Luna loves to play hide and seek. One evening, we couldn't find her anywhere until we heard a gentle purring coming from inside a drawer. She had found the perfect hiding spot.",
+        "owner": {
+            "firstName": "John",
+            "lastName": "Harrison",
+            "email" : "john@abv.bg",
+            "age": 24,
+            "occupation": "Software Engineer",
+            "aboutYou": "Hey there! I'm John, a 24-year-old dog owner with a passion for my Golden Retriever. My furry friend isn't just a pet; he's family. We love exploring the outdoors together, hanging out at home, and taking leisurely walks around the neighborhood. Every moment with my Golden Retriever is special to me, and I'm committed to providing him with all the love and care he deserves."
+        }
     },
     "RsT4567UvW" : {
         "_id": "RsT4567UvW",
@@ -37,6 +61,14 @@
         "imageUrl": "https://www.thesprucepets.com/thmb/slg48hln7ejv_3XYrcdLG8ooKwE=/2119x0/filters:no_upscale():strip_icc()/GettyImages-475324140-292c4ecfd73c4c8483efe31193f8189a.jpg",
         "age": 5,
         "eyeColor": "Hazel",
-        "funStory": "Charlie has an incredible sense of smell. Once, he led us on a mini adventure through the park to find a hidden picnic basket someone had left behind."
+        "funStory": "Charlie has an incredible sense of smell. Once, he led us on a mini adventure through the park to find a hidden picnic basket someone had left behind.",
+        "owner": {
+            "firstName": "Ann",
+            "lastName": "Solis",
+            "email" : "ann@abv.bg",
+            "age": 19,
+            "occupation": "HR",
+            "aboutYou": "Hi, I'm Ann, a girl who adores her Beagle companion. My Beagle isn't just a pet; he's my best friend. Whether we're playing fetch in the park, cuddling on lazy afternoons, or going on adventurous walks, every moment with my Beagle brings joy and companionship into my life. I'm dedicated to ensuring he's happy and healthy, and our bond grows stronger with each passing day."
+        }
     }
 }

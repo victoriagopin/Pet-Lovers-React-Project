@@ -54,8 +54,9 @@ export default function Register(){
             <div className="col-md-9 mx-auto">
               <div className="contact-form">
                 <form action="">
+                  
                   <div>
-                    <input type="text" placeholder="caren@abv.bg" name="email" value={formValues.email} onChange={changeValues}/>
+                    <input type="text" placeholder="Email" name="email" value={formValues.email} onChange={changeValues}/>
                   </div>
                   <div>
                     <input type="password" placeholder="Password" name="password" value={formValues.password} onChange={changeValues}/>

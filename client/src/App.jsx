@@ -9,6 +9,7 @@ import Register from "./components/register/Register";
 import { useState,useEffect } from "react";
 import CatalogItem from "./components/catalog/catalog-item/CatalogItem";
 import Details from "./components/catalog/details/Details";
+import OwnerForm from "./components/owner-form/OwnerForm";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={< LogIn/>}/>
         <Route path="/register" element={< Register/>}/>
         <Route path="/about" element={< About/>}/>
+        <Route path="/setup-owner-profile" element={<OwnerForm />}/>
       </Routes>
     </>
   )

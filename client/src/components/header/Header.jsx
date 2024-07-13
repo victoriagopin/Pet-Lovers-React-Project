@@ -24,16 +24,17 @@ export default function Header(){
             <div className="navbar-collapse" id="navbarSupportedContent">
               <div className="d-flex ml-auto flex-column flex-lg-row align-items-center">
                 <ul className="navbar-nav">
-            
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/catalog" > Catalog </NavLink>
+                  </li>
                   {user ? 
                   <>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/catalog" > Catalog </NavLink>
-                  </li>
-                  <li className="nav-item">
                     <NavLink className="nav-link" to="/create" > Add Pet </NavLink>
                   </li> 
-      
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/about" >About</NavLink>
+                  </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="#">Log Out</NavLink>
                   </li>
@@ -46,9 +47,6 @@ export default function Header(){
                     <NavLink className="nav-link" to="/register" >Register</NavLink>
                   </li>
                   </>}
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/about" >About</NavLink>
-                  </li>
                 </ul>
               </div>
             </div>

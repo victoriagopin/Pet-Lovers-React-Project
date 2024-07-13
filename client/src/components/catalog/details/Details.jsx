@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
@@ -40,8 +40,9 @@ export default function Details({
                 <p><span className="make-yellow">Eye Color:</span> {pet.eyeColor}</p>
                 <p><span className="make-yellow">Fun Story with your Furry Friend:</span> {pet.funStory}</p>
             </div>
-            <button type="submit" className="edit-delete submit">Edit</button>
-            <button type="submit" className="edit-delete submit" onClick={()=> onDeleteClick(pet)}>Delete</button>
+            <Link className="owner-btn" to={'/setup-owner-profile'}>Set Up Owner's Profile</Link>
+            {/* <button type="submit" className="edit-delete submit">Edit</button>
+            <button type="submit" className="edit-delete submit" onClick={()=> onDeleteClick(pet)}>Delete</button> */}
         </div>
     </section>
     )
