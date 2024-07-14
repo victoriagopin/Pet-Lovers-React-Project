@@ -35,3 +35,14 @@
   .owner-info-details p {
     margin: 10px 0;
   }
+  .heading{
+    margin-top: 39px;
+    text-align: center;
+    color: #e7d619;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.owner-make-yellow {
+  color: #e7d619;
+  font-weight: bold;
+}

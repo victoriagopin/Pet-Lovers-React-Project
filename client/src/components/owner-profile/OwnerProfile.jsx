@@ -21,6 +21,8 @@ export default function OwnerProfile(){
     })
     console.log();
     return (
+      <>
+        <h2 className={styles.heading}>Welcome to {`${profile.firstName}'s profile`}</h2>
         <section className={styles['owner-details']}>
         <div className={styles['owner-card-details']}>
           <div className={styles['owner-photo']}>
@@ -36,5 +38,6 @@ export default function OwnerProfile(){
          
         </div>
       </section>
+      </>
     )
 }

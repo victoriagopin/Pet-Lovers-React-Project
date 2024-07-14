@@ -1145,85 +1145,18 @@ form input {
  }
 
 
-/* .pet-card {
-  background-color: #ffffff;
-  border: 2px solid #e7d619;;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 250px;
-  overflow: hidden;
-} */
-
-/* .pet-card img {
-  width: 100%;
-  height: 226px;
-  border-bottom: 2px solid #e7d619;;
-}
-
-.pet-info {
-  padding: 15px;
-} */
 
 .pet-info h2, .pet-info p {
   margin: 10px 0;
   font-size: large;
 }
 
-/* span.make-yellow {
-  color: #e7d619;
-  font-weight: bold;
-} */
+
 
 .create-img{
   float: right;
 }
-/* .pet-card-details {
-  background-color: #ffffff;
-  border: 2px solid #e7d619;;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 450px;
-  overflow: hidden;
-} */
-/* .edit-delete{
-  display: inline-block;
-    padding: 10px 45px;
-    background-color: #e7d619;
-    color: #ffffff;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border: 1px solid #e7d619;
-    border-radius: 0;
-    color: #fff;
-    margin-bottom: 30px;
-    margin-left: 66px;
-    margin-top: 15px;
-}
-.edit-delete:hover{
-  background-color: white;
-  color: #e7d619;
-} */
 
-/* .catalog-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-} */
-
-/* .pet-card-details img {
-  width: 100%;
-  height: 265px;
-  display: block;
-  border-bottom: 2px solid #ffd700;
-  margin: 0 auto;
-} */
-
-/* .pet-info-details {
-  padding: 15px;
-} */
 
 .pet-info-details h2 {
   margin: 10px 0;
@@ -1246,73 +1179,4 @@ p.error{
   margin-top: 10px;
   animation: showAndHide 2s forwards;
  }
-/* .details-btn {
-  display: inline-block;
-  background-color: #e7d619;
-  color: #fff;
-  border: 1px solid #e7d619;
-  border-radius: 50px;
-  -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 10px;
-  text-align: center;
-} 
- .details-btn:hover {
-  background-color: #fff;
-  color: #e7d619;
-  border: 1px solid #e7d619
-} */
-/* .owner-btn{
-  margin-left: 136px;
-  font-size: large;
-  text-decoration: underline;
-} */
-/* .owner-card-details {
-  background-color: #ffffff;
-  border: 2px solid #e7d619;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 500px; 
-  display: flex;
-}
 
-.owner-photo {
-  width: 168px; 
-  height: 120px; 
-  margin-right: 20px; 
-}
-
-.owner-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #ffd700;
-}
-
-.owner-info-details {
-  flex: 1; 
-  padding: 15px;
-}
-
-.owner-info-details h2,
-.owner-info-details p {
-  margin: 10px 0;
-}
-
-.owner-buttons {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px; 
-}
-
-
-.owner-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-} */
