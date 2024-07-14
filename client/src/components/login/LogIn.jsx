@@ -6,6 +6,7 @@ const baseUrl = 'http://localhost:3030/jsonstore';
 
 export default function LogIn(){
   const {setUser} = useContext(UserContext);
+  const [errors, setErrors] = useState(false);
   const [formValues, setFormValues] = useState({
     email:'',
     password: ''
@@ -20,7 +21,7 @@ export default function LogIn(){
     }))
   }
 
-  const onLoginClick = async (e, userData) => {
+  const onLoginClick = async (e) => {
     e.preventDefault();
 
     const response = await fetch(`${baseUrl}/users`);
@@ -30,7 +31,8 @@ export default function LogIn(){
     const authenticatedUser = users.find(user=> user.email === formValues.email && user.password === formValues.password)
 
     if(!authenticatedUser){
-      console.log('Wrong');
+      setErrors(true);
+      setTimeout(() => setErrors(false), 3000);
     } else {
       setUser(authenticatedUser);
       navigate('/catalog');
@@ -46,6 +48,7 @@ export default function LogIn(){
             <h2>
               Log In
             </h2>
+            {errors ? <p className="error">Incorrect email or password!</p> : null}
           </div>
           <div>
             <div>

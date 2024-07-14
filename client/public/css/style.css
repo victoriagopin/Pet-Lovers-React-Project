@@ -1228,6 +1228,24 @@ form input {
 .pet-info-details h2 {
   margin: 10px 0;
 }
+
+@keyframes showAndHide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+p.error{
+  color: red;
+  margin-top: 10px;
+  animation: showAndHide 2s forwards;
+ }
 /* .details-btn {
   display: inline-block;
   background-color: #e7d619;

@@ -56,7 +56,6 @@ export default function Details({
       const response = await fetch(`${baseUrl}/profiles`);
       const data = await response.json();
       const profiles = Object.values(data);
-      console.log(profiles);
       const owner = profiles.find(profile => profile.identity == animal._ownerId);
 
       if(owner != undefined){
