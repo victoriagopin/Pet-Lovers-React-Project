@@ -44,7 +44,7 @@ export default function Details({
       }, [animal._ownerId]);
     
     const onDeleteClick = async () => {
-      const response = await fetch(`${baseUrl}/pets/${animal._id}}`,{
+      const response = await fetch(`${baseUrl}/pets/${animal._id}`,{
         method: 'DELETE'
       });
 
@@ -85,7 +85,7 @@ export default function Details({
             ) : (
               <Link className={styles['owner-btn']} to={`/setup-owner-profile/${animal._ownerId}`}>Set Up Owner's Profile</Link>
             )}
-            <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`}>Edit</button>
+            <Link type="submit" to={`/edit/${animal._id}`} className={`${styles['edit-delete']} ${styles['submit']}`}>Edit</Link>
             <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`} onClick={onDeleteClick}>Delete</button>
           </>
         ) : (

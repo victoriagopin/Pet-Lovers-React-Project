@@ -11,6 +11,7 @@ import CatalogItem from "./components/catalog/catalog-item/CatalogItem";
 import Details from "./components/catalog/details/Details";
 import OwnerForm from "./components/owner-form/OwnerForm";
 import OwnerProfile from "./components/owner-profile/OwnerProfile";
+import EditPet from "./components/edit/Edit";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element={< Home />}/>
         <Route path="/catalog" element={< Catalog pets={pets}/>}/>
         <Route path="/catalog/:petId" element={< Details/>}/>
+        <Route path="/edit/:petId" element={<EditPet />} />
         <Route path="/create" element={< CreatePet/>}/>
         <Route path="/login" element={< LogIn/>}/>
         <Route path="/register" element={< Register/>}/>
