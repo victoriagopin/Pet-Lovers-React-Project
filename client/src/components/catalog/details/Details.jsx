@@ -59,8 +59,6 @@ export default function Details({
       console.log(profiles);
       const owner = profiles.find(profile => profile.identity == animal._ownerId);
 
-      console.log(owner);
-
       if(owner != undefined){
         setIsOwner(true);
       }
