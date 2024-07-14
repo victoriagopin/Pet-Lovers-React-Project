@@ -25,7 +25,7 @@ function App() {
       
       setPets(petsResult);
     })();
-  },[pets]);
+  },[]);
   return (
     <>
       <Header />
@@ -38,7 +38,7 @@ function App() {
         <Route path="/login" element={< LogIn/>}/>
         <Route path="/register" element={< Register/>}/>
         <Route path="/about" element={< About/>}/>
-        <Route path="/setup-owner-profile" element={<OwnerForm />}/>
+        <Route path="/setup-owner-profile/:ownerId" element={<OwnerForm />}/>
         <Route path="/profile/:ownerId" element={<OwnerProfile/>} />
       </Routes>
     </>

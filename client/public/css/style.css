@@ -1315,3 +1315,7 @@ span.make-yellow {
   justify-content: space-around;
   padding: 20px;
 }
+.no-owner{
+  color: #007bff;
+  margin-left: 100px;
+}

@@ -1,10 +1,13 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function CreatePet({
 }){
+    const { user } = useContext(UserContext);
+
     const [formVaules, setFormValues] = useState({
       name:'',
       breed: '',
@@ -12,7 +15,8 @@ export default function CreatePet({
       age: '',
       eyeColor: '',
       imageUrl : '',
-      funStory: ''
+      funStory: '',
+      _ownerId: user._id,
     });
 
     const navigate = useNavigate();

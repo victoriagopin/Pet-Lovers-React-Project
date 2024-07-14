@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function OwnerForm(){
+  const {ownerId} = useParams();
+
   const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
+        identity : ownerId,
         firstName: '',
         lastName: '',
         age: '',
@@ -30,7 +33,7 @@ export default function OwnerForm(){
           headers: {
             'Content-Type' : 'application/json'
           },
-          body : JSON.stringify(userData)
+          body : JSON.stringify(formValues)
         }) 
 
         const data = await response.json();
