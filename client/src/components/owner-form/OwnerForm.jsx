@@ -37,7 +37,7 @@ export default function OwnerForm(){
         }) 
 
         const data = await response.json();
-        navigate(`/profile/${data._id}`);
+        navigate(`/profile/${data.identity}`);
       }
 
     return (
