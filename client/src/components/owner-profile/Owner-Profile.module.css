@@ -1,0 +1,37 @@
+.owner-card-details {
+    background-color: #ffffff;
+    border: 2px solid #e7d619;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 500px;
+    display: flex;
+  }
+  .owner-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .owner-photo {
+    width: 168px; 
+    height: 120px; 
+    margin-right: 20px; 
+  }
+  
+  .owner-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ffd700;
+  }
+  
+  .owner-info-details {
+    flex: 1; 
+    padding: 15px;
+  }
+  
+  .owner-info-details h2,
+  .owner-info-details p {
+    margin: 10px 0;
+  }

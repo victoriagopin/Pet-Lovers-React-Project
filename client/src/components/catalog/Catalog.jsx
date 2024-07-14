@@ -1,4 +1,5 @@
 import CatalogItem from "./catalog-item/CatalogItem";
+import styles from './Catalog.module.css';
 
 export default function Catalog({
     pets,
@@ -7,8 +8,8 @@ export default function Catalog({
     
      return (
         <>
-        <h2 className="catalog-heading">All Of Your Furry Friends</h2>
-        <section className="catalog">
+        <h2 className={styles['catalog-heading']}>All Of Your Furry Friends</h2>
+        <section className={styles.catalog}>
             {pets.map(pet => 
             <CatalogItem 
                 key={pet._id}

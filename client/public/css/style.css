@@ -1143,16 +1143,9 @@ form input {
  button.submit{
   border-radius: 50px;
  }
- .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
 
-.pet-card {
+
+/* .pet-card {
   background-color: #ffffff;
   border: 2px solid #e7d619;;
   border-radius: 10px;
@@ -1160,9 +1153,9 @@ form input {
   margin: 10px;
   width: 250px;
   overflow: hidden;
-}
+} */
 
-.pet-card img {
+/* .pet-card img {
   width: 100%;
   height: 226px;
   border-bottom: 2px solid #e7d619;;
@@ -1170,32 +1163,22 @@ form input {
 
 .pet-info {
   padding: 15px;
-}
+} */
 
 .pet-info h2, .pet-info p {
   margin: 10px 0;
   font-size: large;
 }
-.catalog-heading{
-  text-align: center;
-    margin-top: 71px;
-    margin-bottom: 40px;
-    font-weight: bold;
-    background: -webkit-linear-gradient(127deg, #ffc107 0%, rgba(255, 246, 1, 1) 22%, #ffc107 95%, #fdea11 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
 
-
-}
-span.make-yellow {
+/* span.make-yellow {
   color: #e7d619;
   font-weight: bold;
-}
+} */
 
 .create-img{
   float: right;
 }
-.pet-card-details {
+/* .pet-card-details {
   background-color: #ffffff;
   border: 2px solid #e7d619;;
   border-radius: 10px;
@@ -1203,8 +1186,8 @@ span.make-yellow {
   margin: 10px;
   width: 450px;
   overflow: hidden;
-}
-.edit-delete{
+} */
+/* .edit-delete{
   display: inline-block;
     padding: 10px 45px;
     background-color: #e7d619;
@@ -1221,31 +1204,31 @@ span.make-yellow {
 .edit-delete:hover{
   background-color: white;
   color: #e7d619;
-}
+} */
 
-.catalog-details {
+/* .catalog-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-}
+} */
 
-.pet-card-details img {
+/* .pet-card-details img {
   width: 100%;
   height: 265px;
   display: block;
   border-bottom: 2px solid #ffd700;
   margin: 0 auto;
-}
+} */
 
-.pet-info-details {
+/* .pet-info-details {
   padding: 15px;
-}
+} */
 
-.pet-info-details h2, .pet-info-details p {
+.pet-info-details h2 {
   margin: 10px 0;
 }
-.details-btn {
+/* .details-btn {
   display: inline-block;
   background-color: #e7d619;
   color: #fff;
@@ -1258,31 +1241,31 @@ span.make-yellow {
   cursor: pointer;
   margin-top: 10px;
   text-align: center;
-}
-.details-btn:hover {
+} 
+ .details-btn:hover {
   background-color: #fff;
   color: #e7d619;
   border: 1px solid #e7d619
-}
-.owner-btn{
+} */
+/* .owner-btn{
   margin-left: 136px;
   font-size: large;
   text-decoration: underline;
-}
-.owner-card-details {
+} */
+/* .owner-card-details {
   background-color: #ffffff;
   border: 2px solid #e7d619;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  width: 500px; /* Adjusted width */
+  width: 500px; 
   display: flex;
 }
 
 .owner-photo {
-  width: 168px; /* Adjusted size for circular photo */
-  height: 120px; /* Adjusted size for circular photo */
-  margin-right: 20px; /* Space between photo and info */
+  width: 168px; 
+  height: 120px; 
+  margin-right: 20px; 
 }
 
 .owner-photo img {
@@ -1293,7 +1276,7 @@ span.make-yellow {
 }
 
 .owner-info-details {
-  flex: 1; /* Allows the details to take remaining width */
+  flex: 1; 
   padding: 15px;
 }
 
@@ -1305,7 +1288,7 @@ span.make-yellow {
 .owner-buttons {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px; /* Space between info and buttons */
+  margin-top: 10px; 
 }
 
 
@@ -1314,8 +1297,4 @@ span.make-yellow {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-}
-.no-owner{
-  color: #007bff;
-  margin-left: 100px;
-}
+} */
