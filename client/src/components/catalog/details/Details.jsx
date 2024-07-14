@@ -37,7 +37,6 @@ export default function Details({
             const profile = profiles.find(profile => profile.identity == animal._ownerId);
       
             setOwnerProfile(profile);
-            console.log(ownerProfile);
           };
     
           fetchOwnerProfile();
@@ -52,7 +51,6 @@ export default function Details({
       navigate('/catalog');
    }
 
-  //  console.log(ownerProfile);
    useEffect(() => {
    ( async function getOwner(){
       const response = await fetch(`${baseUrl}/profiles`);
@@ -70,7 +68,6 @@ export default function Details({
    
    })
 
-   console.log(ownerProfile);
     return (
         <section className={styles['catalog-details']}>
         <div className={styles['pet-card-details']}>
@@ -91,8 +88,8 @@ export default function Details({
             ) : (
               <Link className={styles['owner-btn']} to={`/setup-owner-profile/${animal._ownerId}`}>Set Up Owner's Profile</Link>
             )}
-            <button type="submit" className="edit-delete submit">Edit</button>
-            <button type="submit" className="edit-delete submit" onClick={onDeleteClick}>Delete</button>
+            <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`}>Edit</button>
+            <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`} onClick={onDeleteClick}>Delete</button>
           </>
         ) : (
           <>

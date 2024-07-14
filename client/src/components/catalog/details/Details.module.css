@@ -55,16 +55,16 @@ span.make-yellow {
 
 .edit-delete{
     display: inline-block;
-      padding: 10px 45px;
+      padding: 10px 57px;
       background-color: #e7d619;
       color: #ffffff;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
       border: 1px solid #e7d619;
-      border-radius: 0;
+      border-radius: 50px;
       color: #fff;
       margin-bottom: 30px;
-      margin-left: 66px;
+      margin-left: 43px;
       margin-top: 15px;
   }
   .edit-delete:hover{
