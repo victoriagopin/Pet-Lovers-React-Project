@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from './Owner-Profile.module.css';
+import { UserContext } from "../UserContext";
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function OwnerProfile(){
+  const {user} = useContext(UserContext);
   const [profile, setProfile] = useState({});
     const {ownerId} = useParams();
 
@@ -34,8 +36,14 @@ export default function OwnerProfile(){
             <p><span className={styles['owner-make-yellow']}>Age:</span> {profile.age}</p>
             <p><span className={styles['owner-make-yellow']}>Occupation:</span> {profile.occupation}</p>
             <p><span className={styles['owner-make-yellow']}>About Me:</span> {profile.aboutYou}</p>
-            <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>
-            <button className={styles.delete}>Delete</button>
+            {user && user._id == profile._id 
+            ?
+             <>
+             <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>
+            <button className={styles.delete}>Delete</button></> 
+            : null
+            }
+            
           </div>
          
         </div>
