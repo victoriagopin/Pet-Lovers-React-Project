@@ -34,14 +34,14 @@ export default function Header(){
                 <li className="nav-item">
                     <NavLink className="nav-link" to="/catalog" > Catalog </NavLink>
                   </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/about" >About</NavLink>
+                  </li>
                   {user ? 
                   <>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/create" > Add Pet </NavLink>
                   </li> 
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/about" >About</NavLink>
-                  </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="#" onClick={logout}>Log Out</NavLink>
                   </li>

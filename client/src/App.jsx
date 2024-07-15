@@ -12,28 +12,20 @@ import Details from "./components/catalog/details/Details";
 import OwnerForm from "./components/owner-form/OwnerForm";
 import OwnerProfile from "./components/owner-profile/OwnerProfile";
 import EditPet from "./components/edit/Edit";
+import Footer from "./components/footer/Footer";
+import EditProfile from "./components/edit-profile/EditProfile";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+
 
 function App() {
-  const [pets, setPets] = useState([]);
 
-  useEffect(() => {
-    (async function getPets(){
-      const response = await fetch(`${baseUrl}/pets`);
-      const data = await response.json();
-      const petsResult =  Object.values(data);
-      
-      setPets(petsResult);
-    })();
-  },[]);
   return (
     <>
       <Header />
 
       <Routes >
         <Route path="/" element={< Home />}/>
-        <Route path="/catalog" element={< Catalog pets={pets}/>}/>
+        <Route path="/catalog" element={< Catalog/>}/>
         <Route path="/catalog/:petId" element={< Details/>}/>
         <Route path="/edit/:petId" element={<EditPet />} />
         <Route path="/create" element={< CreatePet/>}/>
@@ -42,7 +34,10 @@ function App() {
         <Route path="/about" element={< About/>}/>
         <Route path="/setup-owner-profile/:ownerId" element={<OwnerForm />}/>
         <Route path="/profile/:ownerId" element={<OwnerProfile/>} />
+        <Route path="/edit-profile/:id" element={<EditProfile />} />
       </Routes>
+
+      {/* <Footer /> */}
     </>
   )
 }

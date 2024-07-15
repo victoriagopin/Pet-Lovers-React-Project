@@ -46,3 +46,35 @@
   color: #e7d619;
   font-weight: bold;
 }
+.edit{
+  padding: 10px 40px;
+  color: white;
+  background-color: #e7d619;
+  border-radius: 50px;
+  border: 1px solid #e7d619;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.edit:hover {
+  background-color: white;
+  color: #e7d619;
+  border: 1px solid #e7d619;
+}
+
+.delete{
+  padding: 8px 40px;
+  color: white;
+  background-color: red;
+  border-radius: 50px;
+  border: 1px solid red;
+  margin-left: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.delete:hover{
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}

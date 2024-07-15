@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function About(){
     return (
      <>
@@ -14,12 +16,12 @@ export default function About(){
           We are a global community dedicated to pet lovers everywhere! We created this platform for all who cherish their furry, feathered, or scaly friends and want to share their joy with the world. Here, you can showcase your beloved pets and delight in discovering the adorable companions of others. Join us in celebrating the special bond between pets and their humans, and let's spread the love for our animal friends together!
         </p>
         <div className="btn-box">
-          <a href="">
+          <Link to="/register">
             <span>
               Not part of our community yet? Click here
             </span>
             <img src="images/link-arrow.png" alt="" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

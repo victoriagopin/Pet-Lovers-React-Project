@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from './Owner-Profile.module.css';
 
 const baseUrl = 'http://localhost:3030/jsonstore'
@@ -34,6 +34,8 @@ export default function OwnerProfile(){
             <p><span className={styles['owner-make-yellow']}>Age:</span> {profile.age}</p>
             <p><span className={styles['owner-make-yellow']}>Occupation:</span> {profile.occupation}</p>
             <p><span className={styles['owner-make-yellow']}>About Me:</span> {profile.aboutYou}</p>
+            <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>
+            <button className={styles.delete}>Delete</button>
           </div>
          
         </div>
