@@ -8,7 +8,8 @@
         "age": 3,
         "eyeColor": "Brown",
         "funStory": "Bella loves to swim in the lake near our house. One time, she found an old tennis ball floating and proudly brought it back to us like she had discovered treasure.",
-        "_ownerId": "770df3cd-e190-46cc-b681-40f5df00abf7"
+        "_ownerId": "770df3cd-e190-46cc-b681-40f5df00abf7",
+        "likes" : 4
     },
     "G5hI6789Jk" : {
         "_id": "G5hI6789Jk",
@@ -19,7 +20,8 @@
         "age": 4,
         "eyeColor": "Blue",
         "funStory": "Max has a knack for opening doors. We once came home to find him lounging in the pantry, having snacked on his favorite treats.",
-        "_ownerId":"770df3cd-e190-46cc-b681-40f5df00abf7"
+        "_ownerId":"770df3cd-e190-46cc-b681-40f5df00abf7",
+        "likes": 15
     },
     "LmN0123Opq" : {
         "_id": "LmN0123Opq",
@@ -30,7 +32,8 @@
         "age": 2,
         "eyeColor": "Green",
         "funStory": "Luna loves to play hide and seek. One evening, we couldn't find her anywhere until we heard a gentle purring coming from inside a drawer. She had found the perfect hiding spot.",
-        "_ownerId": "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038"
+        "_ownerId": "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038",
+        "likes": 7
     },
     "RsT4567UvW" : {
         "_id": "RsT4567UvW",
@@ -41,6 +44,7 @@
         "age": 5,
         "eyeColor": "Hazel",
         "funStory": "Charlie has an incredible sense of smell. Once, he led us on a mini adventure through the park to find a hidden picnic basket someone had left behind.",
-        "_ownerId": "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038"
+        "_ownerId": "f02f3b1e-0d5d-4c57-ba20-711fbb0fa038",
+        "likes": 1
     }
 }

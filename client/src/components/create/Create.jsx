@@ -17,6 +17,7 @@ export default function CreatePet({
       imageUrl : '',
       funStory: '',
       _ownerId: user._id,
+      likes: 0
     });
 
     const navigate = useNavigate();

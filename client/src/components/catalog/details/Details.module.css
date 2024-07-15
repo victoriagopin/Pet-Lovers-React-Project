@@ -71,3 +71,30 @@ span.make-yellow {
     background-color: white;
     color: #e7d619;
   }
+  .likes{
+    color: #e7d619;
+    margin-left: 175px;
+    margin-top: 10px;
+  }
+  .like{
+    display: block;
+    margin-left: 146px;
+    padding: 6px 45px;
+    margin-bottom: 10px;
+    border: 1px solid #e7d619;
+    border-radius: 50px;
+    color: white;
+    background: #e7d619;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .like:hover{
+    background-color: white;
+    color: #e7d619;
+  }
+  .like.disabled {
+    background-color: #dee2e6;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border: none;
+  }
