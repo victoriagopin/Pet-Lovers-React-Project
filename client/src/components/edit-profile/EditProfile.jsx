@@ -37,7 +37,7 @@ export default function EditProfile(){
               body: JSON.stringify(userToEdit),
             });
             const result = await response.json();
-            navigate(`/profile/${result._id}`);
+            navigate(`/profile/${result.identity}`);
           } catch (error) {
             console.error('Error updating data:', error);
           }

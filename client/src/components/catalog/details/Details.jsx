@@ -7,7 +7,6 @@ import styles from './Details.module.css';
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function Details() {
-  console.log('rerender');
     const { user } = useContext(UserContext);
     const { petId } = useParams();
     const [animal, setAnimal] = useState({});

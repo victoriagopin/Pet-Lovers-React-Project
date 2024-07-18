@@ -11,6 +11,7 @@ export default function Header(){
 
     const logout = ()=> {
       setUser(null);
+      localStorage.clear();
       navigate('/');
     }
 

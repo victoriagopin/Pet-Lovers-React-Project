@@ -20,8 +20,8 @@ export default function OwnerProfile(){
 
         setProfile(user);
       })()
-    })
-    console.log();
+    }, []);
+    
     return (
       <>
         <h2 className={styles.heading}>Welcome to {`${profile.firstName}'s profile`}</h2>
@@ -36,7 +36,7 @@ export default function OwnerProfile(){
             <p><span className={styles['owner-make-yellow']}>Age:</span> {profile.age}</p>
             <p><span className={styles['owner-make-yellow']}>Occupation:</span> {profile.occupation}</p>
             <p><span className={styles['owner-make-yellow']}>About Me:</span> {profile.aboutYou}</p>
-            {user && user._id == profile._id 
+            {user && user._id == profile.identity 
             ?
              <>
              <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>
