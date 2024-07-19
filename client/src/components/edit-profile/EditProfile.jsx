@@ -46,6 +46,7 @@ export default function EditProfile(){
     if (!userToEdit) {
         return <p>Loading...</p>;
       }
+
  return (
     <section className="contact_section layout_padding">
     <div className="container">

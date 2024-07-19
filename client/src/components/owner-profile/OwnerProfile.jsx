@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from './Owner-Profile.module.css';
 import { UserContext } from "../UserContext";
 
@@ -9,6 +9,7 @@ export default function OwnerProfile(){
   const {user} = useContext(UserContext);
   const [profile, setProfile] = useState({});
     const {ownerId} = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
       (async () => {
@@ -22,6 +23,12 @@ export default function OwnerProfile(){
       })()
     }, []);
     
+    const onDeleteClick = async () => {
+      await fetch(`${baseUrl}/profiles/${profile._id}`, {
+          method: 'DELETE'
+      });
+      navigate('/catalog');
+  };
     return (
       <>
         <h2 className={styles.heading}>Welcome to {`${profile.firstName}'s profile`}</h2>
@@ -40,7 +47,7 @@ export default function OwnerProfile(){
             ?
              <>
              <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>
-            <button className={styles.delete}>Delete</button></> 
+            <button className={styles.delete} onClick={onDeleteClick}>Delete</button></> 
             : null
             }
             
