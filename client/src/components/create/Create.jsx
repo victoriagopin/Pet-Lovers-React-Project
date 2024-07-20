@@ -33,16 +33,21 @@ export default function CreatePet({
    const createPet = async (e,petData) => {
       e.preventDefault();
      
-      const response = await fetch(`${baseUrl}/pets`,{
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        } ,
-        body: JSON.stringify(petData)
-    });
-
-    const createdPet = await response.json();
-    navigate(`/catalog/${createdPet._id}`);
+      try{
+        const response = await fetch(`${baseUrl}/pets`,{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          } ,
+          body: JSON.stringify(petData)
+      });
+  
+      const createdPet = await response.json();
+      navigate(`/catalog/${createdPet._id}`);
+      } catch (err){
+        console.log(err.message);
+      }
+     
 
    }
     return (

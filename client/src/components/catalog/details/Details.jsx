@@ -46,21 +46,31 @@ export default function Details() {
 
     useEffect(() => {
         const getOwner = async () => {
-            const response = await fetch(`${baseUrl}/profiles`);
-            const data = await response.json();
-            const profiles = Object.values(data);
-            const owner = profiles.find(profile => profile.identity === animal._ownerId);
-            if (owner !== undefined) {
-                setIsOwner(true);
+            try{
+                const response = await fetch(`${baseUrl}/profiles`);
+                const data = await response.json();
+                const profiles = Object.values(data);
+                const owner = profiles.find(profile => profile.identity === animal._ownerId);
+                if (owner !== undefined) {
+                    setIsOwner(true);
+                }
+            } catch (err){
+                console.log(err.message);
             }
+          
         };
         getOwner();
     }, [animal._ownerId]);
 
     const onDeleteClick = async () => {
-        await fetch(`${baseUrl}/pets/${animal._id}`, {
-            method: 'DELETE'
-        });
+        try {
+            await fetch(`${baseUrl}/pets/${animal._id}`, {
+                method: 'DELETE'
+            });
+        } catch (err){
+            console.log(err.message);
+        }
+       
         navigate('/catalog');
     };
 
@@ -69,13 +79,18 @@ export default function Details() {
         setLikes(likes + 1);
         setHasLiked(true);
 
-        await fetch(`${baseUrl}/pets/${animal._id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updatedAnimal)
-        });
+        try{
+            await fetch(`${baseUrl}/pets/${animal._id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedAnimal)
+            });
+        } catch (err){
+            console.log(err.message);
+        }
+   
 
         setAnimal(updatedAnimal);
         const likedAnimals = JSON.parse(localStorage.getItem('likedAnimals')) || {};

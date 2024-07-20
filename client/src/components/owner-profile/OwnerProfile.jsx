@@ -13,20 +13,30 @@ export default function OwnerProfile(){
 
     useEffect(() => {
       (async () => {
-        const response = await fetch(`${baseUrl}/profiles`);
-        const data = await response.json();
-        const profiles = Object.values(data);
-
-        const user = profiles.find(profile => profile.identity == ownerId);
-
-        setProfile(user);
+        try{
+          const response = await fetch(`${baseUrl}/profiles`);
+          const data = await response.json();
+          const profiles = Object.values(data);
+  
+          const user = profiles.find(profile => profile.identity == ownerId);
+  
+          setProfile(user);
+        } catch(err) {
+          console.log(err.message);
+        }
+       
       })()
     }, []);
     
     const onDeleteClick = async () => {
-      await fetch(`${baseUrl}/profiles/${profile._id}`, {
+      try{
+        await fetch(`${baseUrl}/profiles/${profile._id}`, {
           method: 'DELETE'
       });
+      } catch (err){
+        console.log(err.message);
+      }
+     
       navigate('/catalog');
   };
     return (

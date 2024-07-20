@@ -10,10 +10,15 @@ export default function EditProfile(){
     
     useEffect(() => {
         (async function getUser (){
+          try{
             const response = await fetch(`${baseUrl}/profiles/${id}`);
             const user = await response.json();
 
             setUserToEdit(user);
+          } catch (err){
+            console.log(err.message);
+          }
+          
         })()
     },[])
 
