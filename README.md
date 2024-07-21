@@ -8,7 +8,7 @@ PetLovers is a Single Page Application (SPA) built using React.js. It provides a
    ```bash
    git clone https://github.com/victoriagopin/Pet-Lovers-React-Project.git
    cd Pet-Lovers-React-Project
-2. Install dependencies for the client and starting the client:
+2. Install dependencies for the client:
    ```bash
    cd client
    npm install
