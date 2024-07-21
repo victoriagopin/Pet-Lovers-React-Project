@@ -22,6 +22,7 @@ PetLovers is a Single Page Application (SPA) built using React.js. It provides a
     cd server
     node server.js
 
+- After you are finished with the installation go back to Terminal 1 and open the link.
 
 ## Features
 
