@@ -17,10 +17,8 @@ export default function Header(){
     },[loggingOut]);
 
     const logout = ()=> {
-      console.log('Logging out..');
       setUser(null);
       localStorage.clear();
-      console.log('Navigating');
       setLoggingOut(true);
     }
 

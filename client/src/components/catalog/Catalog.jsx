@@ -18,15 +18,22 @@ export default function Catalog({}){
     },[]);
      return (
         <>
-        <h2 className={styles['catalog-heading']}>All Of Your Furry Friends</h2>
-        <section className={styles.catalog}>
-            {pets.map(pet => 
-            <CatalogItem 
-                key={pet._id}
-                pet={pet}
-            />
-            )}
-        </section>
+         <h2 className={styles['catalog-heading']}>All Of Your Furry Friends</h2>
+        {pets.length > 0 
+        ? 
+           <section className={styles.catalog}>
+           {pets.map(pet => 
+           <CatalogItem 
+               key={pet._id}
+               pet={pet}
+           />
+           )}
+            </section> 
+        : <p className={styles['no-pets']}>No pets added yet</p>
+       
+      }
+       
+       
         </>
      )
 }

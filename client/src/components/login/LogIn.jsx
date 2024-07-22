@@ -41,7 +41,7 @@ export default function LogIn(){
   }
 
     return (
-        <section className="contact_section layout_padding">
+        <section className="contact_section layout_padding" style={{minHeight: '83vh'}}>
         <div className="container">
     
           <div className="heading_container">

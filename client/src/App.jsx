@@ -35,7 +35,7 @@ function App() {
         <Route path="/edit-profile/:id" element={<EditProfile />} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
