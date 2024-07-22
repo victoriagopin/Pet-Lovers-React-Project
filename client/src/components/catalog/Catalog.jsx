@@ -24,8 +24,6 @@ export default function Catalog({}){
             <CatalogItem 
                 key={pet._id}
                 pet={pet}
-                // onDetailsClick={onDetailsClick}
-              
             />
             )}
         </section>

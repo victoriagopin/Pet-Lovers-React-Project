@@ -6,13 +6,22 @@ const baseUrl = 'http://localhost:3030/jsonstore'
 
 export default function Header(){
     const {user, setUser} = useContext(UserContext);
-
+    const [loggingOut, setLoggingOut] = useState(false);
     const navigate = useNavigate();
 
+    useEffect(() => {
+      if(loggingOut){
+        navigate('/');
+        setLoggingOut(false);
+      }
+    },[loggingOut]);
+
     const logout = ()=> {
+      console.log('Logging out..');
       setUser(null);
       localStorage.clear();
-      navigate('/');
+      console.log('Navigating');
+      setLoggingOut(true);
     }
 
     return(

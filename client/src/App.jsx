@@ -6,8 +6,6 @@ import Home from "./components/home/Home";
 import {Route, Routes} from "react-router-dom";
 import LogIn from "./components/login/LogIn";
 import Register from "./components/register/Register";
-import { useState,useEffect } from "react";
-import CatalogItem from "./components/catalog/catalog-item/CatalogItem";
 import Details from "./components/catalog/details/Details";
 import OwnerForm from "./components/owner-form/OwnerForm";
 import OwnerProfile from "./components/owner-profile/OwnerProfile";
