@@ -167,6 +167,18 @@
             "Devon Rex",
             "Oriental Shorthair",
             "American Curl"
+          ],
+          "food": [
+            {
+            "foodName" : "True Origins",
+            "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0cc37dd6/images/pienso_para_gatos_esterilizados_salmon_true_origins_TRU88966_M.jpg?sw=780&sh=780&q=85",
+            "price": 21.99 
+            },
+            {
+            "foodName" : "Nath",
+            "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwebff5cd6/images/pienso_gatos_nath_adult_sterilised_4kg_NTH88595.jpg?sw=780&sh=780&q=85",
+            "price": 29.99 
+            }
           ]
         },
         {
@@ -180,6 +192,18 @@
             "Burmese",
             "Siamese",
             "Scottish Fold"
+          ],
+          "food": [
+            {
+            "foodName" : "Purina",
+            "imageUrl" : "https://media.zooplus.com/bilder/1/400/112120_pla_purina_one_sensitive_turkeyrice_9_75kg_1.jpg",
+            "price": 43.99 
+            },
+            {
+            "foodName" : "Smilla",
+            "imageUrl" : "https://media.zooplus.com/bilder/7/400/smilla_vet_weightcontrol_1kg_1000x1000_7.jpg",
+            "price": 19.99 
+            }
           ]
         },
         {
@@ -193,6 +217,18 @@
             "Norwegian Forest Cat",
             "Siberian",
             "British Shorthair"
+          ],
+          "food": [
+            {
+            "foodName" : "Concept for life",
+            "imageUrl" : "https://media.zooplus.com/bilder/8/400/287797_pla_concept_for_life_veterinary_diet_cat_gastrointestinal_10kg_8.jpg",
+            "price": 30.99 
+            },
+            {
+            "foodName" : "Salvaje",
+            "imageUrl" : "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw5b3ebb6d/images/comida_gatos_salvaje_adulto_esterilizado_aves_12kg_SAB1244.jpg?sw=780&sh=780&q=85",
+            "price": 24.99 
+            }
           ]
         }
       ]
