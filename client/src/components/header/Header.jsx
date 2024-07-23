@@ -40,6 +40,9 @@ export default function Header(){
               <div className="d-flex ml-auto flex-column flex-lg-row align-items-center">
                 <ul className="navbar-nav">
                 <li className="nav-item">
+                    <NavLink className="nav-link" to="/search" > Search </NavLink>
+                  </li>
+                <li className="nav-item">
                     <NavLink className="nav-link" to="/catalog" > Catalog </NavLink>
                   </li>
                   <li className="nav-item">

@@ -12,6 +12,7 @@ import OwnerProfile from "./components/owner-profile/OwnerProfile";
 import EditPet from "./components/edit/Edit";
 import Footer from "./components/footer/Footer";
 import EditProfile from "./components/edit-profile/EditProfile";
+import Search from "./components/search/Search";
 
 
 
@@ -23,6 +24,7 @@ function App() {
 
       <Routes >
         <Route path="/" element={< Home />}/>
+        <Route path="/search" element={< Search />} />
         <Route path="/catalog" element={< Catalog/>}/>
         <Route path="/catalog/:petId" element={< Details/>}/>
         <Route path="/edit/:petId" element={<EditPet />} />
