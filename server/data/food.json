@@ -1,0 +1,143 @@
+{
+    "dog": [
+      {
+        "weight": {
+          "min": 1,
+          "max": 4
+        },
+        "months": {
+          "min": 1,
+          "max": 12
+        },
+        "breed": [
+          "Chihuahua",
+          "Yorkshire Terrier",
+          "Pomeranian",
+          "Papillon",
+          "Toy Poodle"
+        ],
+        "food": [
+            {
+            "foodName" : "Concept for life",
+            "imageUrl" : "https://media.zooplus.com/bilder/2/400/1_5kg_minijunior_1000x1000_2.jpg",
+            "price": 29.99 
+        },
+        {
+            "foodName" : "Proplan",
+            "imageUrl" : "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
+            "price": 20.99 
+        },
+        {
+            "foodName" : "Royal Canin",
+            "imageUrl" : "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
+            "price": 25.49 
+        }
+    ]
+      },
+      {
+        "weight": {
+          "min": 15,
+          "max": 25
+        },
+        "years": {
+          "min": 10,
+          "max": 14
+        },
+        "breed": [
+          "Beagle",
+          "Cocker Spaniel",
+          "Bulldog",
+          "Whippet",
+          "Basset Hound"
+        ]
+      },
+      {
+        "weight": {
+          "min": 30,
+          "max": 50
+        },
+        "years": {
+          "min": 8,
+          "max": 12
+        },
+        "breed": [
+          "Boxer",
+          "Golden Retriever",
+          "Labrador Retriever",
+          "German Shepherd",
+          "Border Collie"
+        ]
+      },
+      {
+        "weight": {
+          "min": 60,
+          "max": 100
+        },
+        "years": {
+          "min": 7,
+          "max": 10
+        },
+        "breed": [
+          "Great Dane",
+          "Saint Bernard",
+          "Mastiff",
+          "Newfoundland",
+          "Bernese Mountain Dog"
+        ]
+      }
+    ],
+    "cat": [
+        {
+          "weight": {
+            "min": 4,
+            "max": 6
+          },
+          "years": {
+            "min": 12,
+            "max": 16
+          },
+          "breed": [
+            "Singapura",
+            "Cornish Rex",
+            "Devon Rex",
+            "Oriental Shorthair",
+            "American Curl"
+          ]
+        },
+        {
+          "weight": {
+            "min": 7,
+            "max": 10
+          },
+          "years": {
+            "min": 10,
+            "max": 15
+          },
+          "breed": [
+            "American Shorthair",
+            "Bengal",
+            "Burmese",
+            "Siamese",
+            "Scottish Fold"
+          ]
+        },
+        {
+          "weight": {
+            "min": 11,
+            "max": 20
+          },
+          "years": {
+            "min": 8,
+            "max": 12
+          },
+          "breed": [
+            "Maine Coon",
+            "Ragdoll",
+            "Norwegian Forest Cat",
+            "Siberian",
+            "British Shorthair"
+          ]
+        }
+      ]
+  }
+  
