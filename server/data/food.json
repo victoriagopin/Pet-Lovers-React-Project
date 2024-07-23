@@ -3,18 +3,20 @@
       {
         "weight": {
           "min": 1,
-          "max": 4
-        },
-        "months": {
-          "min": 1,
-          "max": 12
+          "max": 5
         },
         "breed": [
           "Chihuahua",
           "Yorkshire Terrier",
           "Pomeranian",
           "Papillon",
-          "Toy Poodle"
+          "Toy Poodle",
+          "Pinscher", 
+          "Dachshund",
+          "Affenpinscher",
+          "Maltese",
+          "Boston Terrier",
+          "Shih Tzu"
         ],
         "food": [
             {
@@ -33,15 +35,44 @@
             "price": 25.49 
         }
     ]
+      },     {
+        "weight": {
+          "min": 6,
+          "max": 9
+        },
+        "breed": [
+          "Cavalier King Charles Spaniel",
+          "Beagle",
+          "Cocker Spaniel",
+          "Bulldog",
+          "Whippet",
+          "Basset Hound",
+          "Shih Tzu",
+          "Affenpinscher",
+          "Boston Terrier"
+        ],
+        "food": [
+          {
+          "foodName" : "Harringtons",
+          "imageUrl" : "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+          "price": 31.99 
+      },
+      {
+          "foodName" : "Hill's",
+          "imageUrl" : "https://media.zooplus.com/bilder/5/400/105737_pla_hill_s_scienceplan_adult_medium_chicken_14kg_hs_01_5.jpg",
+          "price": 52.99 
+      },
+      {
+          "foodName" : "Royal Canin",
+          "imageUrl" : "https://i.ebayimg.com/images/g/8yAAAOSw1HllN2QV/s-l400.jpg",
+          "price": 28.99 
+      }
+  ]
       },
       {
         "weight": {
-          "min": 15,
+          "min": 9,
           "max": 25
-        },
-        "years": {
-          "min": 10,
-          "max": 14
         },
         "breed": [
           "Beagle",
@@ -49,16 +80,29 @@
           "Bulldog",
           "Whippet",
           "Basset Hound"
-        ]
+        ],
+        "food": [
+          {
+          "foodName" : "Harringtons",
+          "imageUrl" : "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+          "price": 31.99 
+      },
+      {
+          "foodName" : "Hill's",
+          "imageUrl" : "https://media.zooplus.com/bilder/5/400/105737_pla_hill_s_scienceplan_adult_medium_chicken_14kg_hs_01_5.jpg",
+          "price": 52.99 
+      },
+      {
+          "foodName" : "Royal Canin",
+          "imageUrl" : "https://i.ebayimg.com/images/g/8yAAAOSw1HllN2QV/s-l400.jpg",
+          "price": 28.99 
+      }
+  ]
       },
       {
         "weight": {
-          "min": 30,
-          "max": 50
-        },
-        "years": {
-          "min": 8,
-          "max": 12
+          "min": 26,
+          "max": 60
         },
         "breed": [
           "Boxer",
@@ -66,16 +110,29 @@
           "Labrador Retriever",
           "German Shepherd",
           "Border Collie"
-        ]
+        ],
+        "food": [
+          {
+          "foodName" : "Trusty",
+          "imageUrl" : "https://www.aviproducts.co.za/wp-content/uploads/2024/05/trusty-adult-dog-food-product-img.png",
+          "price": 60.99 
+      },
+      {
+          "foodName" : "Complete Maintenance",
+          "imageUrl" : "https://pawscafe.co.za/wp-content/uploads/2019/01/25kg-Maintenance-1.png",
+          "price": 62.99 
+      },
+      {
+          "foodName" : "Royal Canin",
+          "imageUrl" : "https://www.direct-vet.ie/2166-large_default/royal-canin-large-adult-over-25kg-dog-food-kibbles.jpg",
+          "price": 29.99 
+      }
+  ]
       },
       {
         "weight": {
-          "min": 60,
+          "min": 61,
           "max": 100
-        },
-        "years": {
-          "min": 7,
-          "max": 10
         },
         "breed": [
           "Great Dane",
@@ -83,7 +140,19 @@
           "Mastiff",
           "Newfoundland",
           "Bernese Mountain Dog"
-        ]
+        ],
+        "food": [
+          {
+          "foodName" : "Pedigree",
+          "imageUrl" : "https://whoof-whoof.com/wp-content/uploads/2021/07/61LVLCWLKCL._SL1000_.jpg",
+          "price": 31.99 
+      },
+      {
+          "foodName" : "Concept for life",
+          "imageUrl" : "https://media.zooplus.com/bilder/7/800/75918_pla_concept_for_life_x_large_adult_12kg_7.jpg",
+          "price": 10.99 
+      }
+  ]
       }
     ],
     "cat": [
@@ -91,10 +160,6 @@
           "weight": {
             "min": 4,
             "max": 6
-          },
-          "years": {
-            "min": 12,
-            "max": 16
           },
           "breed": [
             "Singapura",
@@ -109,10 +174,6 @@
             "min": 7,
             "max": 10
           },
-          "years": {
-            "min": 10,
-            "max": 15
-          },
           "breed": [
             "American Shorthair",
             "Bengal",
@@ -125,10 +186,6 @@
           "weight": {
             "min": 11,
             "max": 20
-          },
-          "years": {
-            "min": 8,
-            "max": 12
           },
           "breed": [
             "Maine Coon",

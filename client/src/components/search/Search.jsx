@@ -40,11 +40,6 @@ export default function Search() {
                         </div>
 
                         <div className={styles['form-outline']}>
-                            <label className={styles['form-label']} htmlFor="age">Age</label>
-                            <input type="number" id="age" className={styles['form-control']} name='age' value={values.age} onChange={changeValues}/>
-                        </div>
-
-                        <div className={styles['form-outline']}>
                             <label className={styles['form-label']} htmlFor="age-unit">Animal</label>
                             <select id="animal" className={styles['form-control']} name='animal' value={values.animal} onChange={changeValues}>
                                 <option value="years">Dog</option>
@@ -52,13 +47,6 @@ export default function Search() {
                             </select>
                         </div>
 
-                        <div className={styles['form-outline']}>
-                            <label className={styles['form-label']} htmlFor="age-unit">Select</label>
-                            <select id="age-unit" className={styles['form-control']} name='ageUnit' value={values.ageUnit} onChange={changeValues}>
-                                <option value="years">Years</option>
-                                <option value="months">Months</option>
-                            </select>
-                        </div>
 
                         <div className={styles['form-outline']}>
                             <label className={styles['form-label']} htmlFor="breed">Breed</label>
