@@ -1,39 +1,22 @@
-export default function SearchList(){
+import styles from './SearchList.module.css';
+
+export default function SearchList({ foods }) { // Destructure foods from props
+    const spacing = 2; 
+    const foodsInfo = foods; // Assuming foods is already an array
 
     return (
-        <div className="food_container">
-        <div className="box">
-          <div className="img-box">
-            <img src="https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwbf4d3166/images/pienso_perros_royal_canin_giant_adult_ROY155171_M_M24%20(1).jpeg?sw=780&sh=780&q=85" alt="" />
-          </div>
-          <div className="detail-box">
-            <h6>
-              Standard
-            </h6>
-            <h3>
-              <span>$</span>300
-            </h3>
-            <a href="">
-              Buy Now
-            </a>
-          </div>
+        <div className={styles.container}>
+            {foodsInfo.map(foodInfo => (
+                <div key={foodInfo.foodName} className={`card ${styles.box}`} style={{marginRight: spacing + 'em'}}>
+                    <img className={`card-img-top ${styles['img-box']}`} src={foodInfo.imageUrl} alt="Card image cap" />
+                    <div className="card-body">
+                        <h5 className="card-title">{foodInfo.foodName}</h5>
+                        <p className="card-text">{foodInfo.description}</p>
+                        <a href="#" className="btn btn-primary">Price: {foodInfo.price}$</a>
+                    </div>
+                </div>
+            ))}
         </div>
-        <div className="box">
-          <div className="img-box">
-            <img src="images/f3.png" alt="" />
-          </div>
-          <div className="detail-box">
-            <h6>
-              Standard
-            </h6>
-            <h3>
-              <span>$</span>300
-            </h3>
-            <a href="">
-              Buy Now
-            </a>
-          </div>
-        </div>
-      </div>
-    )
+    );
 }
+

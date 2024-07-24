@@ -1,0 +1,12 @@
+.box{
+    width: 310px;
+    margin: 20px;
+    border: 1px solid #e7d619;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.img-box{
+    border-bottom: 1px solid #e7d619;
+}

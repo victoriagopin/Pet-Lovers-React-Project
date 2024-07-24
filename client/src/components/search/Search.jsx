@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Search.module.css';
+import SearchList from './search-list/Search-list';
 
 const baseUrl = 'http://localhost:3030/jsonstore'
 
@@ -8,7 +9,9 @@ export default function Search() {
         weight: '',
         animal: 'dog',
         breed: ''
-    })
+    });
+    
+    const [animalFood, setAnimalFood] = useState(null);
 
     const changeValues = (e) => {
         setValues(oldValues => ({
@@ -27,19 +30,21 @@ export default function Search() {
         const accWeight = result.find(animal => {
             return values.weight <= animal.weight;
         });
-        console.log(accWeight);
         
         const accBreed = result.find(animal => {
             return animal.breed.includes(values.breed);
         })
 
+        if(accWeight == accBreed){
+            setAnimalFood(accBreed);
+        }
        } catch (err){
         console.log(err.message);
        }
     }
 
     return (
-        <section className={`about_section ${styles.layout}`}>
+        <section className={`about_section ${styles.layout} ${styles.catalog}`}>
             <div className="container">
                 <div className="detail-box">
                     <div className="heading_container">
@@ -73,7 +78,15 @@ export default function Search() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> 
+            {animalFood 
+                ?
+                    <SearchList 
+                    key={animalFood._id}
+                    foods={animalFood.food}
+                    />
+                :   null
+            }
         </section>
     );
 }
