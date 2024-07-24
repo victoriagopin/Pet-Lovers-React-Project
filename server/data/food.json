@@ -20,16 +20,19 @@
             {
             "foodName" : "Concept for life",
             "imageUrl" : "https://media.zooplus.com/bilder/2/400/1_5kg_minijunior_1000x1000_2.jpg",
+            "description" : "Food for puppies and young dogs of small breeds , for healthy growth and to strengthen defenses, with high digestive safety and suitable for pregnant or lactating dogs.",
             "price": 29.99 
         },
         {
             "foodName" : "Proplan",
             "imageUrl" : "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
+            "description" :"Wheat-free food for puppies (< 1 year) of small and very small breeds (<10kg), rich in omega 3 for normal skin, selected protein sources for good digestibility. ",
             "price": 20.99 
         },
         {
             "foodName" : "Royal Canin",
             "imageUrl" : "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
+            "description" : "Royal Canin Mini Puppy is a complete and balanced food especially indicated for the daily feeding of small breed puppies (less than 10 kg of adult weight and up to 10 months).",
             "price": 25.49 
         }
     ]
