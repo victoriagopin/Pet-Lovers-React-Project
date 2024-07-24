@@ -1,10 +1,8 @@
 {
     "dog": [
       {
-        "weight": {
-          "min": 1,
-          "max": 5
-        },
+        "_id" : "a1B2c3D4e5",
+        "weight": 5,
         "breed": [
           "Chihuahua",
           "Yorkshire Terrier",
@@ -35,11 +33,10 @@
             "price": 25.49 
         }
     ]
-      },     {
-        "weight": {
-          "min": 6,
-          "max": 9
-        },
+      },    
+       {
+        "_id" : "f6G7h8I9j0",
+        "weight": 9,
         "breed": [
           "Cavalier King Charles Spaniel",
           "Beagle",
@@ -70,10 +67,8 @@
   ]
       },
       {
-        "weight": {
-          "min": 9,
-          "max": 25
-        },
+        "_id": "k1L2m3N4o5",
+        "weight": 25,
         "breed": [
           "Beagle",
           "Cocker Spaniel",
@@ -100,10 +95,8 @@
   ]
       },
       {
-        "weight": {
-          "min": 26,
-          "max": 60
-        },
+        "_id": "p6Q7r8S9t0",
+        "weight": 60,
         "breed": [
           "Boxer",
           "Golden Retriever",
@@ -130,10 +123,8 @@
   ]
       },
       {
-        "weight": {
-          "min": 61,
-          "max": 100
-        },
+        "_id": "u1V2w3X4y5",
+        "weight": 100,
         "breed": [
           "Great Dane",
           "Saint Bernard",

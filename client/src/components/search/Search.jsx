@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styles from './Search.module.css';
 
+const baseUrl = 'http://localhost:3030/jsonstore'
+
 export default function Search() {
     const [values, setValues] = useState({
         weight: '',
-        age: '',
         animal: 'dog',
-        ageUnit: 'years',
         breed: ''
     })
 
@@ -17,10 +17,25 @@ export default function Search() {
         }))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log(values);
+       try {
+        const req = await fetch(`${baseUrl}/food/${values.animal}`);
+        const result = await req.json();
+
+        const accWeight = result.find(animal => {
+            return values.weight <= animal.weight;
+        });
+        console.log(accWeight);
+        
+        const accBreed = result.find(animal => {
+            return animal.breed.includes(values.breed);
+        })
+
+       } catch (err){
+        console.log(err.message);
+       }
     }
 
     return (
