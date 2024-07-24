@@ -10,3 +10,13 @@
 .img-box{
     border-bottom: 1px solid #e7d619;
 }
+.btn{
+    color: #e7d619;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.heading{
+    color: #e7d619;
+}

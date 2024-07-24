@@ -8,6 +8,7 @@ export default function Search() {
     const [values, setValues] = useState({
         weight: '',
         animal: 'dog',
+        lifeStage: 'adult',
         breed: ''
     });
     
@@ -60,17 +61,24 @@ export default function Search() {
                         </div>
 
                         <div className={styles['form-outline']}>
-                            <label className={styles['form-label']} htmlFor="age-unit">Animal</label>
+                            <label className={styles['form-label']} htmlFor="breed">Breed</label>
+                            <input type="text" id="breed" className={styles['form-control']} name='breed' value={values.breed} onChange={changeValues}/>
+                        </div>
+
+                        <div className={styles['form-outline']}>
+                            <label className={styles['form-label']} htmlFor="age-unit">Pet</label>
                             <select id="animal" className={styles['form-control']} name='animal' value={values.animal} onChange={changeValues}>
-                                <option value="years">Dog</option>
-                                <option value="months">Cat</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
                             </select>
                         </div>
 
-
                         <div className={styles['form-outline']}>
-                            <label className={styles['form-label']} htmlFor="breed">Breed</label>
-                            <input type="text" id="breed" className={styles['form-control']} name='breed' value={values.breed} onChange={changeValues}/>
+                            <label className={styles['form-label']} htmlFor="age-unit">Pet Life Stage</label>
+                            <select id="life-stage" className={styles['form-control']} name='lifeStage' value={values.lifeStage} onChange={changeValues}>
+                                <option value="baby">Baby (up to 12 months)</option>
+                                <option value="adult">Adult</option>
+                            </select>
                         </div>
 
                         <button type="submit" className={styles.btn} onClick={handleSubmit}>
@@ -84,6 +92,7 @@ export default function Search() {
                     <SearchList 
                     key={animalFood._id}
                     foods={animalFood.food}
+                    petLifeStage={values.lifeStage}
                     />
                 :   null
             }
