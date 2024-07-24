@@ -25,19 +25,27 @@ export default function Search() {
         e.preventDefault();
 
        try {
-        const req = await fetch(`${baseUrl}/food/${values.animal}`);
-        const result = await req.json();
+            if(values.lifeStage == 'adult'){
+            const req = await fetch(`${baseUrl}/food/${values.animal}`);
+            const result = await req.json();
 
-        const accWeight = result.find(animal => {
+            const accWeight = result.find(animal => {
             return values.weight <= animal.weight;
-        });
+            });
         
-        const accBreed = result.find(animal => {
+            const accBreed = result.find(animal => {
             return animal.breed.includes(values.breed);
         })
 
         if(accWeight == accBreed){
             setAnimalFood(accBreed);
+        }
+        } else{
+            const req = await fetch(`${baseUrl}/food/dogBaby`);
+            const result = await req.json();
+
+            const babyFoods = result[0];
+            setAnimalFood(babyFoods);
         }
        } catch (err){
         console.log(err.message);
@@ -92,7 +100,6 @@ export default function Search() {
                     <SearchList 
                     key={animalFood._id}
                     foods={animalFood.food}
-                    petLifeStage={values.lifeStage}
                     />
                 :   null
             }

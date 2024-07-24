@@ -14,7 +14,12 @@
           "Affenpinscher",
           "Maltese",
           "Boston Terrier",
-          "Shih Tzu"
+          "Shih Tzu",
+          "Pekingese",
+          "Havanese",
+          "Italian Greyhound",
+          "Scottish Terrier",
+          "Pug"
         ],
         "food": [
             {
@@ -24,15 +29,15 @@
             "price": 29.99 
         },
         {
-            "foodName" : "Proplan",
-            "imageUrl" : "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
-            "description" :"Wheat-free food for puppies (< 1 year) of small and very small breeds (<10kg), rich in omega 3 for normal skin, selected protein sources for good digestibility. ",
-            "price": 20.99 
+            "foodName" : "Hill's Adult" ,
+            "imageUrl" : "https://media.zooplus.com/bilder/3/400/106000_pla_hill_s_scienceplan_adult_small_mini_chicken_1_5kg_hs_01_3.jpg",
+            "description" :"Balanced chicken-rich food for adult small breed dogs aged 1 to 6 years who prefer kibble in a suitable size. With a unique combination of antioxidants and omega 6.",
+            "price": 27.19 
         },
         {
-            "foodName" : "Royal Canin",
-            "imageUrl" : "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
-            "description" : "Royal Canin Mini Puppy is a complete and balanced food especially indicated for the daily feeding of small breed puppies (less than 10 kg of adult weight and up to 10 months).",
+            "foodName" : "Purina",
+            "imageUrl" : "https://media.zooplus.com/bilder/7/400/99296_pla_purina_proplan_small_mini_adult_optibalance_7kg_hs_01_7.jpg",
+            "description" : "Complete dry food for adult dogs of small breeds, with vitamin D for normal teeth and bones, omega-3 fatty acids for skin and hair. t is rich in  protein and is made from high-quality chicken pieces. It contains essential omega-3 fatty acids from fish oil.",
             "price": 25.49 
         }
     ]
@@ -55,17 +60,20 @@
           {
           "foodName" : "Harringtons",
           "imageUrl" : "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
-          "price": 31.99 
+          "description" : "Just 6 Carefully Selected Ingredients for taste, nutrition & digestion. Complete, grain-free dry dog food with over 50% chicken & salmon and added tasty fresh baked bites.",
+          "price": 58.90 
       },
       {
-          "foodName" : "Hill's",
-          "imageUrl" : "https://media.zooplus.com/bilder/5/400/105737_pla_hill_s_scienceplan_adult_medium_chicken_14kg_hs_01_5.jpg",
-          "price": 52.99 
+          "foodName" : "Dog's love",
+          "imageUrl" : "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202309/28/00149510168377____2__1200x1200.jpg",
+          "description": "Wet dog food with venison for adult dogs. Perfect for spoiling your beloved pet.",
+          "price": 4.99 
       },
       {
           "foodName" : "Royal Canin",
-          "imageUrl" : "https://i.ebayimg.com/images/g/8yAAAOSw1HllN2QV/s-l400.jpg",
-          "price": 28.99 
+          "imageUrl" : "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw2e41c5ff/images/pienso_perros_royal_canin_adult_medium_ROY152036_M_M24%20(1).jpeg?sw=780&sh=780&q=85",
+          "description": "Food for adult dogs with moderate digestive problems, easy to digest and with ingredients that help strengthen defenses.",
+          "price": 26.49 
       }
   ]
       },
@@ -74,10 +82,17 @@
         "weight": 25,
         "breed": [
           "Beagle",
+          "Dachshund",
           "Cocker Spaniel",
           "Bulldog",
           "Whippet",
-          "Basset Hound"
+          "Basset Hound",
+          "Havanes",
+          "American Eskimo Dog",
+          "Pug",
+          "Shetland Sheepdog",
+          "Keeshond",
+          "Boxer"
         ],
         "food": [
           {
@@ -102,26 +117,38 @@
         "weight": 60,
         "breed": [
           "Boxer",
+          "Rottweiler",
           "Golden Retriever",
           "Labrador Retriever",
           "German Shepherd",
-          "Border Collie"
+          "Border Collie",
+          "Boxer",
+          "Doberman",
+          "Great Dane",
+          "Bullmastiff",
+          "Saint Bernard",
+          "American Bulldog",
+          "Kangal",
+          "Cane Corso"
         ],
         "food": [
           {
           "foodName" : "Trusty",
           "imageUrl" : "https://www.aviproducts.co.za/wp-content/uploads/2024/05/trusty-adult-dog-food-product-img.png",
+          "description" : "Trusty adult dog food is formulated as a healthy maintenance diet for your furry friends. Containing all the vitamins, minerals, and amino acids they need to sustain balanced health. Carefully selected, quality ingredients will ensure that your loyal friend will enjoy every mouthful.",
           "price": 60.99 
       },
       {
           "foodName" : "Complete Maintenance",
           "imageUrl" : "https://pawscafe.co.za/wp-content/uploads/2019/01/25kg-Maintenance-1.png",
+          "description": "Quality dog food that contains all the essential vitamins and minerals to ensure the overall health and condition of you dog. Containing the ideal amount of protean for a healthy dog and is designed to suit your pocket. Include crude fat for energy and fibre to promote a healthy gut and digestive system.",
           "price": 62.99 
       },
       {
           "foodName" : "Royal Canin",
           "imageUrl" : "https://www.direct-vet.ie/2166-large_default/royal-canin-large-adult-over-25kg-dog-food-kibbles.jpg",
-          "price": 29.99 
+          "description": "Complete dietetic food for adult dogs that are sterilized or have a tendency to gain weight, of large breeds (over 25 kg) - From 15 months of age",
+          "price": 26.14 
       }
   ]
       },
@@ -133,20 +160,49 @@
           "Saint Bernard",
           "Mastiff",
           "Newfoundland",
-          "Bernese Mountain Dog"
+          "Bernese Mountain Dog",
+          "Bully Kutta",
+          "Landseer"
         ],
         "food": [
           {
           "foodName" : "Pedigree",
           "imageUrl" : "https://whoof-whoof.com/wp-content/uploads/2021/07/61LVLCWLKCL._SL1000_.jpg",
+          "description": "Complete & balanced dog food, a perfect food for adult dogs. Contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre. Provides strong muscles, bones & teeth and healthier & shinier coat",
           "price": 31.99 
       },
       {
           "foodName" : "Concept for life",
           "imageUrl" : "https://media.zooplus.com/bilder/7/800/75918_pla_concept_for_life_x_large_adult_12kg_7.jpg",
+          "description": "Concept for Life X-Large Adult is specifically tailored to the needs of very large breed dogs and provides them with a balanced nutrient content so that they get everything they need from this food.",
           "price": 10.99 
       }
   ]
+      }
+    ],
+    "dogBaby": [
+      {
+        "_id" : "a1B2c3D4e5nmj6",
+        "food": [
+            {
+            "foodName" : "Hill's",
+            "imageUrl" : "https://media.zooplus.com/bilder/6/400/106025_pla_hill_s_scienceplan_puppy_small_mini_chicken_1_5kg_hs_01_6.jpg",
+            "description" : "Small breed puppy food for strong bones and teeth. Tasty recipe with chicken, quality proteins, selected minerals and antioxidants. Extra-small pellets .",
+            "price": 34.64 
+        },
+        {
+            "foodName" : "Proplan",
+            "imageUrl" : "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
+            "description" :"Wheat-free food for puppies (< 1 year) of small and very small breeds (<10kg), rich in omega 3 for normal skin, selected protein sources for good digestibility. ",
+            "price": 20.99 
+        },
+        {
+            "foodName" : "Royal Canin",
+            "imageUrl" : "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
+            "description" : "Royal Canin Mini Puppy is a complete and balanced food especially indicated for the daily feeding of small breed puppies (less than 10 kg of adult weight and up to 10 months).",
+            "price": 25.49 
+        }
+    ]
       }
     ],
     "cat": [
