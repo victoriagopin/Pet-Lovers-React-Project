@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 150px;
+    justify-content: center;
   }
 
   .form-outline {
@@ -47,6 +47,7 @@
     margin-top: 24px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    width: 130px;
   }
 
   .btn:hover {
