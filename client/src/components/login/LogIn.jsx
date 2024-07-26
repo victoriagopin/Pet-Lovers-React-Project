@@ -25,7 +25,7 @@ export default function LogIn(){
     e.preventDefault();
 
     try{
-    const response = await fetch(`${baseUrl}/login`, {
+    const req = await fetch(`${baseUrl}/login`, {
       method : 'POST',
       headers : {
         'Content-Type' : 'application/json'
@@ -35,9 +35,14 @@ export default function LogIn(){
         password: formValues.password
       })
     });
-    const curUser = await response.json();
 
-    console.log(curUser);
+    if(req.status != 200){
+      setErrors(true);
+      setTimeout(() => setErrors(false), 3000);
+      return;
+    }
+
+    const curUser = await req.json();
 
     if(!curUser){
       setErrors(true);
