@@ -207,80 +207,119 @@
     ],
     "cat": [
         {
-          "weight": {
-            "min": 4,
-            "max": 6
-          },
+          "_id": "6Lp8z4X1uM",
+          "weight": 6,
           "breed": [
             "Singapura",
             "Cornish Rex",
             "Devon Rex",
             "Oriental Shorthair",
-            "American Curl"
+            "American Curl",
+            "Siamese",
+            "Abyssinian",
+            "Russian Blue",
+            "Singapura",
+            "Burmese",
+            "Toyger"
           ],
           "food": [
             {
             "foodName" : "True Origins",
             "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0cc37dd6/images/pienso_para_gatos_esterilizados_salmon_true_origins_TRU88966_M.jpg?sw=780&sh=780&q=85",
-            "price": 21.99 
+            "description" : "Grain-free food for sterilized cats with salmon. Also suitable for adult cats, cats with low activity, older cats or overweight cats.",
+            "price": 22.99 
             },
             {
             "foodName" : "Nath",
             "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwebff5cd6/images/pienso_gatos_nath_adult_sterilised_4kg_NTH88595.jpg?sw=780&sh=780&q=85",
-            "price": 29.99 
+            "description" : "Food for sterilized adult cats. This food with fresh chicken meat helps to care for the urinary tract and control the animal's weight.",
+            "price": 44.99 
             }
           ]
         },
         {
-          "weight": {
-            "min": 7,
-            "max": 10
-          },
+          "_id":"7nY3r5K2vZ",
+          "weight": 10,
           "breed": [
             "American Shorthair",
             "Bengal",
             "Burmese",
             "Siamese",
-            "Scottish Fold"
+            "Scottish Fold",
+            "Maine Coon",
+            "Ragdoll",
+            "British Shorthair",
+            "Chartreux",
+            "Siberian"
           ],
           "food": [
             {
             "foodName" : "Purina",
             "imageUrl" : "https://media.zooplus.com/bilder/1/400/112120_pla_purina_one_sensitive_turkeyrice_9_75kg_1.jpg",
+            "description": "Purina One Sterilized is formulated by veterinarians and nutritionists. This product is adapted for neutered cats and spayed female cats. It is formulated with an increased protein/fat ratio to help control your cat's weight. With Omega 6 fatty acids, which act on the outside, helping your pet to have healthy skin and coat. ",
             "price": 43.99 
             },
             {
             "foodName" : "Smilla",
-            "imageUrl" : "https://media.zooplus.com/bilder/7/400/smilla_vet_weightcontrol_1kg_1000x1000_7.jpg",
-            "price": 19.99 
+            "imageUrl" : "https://media.zooplus.com/bilder/3/800/110021_pla_smilla_sensitiveadult_poultry_4kg_3.jpg",
+            "description" : "Smilla Sensitive - Grain-free Poultry is a premium complete food for adult cats with nutritional sensitivities. The tasty, grain-free recipe is packed with easy to digest poultry and also contains all the vitamins and nutrients your cat needs. It provides your cat with a balanced, appetising meal and helps to promote general well-being.",
+            "price": 4.99 
             }
           ]
         },
         {
-          "weight": {
-            "min": 11,
-            "max": 20
-          },
+          "_id": "2Hk6u8F4bP",
+          "weight": 20,
           "breed": [
             "Maine Coon",
             "Ragdoll",
             "Norwegian Forest Cat",
             "Siberian",
-            "British Shorthair"
+            "British Shorthair",
+            "Savannah Cat",
+            "Turkish Angora",
+            "Ragamuffin"
           ],
           "food": [
             {
             "foodName" : "Concept for life",
-            "imageUrl" : "https://media.zooplus.com/bilder/8/400/287797_pla_concept_for_life_veterinary_diet_cat_gastrointestinal_10kg_8.jpg",
-            "price": 30.99 
+            "imageUrl" : "https://media.zooplus.com/bilder/6/400/196907_pla_cfl_katze_indoorcat_3kg_1000x1000_2021_6.jpg",
+            "description" : "Concept for Life Indoor Cats is perfectly tailored to your cat's needs and offers a nutritional balance for a complete supply. Concept for Life contributes to the health and well-being of your domestic cat! The moderate calorie content of Concept for Life Indoor Cats and the added L-carnitine help to maintain your cat's ideal weight. The anti-hairball function promotes the natural transport of ingested hair and thus minimises the formation of hairballs.",
+            "price": 20.99 
             },
             {
             "foodName" : "Salvaje",
             "imageUrl" : "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw5b3ebb6d/images/comida_gatos_salvaje_adulto_esterilizado_aves_12kg_SAB1244.jpg?sw=780&sh=780&q=85",
+            "description" : "Wild cat food. This product from Salvaje is a food for adult cats that are undergoing sterilization , as it helps them maintain their immune system in good condition and improves the health of their skin and hair . In addition, it prevents them from gaining weight after this operation.",
             "price": 24.99 
             }
           ]
         }
-      ]
+      ],
+    "catBaby": [
+      {
+        "_id" : "9dk7F3y5Q2",
+        "food": [
+            {
+            "foodName" : "Nath",
+            "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw91a684fd/images/comida_humeda_gatitos_nath_kitten_pollo_gelatina_NTH40641.jpg?sw=780&sh=780&q=85",
+            "description" : "Wet food with a succulent gelatinous texture for kittens. Ideal for offering a complete and balanced diet that provides optimal growth thanks to its taurine and EPA and DHA fatty acid content.",
+            "price": 23.16 
+        },
+        {
+            "foodName" : "Baby Blue",
+            "imageUrl" : "https://www.catster.com/wp-content/uploads/2023/11/Blue-Buffalo-Healthy-Growth-Kitten-Chicken-Rice-Dry-Cat-Food-2024.jpg",
+            "description" :"Support your kitten’s higher energy needs with our grain-free, high-protein Baby BLUE recipe. Starting with more protein-rich chicken, this natural recipe features wholesome fruits and veggies and is free of grains.",
+            "price": 20.99 
+        },
+        {
+            "foodName" : "Royal Canin",
+            "imageUrl" : "https://thepetshack.ae/assets/uploads/2018/12/kitten_dry_2.jpg",
+            "description" : "Royal Canin Kitten Dry cat food is formulated for the second stage of kittenhood (between 4 months and 1 year). Supports a kitten’s developing immune system development with an exclusive blend of antioxidants and vitamins EXCLUSIVE KIBBLE.",
+            "price": 14.49 
+        }
+    ]
+      }
+    ]
   }
   
