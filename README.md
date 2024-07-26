@@ -31,6 +31,7 @@ PetLovers is a Single Page Application (SPA) built using React.js. It provides a
   - Browse all uploaded pets
   - Access the About Page
   - Register and Login
+  - Search suitable foods for their pets
 
 - **Registered Users:**
   - View pet details
