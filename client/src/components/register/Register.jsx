@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore';
+const baseUrl = 'http://localhost:3030/users';
 
 export default function Register(){
   const [isAvaliable, setIsAvaliable] = useState(true);
@@ -30,46 +30,74 @@ export default function Register(){
 
     let hasErrors = false;
 
+    if(!formValues.email){
+      setIsAvaliable(false);
+        hasErrors = true;
+        setTimeout(() => setIsAvaliable(true), 3000);
+        return;
+    }
     if (formValues.password.length < 6) {
       setIsPasswordLongEnough(false);
       hasErrors = true;
       setTimeout(() => setIsPasswordLongEnough(true), 3000);
+      return;
     }
 
     if (formValues.password !== formValues.repass) {
       setPasswordsMatch(false);
       hasErrors = true;
       setTimeout(() => setPasswordsMatch(true), 3000);
+      return;
     }
 
-    const req = await fetch(`${baseUrl}/users`);
-    const res = await req.json();
-    const users = Object.values(res);
+    try{
+    const req = await fetch(`${baseUrl}/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: formValues.email,
+        password: formValues.password
+      })
+    });
 
-    const existingEmail = users.find(user => user.email === formValues.email);
-
-    if (existingEmail) {
+    if(req.status != 200){
       setIsAvaliable(false);
       hasErrors = true;
       setTimeout(() => setIsAvaliable(true), 3000);
+      return;
     }
+    
+    const data = await req.json();
+    const {password, ...user} = data;
+    setUser(user);
+    navigate('/catalog');
+  } catch (err) {
+    console.log(err.message);
+  }
 
-    if (!hasErrors) {
-      const response = await fetch(`${baseUrl}/users`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: formValues.email,
-          password: formValues.password
-        })
-      });
+    // if (existingEmail) {
+    //   setIsAvaliable(false);
+    //   hasErrors = true;
+    //   setTimeout(() => setIsAvaliable(true), 3000);
+    // }
 
-      const data = await response.json();
-      setUser(data);
-      navigate('/catalog');
-    }
+    // if (!hasErrors) {
+    //   const response = await fetch(`${baseUrl}/users`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       email: formValues.email,
+    //       password: formValues.password
+    //     })
+    //   });
+
+      // const data = await response.json();
+    
+ 
   }
 
     return (
@@ -90,7 +118,7 @@ export default function Register(){
                   
                   <div>
                     <input type="text" placeholder="Email" name="email" value={formValues.email} onChange={changeValues}/>
-                    {!isAvaliable && <p className="error">Email is already taken</p>}
+                    {!isAvaliable && <p className="error">Email is already taken or the filed is empty!</p>}
                   </div>
                   <div>
                     <input type="password" placeholder="Password" name="password" value={formValues.password} onChange={changeValues}/>
