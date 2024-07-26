@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../UserContext";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-const baseUrl = 'http://localhost:3030/jsonstore';
+const baseUrl = 'http://localhost:3030/users';
 
 export default function LogIn(){
   const {setUser} = useContext(UserContext);
@@ -24,19 +24,33 @@ export default function LogIn(){
   const onLoginClick = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${baseUrl}/users`);
-    const data = await response.json();
-    const users = Object.values(data);
+    try{
+    const response = await fetch(`${baseUrl}/login`, {
+      method : 'POST',
+      headers : {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        email: formValues.email,
+        password: formValues.password
+      })
+    });
+    const curUser = await response.json();
 
-    const authenticatedUser = users.find(user=> user.email === formValues.email && user.password === formValues.password)
+    console.log(curUser);
 
-    if(!authenticatedUser){
+    if(!curUser){
       setErrors(true);
       setTimeout(() => setErrors(false), 3000);
     } else {
-      setUser(authenticatedUser);
+      const {password, ...user} = curUser;
+      setUser(user);
       navigate('/catalog');
     }
+  } catch(err){
+    console.log(err.message);
+  }
+
     
   }
 
