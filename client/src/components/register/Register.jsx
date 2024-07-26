@@ -68,35 +68,14 @@ export default function Register(){
       setTimeout(() => setIsAvaliable(true), 3000);
       return;
     }
-    
+
     const data = await req.json();
     const {password, ...user} = data;
     setUser(user);
     navigate('/catalog');
   } catch (err) {
     console.log(err.message);
-  }
-
-    // if (existingEmail) {
-    //   setIsAvaliable(false);
-    //   hasErrors = true;
-    //   setTimeout(() => setIsAvaliable(true), 3000);
-    // }
-
-    // if (!hasErrors) {
-    //   const response = await fetch(`${baseUrl}/users`, {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       email: formValues.email,
-    //       password: formValues.password
-    //     })
-    //   });
-
-      // const data = await response.json();
-    
+  } 
  
   }
 
