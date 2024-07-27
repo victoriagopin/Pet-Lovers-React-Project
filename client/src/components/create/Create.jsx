@@ -1,12 +1,14 @@
-import { useContext, useState } from "react"
+import { useCallback, useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function CreatePet({
 }){
     const { user } = useContext(UserContext);
+
+    console.log(user.accessToken);
 
     const [formVaules, setFormValues] = useState({
       name:'',
@@ -16,7 +18,6 @@ export default function CreatePet({
       eyeColor: '',
       imageUrl : '',
       funStory: '',
-      _ownerId: user._id,
       likes: 0
     });
 
@@ -38,6 +39,7 @@ export default function CreatePet({
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'X-Authorization': user.accessToken
           } ,
           body: JSON.stringify(petData)
       });

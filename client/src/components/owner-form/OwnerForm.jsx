@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function OwnerForm(){
+  const {user} = useCallback(UserContext);
   const {ownerId} = useParams();
 
   const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
-        identity : ownerId,
         firstName: '',
         lastName: '',
         age: '',
@@ -31,13 +32,14 @@ export default function OwnerForm(){
         const response = await fetch(`${baseUrl}/profiles`, {
           method: 'POST',
           headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json',
+            'X-Authorization': user.accessToken
           },
           body : JSON.stringify(formValues)
         }) 
 
         const data = await response.json();
-        navigate(`/profile/${data.identity}`);
+        navigate(`/profile/${data._id}`);
       }
 
     return (

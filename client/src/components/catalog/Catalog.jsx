@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CatalogItem from "./catalog-item/CatalogItem";
 import styles from './Catalog.module.css';
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function Catalog({}){
     const [pets, setPets] = useState([]);

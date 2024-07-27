@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from './Owner-Profile.module.css';
 import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function OwnerProfile(){
   const {user} = useContext(UserContext);
@@ -14,13 +14,9 @@ export default function OwnerProfile(){
     useEffect(() => {
       (async () => {
         try{
-          const response = await fetch(`${baseUrl}/profiles`);
+          const response = await fetch(`${baseUrl}/profiles/${ownerId}`);
           const data = await response.json();
-          const profiles = Object.values(data);
-  
-          const user = profiles.find(profile => profile.identity == ownerId);
-  
-          setProfile(user);
+          setProfile(data);
         } catch(err) {
           console.log(err.message);
         }
@@ -53,7 +49,7 @@ export default function OwnerProfile(){
             <p><span className={styles['owner-make-yellow']}>Age:</span> {profile.age}</p>
             <p><span className={styles['owner-make-yellow']}>Occupation:</span> {profile.occupation}</p>
             <p><span className={styles['owner-make-yellow']}>About Me:</span> {profile.aboutYou}</p>
-            {user && user._id == profile.identity 
+            {user && user._id == profile._ownerId
             ?
              <>
              <Link to={`/edit-profile/${profile._id}`} className={styles.edit}>Edit</Link>

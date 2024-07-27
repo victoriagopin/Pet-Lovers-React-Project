@@ -4,16 +4,18 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../UserContext";
 import styles from './Details.module.css';
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function Details() {
     const { user } = useContext(UserContext);
     const { petId } = useParams();
     const [animal, setAnimal] = useState({});
-    const [ownerProfile, setOwnerProfile] = useState(null);
-    const [isOwner, setIsOwner] = useState(false);
+    const [ownerProfile, setOwnerProfile] = useState({});
+    const [hasProfile, sethasProifle] = useState(false);
     const [likes, setLikes] = useState(0);
     const [hasLiked, setHasLiked] = useState(false);
+
+    console.log(ownerProfile);
 
     const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ export default function Details() {
                 const response = await fetch(`${baseUrl}/profiles`);
                 const data = await response.json();
                 const profiles = Object.values(data);
-                const profile = profiles.find(profile => profile.identity === animal._ownerId);
+                const profile = profiles.find(profile => profile._ownerId === animal._ownerId);
                 setOwnerProfile(profile);
             };
             fetchOwnerProfile();
@@ -47,12 +49,11 @@ export default function Details() {
     useEffect(() => {
         const getOwner = async () => {
             try{
-                const response = await fetch(`${baseUrl}/profiles`);
+                const response = await fetch(`${baseUrl}/profiles/${ownerProfile._id}`);
                 const data = await response.json();
-                const profiles = Object.values(data);
-                const owner = profiles.find(profile => profile.identity === animal._ownerId);
-                if (owner !== undefined) {
-                    setIsOwner(true);
+              
+                if (data) {
+                    sethasProifle(true);
                 }
             } catch (err){
                 console.log(err.message);
@@ -115,9 +116,9 @@ export default function Details() {
                     <>
                         <p className={styles.likes}>Likes: {likes}</p>
                         {ownerProfile ? (
-                            <Link className={styles['owner-btn']} to={`/profile/${animal._ownerId}`}>See Your Profile</Link>
+                            <Link className={styles['owner-btn']} to={`/profile/${ownerProfile._id}`}>See Your Profile</Link>
                         ) : (
-                            <Link className={styles['owner-btn']} to={`/setup-owner-profile/${animal._ownerId}`}>Set Up Owner's Profile</Link>
+                            <Link className={styles['owner-btn']} to={`/setup-owner-profile/${ownerProfile._id}`}>Set Up Owner's Profile</Link>
                         )}
                         <Link type="submit" to={`/edit/${animal._id}`} className={`${styles['edit-delete']} ${styles['submit']}`}>Edit</Link>
                         <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`} onClick={onDeleteClick}>Delete</button>
@@ -131,8 +132,8 @@ export default function Details() {
                         >
                           Like
                         </button>
-                        {isOwner ? (
-                            <Link className={styles['owner-btn']} to={`/profile/${animal._ownerId}`}>See Owner's Profile</Link>
+                        {hasProfile ? (
+                            <Link className={styles['owner-btn']} to={`/profile/${ownerProfile._id}`}>See Owner's Profile</Link>
                         ) : (
                             <p className={styles['no-owner']}>No owner profile set up yet</p>
                         )}
