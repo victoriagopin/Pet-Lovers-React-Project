@@ -27,7 +27,11 @@ export default function OwnerProfile(){
     const onDeleteClick = async () => {
       try{
         await fetch(`${baseUrl}/profiles/${profile._id}`, {
-          method: 'DELETE'
+          method: 'DELETE',
+          headers: {
+            'Content-Type' : 'application/json',
+            'X-Authorization' : user.accessToken
+          }
       });
       } catch (err){
         console.log(err.message);

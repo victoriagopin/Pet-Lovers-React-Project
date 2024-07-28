@@ -1,11 +1,11 @@
-import { useCallback, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
 const baseUrl = 'http://localhost:3030/data'
 
 export default function OwnerForm(){
-  const {user} = useCallback(UserContext);
+  const {user} = useContext(UserContext);
 
   const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
@@ -25,7 +25,7 @@ export default function OwnerForm(){
     
       }
 
-      const onCreateProfile = async (e, userData) => {
+      const onCreateProfile = async (e) => {
         e.preventDefault();
 
         const response = await fetch(`${baseUrl}/profiles`, {
