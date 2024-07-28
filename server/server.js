@@ -1395,311 +1395,331 @@
                     "imageUrl" : "https://cbx-prod.b-cdn.net/COLOURBOX10274126.jpg?width=800&height=800&quality=70",
                     "aboutYou" : "Hi, I'm Peter, a boy who adores his Beagle companion. My Beagle isn't just a pet; he's my best friend. Whether we're playing fetch in the park, cuddling on lazy afternoons, or going on adventurous walks, every moment with my Beagle brings joy and companionship into my life. I'm dedicated to ensuring he's happy and healthy, and our bond grows stronger with each passing day."
                 }
-        }
-    	// recipes: {
-    	// 	"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		name: "Easy Lasagna",
-    	// 		img: "assets/lasagna.jpg",
-    	// 		ingredients: [
-    	// 			"1 tbsp Ingredient 1",
-    	// 			"2 cups Ingredient 2",
-    	// 			"500 g  Ingredient 3",
-    	// 			"25 g Ingredient 4"
-    	// 		],
-    	// 		steps: [
-    	// 			"Prepare ingredients",
-    	// 			"Mix ingredients",
-    	// 			"Cook until done"
-    	// 		],
-    	// 		_createdOn: 1613551279012
-    	// 	},
-    	// 	"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		name: "Grilled Duck Fillet",
-    	// 		img: "assets/roast.jpg",
-    	// 		ingredients: [
-    	// 			"500 g  Ingredient 1",
-    	// 			"3 tbsp Ingredient 2",
-    	// 			"2 cups Ingredient 3"
-    	// 		],
-    	// 		steps: [
-    	// 			"Prepare ingredients",
-    	// 			"Mix ingredients",
-    	// 			"Cook until done"
-    	// 		],
-    	// 		_createdOn: 1613551344360
-    	// 	},
-    	// 	"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		name: "Roast Trout",
-    	// 		img: "assets/fish.jpg",
-    	// 		ingredients: [
-    	// 			"4 cups Ingredient 1",
-    	// 			"1 tbsp Ingredient 2",
-    	// 			"1 tbsp Ingredient 3",
-    	// 			"750 g  Ingredient 4",
-    	// 			"25 g Ingredient 5"
-    	// 		],
-    	// 		steps: [
-    	// 			"Prepare ingredients",
-    	// 			"Mix ingredients",
-    	// 			"Cook until done"
-    	// 		],
-    	// 		_createdOn: 1613551388703
-    	// 	}
-    	// },
-    	// comments: {
-    	// 	"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		content: "Great recipe!",
-    	// 		recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    	// 		_createdOn: 1614260681375,
-    	// 		_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    	// 	}
-    	// },
-    	// records: {
-    	// 	i01: {
-    	// 		name: "John1",
-    	// 		val: 1,
-    	// 		_createdOn: 1613551388703
-    	// 	},
-    	// 	i02: {
-    	// 		name: "John2",
-    	// 		val: 1,
-    	// 		_createdOn: 1613551388713
-    	// 	},
-    	// 	i03: {
-    	// 		name: "John3",
-    	// 		val: 2,
-    	// 		_createdOn: 1613551388723
-    	// 	},
-    	// 	i04: {
-    	// 		name: "John4",
-    	// 		val: 2,
-    	// 		_createdOn: 1613551388733
-    	// 	},
-    	// 	i05: {
-    	// 		name: "John5",
-    	// 		val: 2,
-    	// 		_createdOn: 1613551388743
-    	// 	},
-    	// 	i06: {
-    	// 		name: "John6",
-    	// 		val: 3,
-    	// 		_createdOn: 1613551388753
-    	// 	},
-    	// 	i07: {
-    	// 		name: "John7",
-    	// 		val: 3,
-    	// 		_createdOn: 1613551388763
-    	// 	},
-    	// 	i08: {
-    	// 		name: "John8",
-    	// 		val: 2,
-    	// 		_createdOn: 1613551388773
-    	// 	},
-    	// 	i09: {
-    	// 		name: "John9",
-    	// 		val: 3,
-    	// 		_createdOn: 1613551388783
-    	// 	},
-    	// 	i10: {
-    	// 		name: "John10",
-    	// 		val: 1,
-    	// 		_createdOn: 1613551388793
-    	// 	}
-    	// },
-    	// catches: {
-    	// 	"07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		angler: "Paulo Admorim",
-    	// 		weight: 636,
-    	// 		species: "Atlantic Blue Marlin",
-    	// 		location: "Vitoria, Brazil",
-    	// 		bait: "trolled pink",
-    	// 		captureTime: 80,
-    	// 		_createdOn: 1614760714812,
-    	// 		_id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    	// 	},
-    	// 	"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		angler: "John Does",
-    	// 		weight: 554,
-    	// 		species: "Atlantic Blue Marlin",
-    	// 		location: "Buenos Aires, Argentina",
-    	// 		bait: "trolled pink",
-    	// 		captureTime: 120,
-    	// 		_createdOn: 1614760782277,
-    	// 		_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    	// 	}
-    	// },
-    	// furniture: {
-    	// },
-    	// orders: {
-    	// },
-    	// movies: {
-    	// 	"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		title: "Black Widow",
-    	// 		description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    	// 		img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    	// 		_createdOn: 1614935055353,
-    	// 		_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    	// 	},
-    	// 	"143e5265-333e-4150-80e4-16b61de31aa0": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		title: "Wonder Woman 1984",
-    	// 		description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    	// 		img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    	// 		_createdOn: 1614935181470,
-    	// 		_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    	// 	},
-    	// 	"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		title: "Top Gun 2",
-    	// 		description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    	// 		img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    	// 		_createdOn: 1614935268135,
-    	// 		_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    	// 	}
-    	// },
-    	// likes: {
-    	// },
-    	// ideas: {
-    	// 	"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		title: "Best Pilates Workout To Do At Home",
-    	// 		description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-    	// 		img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-    	// 		_createdOn: 1615033373504,
-    	// 		_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    	// 	},
-    	// 	"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		title: "4 Eady DIY Idea To Try!",
-    	// 		description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-    	// 		img: "./images/brightideacropped.jpg",
-    	// 		_createdOn: 1615033452480,
-    	// 		_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    	// 	},
-    	// 	"b8608c22-dd57-4b24-948e-b358f536b958": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		title: "Dinner Recipe",
-    	// 		description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-    	// 		img: "./images/dinner.jpg",
-    	// 		_createdOn: 1615033491967,
-    	// 		_id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    	// 	}
-    	// },
-    	// catalog: {
-    	// 	"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		make: "Table",
-    	// 		model: "Swedish",
-    	// 		year: 2015,
-    	// 		description: "Medium table",
-    	// 		price: 235,
-    	// 		img: "./images/table.png",
-    	// 		material: "Hardwood",
-    	// 		_createdOn: 1615545143015,
-    	// 		_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    	// 	},
-    	// 	"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		make: "Sofa",
-    	// 		model: "ES-549-M",
-    	// 		year: 2018,
-    	// 		description: "Three-person sofa, blue",
-    	// 		price: 1200,
-    	// 		img: "./images/sofa.jpg",
-    	// 		material: "Frame - steel, plastic; Upholstery - fabric",
-    	// 		_createdOn: 1615545572296,
-    	// 		_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    	// 	},
-    	// 	"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		make: "Chair",
-    	// 		model: "Bright Dining Collection",
-    	// 		year: 2017,
-    	// 		description: "Dining chair",
-    	// 		price: 180,
-    	// 		img: "./images/chair.jpg",
-    	// 		material: "Wood laminate; leather",
-    	// 		_createdOn: 1615546332126,
-    	// 		_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    	// 	}
-    	// },
-    	// teams: {
-    	// 	"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		name: "Storm Troopers",
-    	// 		logoUrl: "/assets/atat.png",
-    	// 		description: "These ARE the droids we're looking for",
-    	// 		_createdOn: 1615737591748,
-    	// 		_id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    	// 	},
-    	// 	"dc888b1a-400f-47f3-9619-07607966feb8": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		name: "Team Rocket",
-    	// 		logoUrl: "/assets/rocket.png",
-    	// 		description: "Gotta catch 'em all!",
-    	// 		_createdOn: 1615737655083,
-    	// 		_id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    	// 	},
-    	// 	"733fa9a1-26b6-490d-b299-21f120b2f53a": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		name: "Minions",
-    	// 		logoUrl: "/assets/hydrant.png",
-    	// 		description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-    	// 		_createdOn: 1615737688036,
-    	// 		_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    	// 	}
-    	// },
-    	// members: {
-    	// 	"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    	// 		status: "member",
-    	// 		_createdOn: 1616236790262,
-    	// 		_updatedOn: 1616236792930
-    	// 	},
-    	// 	"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    	// 		status: "member",
-    	// 		_createdOn: 1616237188183,
-    	// 		_updatedOn: 1616237189016
-    	// 	},
-    	// 	"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    	// 		teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    	// 		status: "member",
-    	// 		_createdOn: 1616237193355,
-    	// 		_updatedOn: 1616237195145
-    	// 	},
-    	// 	"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    	// 		teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    	// 		status: "member",
-    	// 		_createdOn: 1616237231299,
-    	// 		_updatedOn: 1616237235713
-    	// 	},
-    	// 	"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    	// 		_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    	// 		teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    	// 		status: "member",
-    	// 		_createdOn: 1616237257265,
-    	// 		_updatedOn: 1616237278248
-    	// 	},
-    	// 	"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    	// 		_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    	// 		teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    	// 		status: "member",
-    	// 		_createdOn: 1616237272948,
-    	// 		_updatedOn: 1616237293676
-    	// 	}
-    	// }
+        },
+        food : {
+            "dog": [
+              {
+                "_id" : "a1B2c3D4e5",
+                "weight": 5,
+                "breed": [
+                  "Chihuahua",
+                  "Yorkshire Terrier",
+                  "Pomeranian",
+                  "Papillon",
+                  "Toy Poodle",
+                  "Pinscher", 
+                  "Dachshund",
+                  "Affenpinscher",
+                  "Maltese",
+                  "Boston Terrier",
+                  "Shih Tzu",
+                  "Pekingese",
+                  "Havanese",
+                  "Italian Greyhound",
+                  "Scottish Terrier",
+                  "Pug"
+                ],
+                "food": [
+                    {
+                    "foodName" : "Concept for life",
+                    "imageUrl" : "https://media.zooplus.com/bilder/2/400/1_5kg_minijunior_1000x1000_2.jpg",
+                    "description" : "Food for puppies and young dogs of small breeds , for healthy growth and to strengthen defenses, with high digestive safety and suitable for pregnant or lactating dogs.",
+                    "price": 29.99 
+                },
+                {
+                    "foodName" : "Hill's Adult" ,
+                    "imageUrl" : "https://media.zooplus.com/bilder/3/400/106000_pla_hill_s_scienceplan_adult_small_mini_chicken_1_5kg_hs_01_3.jpg",
+                    "description" :"Balanced chicken-rich food for adult small breed dogs aged 1 to 6 years who prefer kibble in a suitable size. With a unique combination of antioxidants and omega 6.",
+                    "price": 27.19 
+                },
+                {
+                    "foodName" : "Purina",
+                    "imageUrl" : "https://media.zooplus.com/bilder/7/400/99296_pla_purina_proplan_small_mini_adult_optibalance_7kg_hs_01_7.jpg",
+                    "description" : "Complete dry food for adult dogs of small breeds, with vitamin D for normal teeth and bones, omega-3 fatty acids for skin and hair. t is rich in  protein and is made from high-quality chicken pieces. It contains essential omega-3 fatty acids from fish oil.",
+                    "price": 25.49 
+                }
+            ]
+              },    
+               {
+                "_id" : "f6G7h8I9j0",
+                "weight": 9,
+                "breed": [
+                  "Cavalier King Charles Spaniel",
+                  "Beagle",
+                  "Cocker Spaniel",
+                  "Bulldog",
+                  "Whippet",
+                  "Basset Hound",
+                  "Shih Tzu",
+                  "Affenpinscher",
+                  "Boston Terrier"
+                ],
+                "food": [
+                  {
+                  "foodName" : "Harringtons",
+                  "imageUrl" : "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+                  "description" : "Just 6 Carefully Selected Ingredients for taste, nutrition & digestion. Complete, grain-free dry dog food with over 50% chicken & salmon and added tasty fresh baked bites.",
+                  "price": 58.90 
+              },
+              {
+                  "foodName" : "Dog's love",
+                  "imageUrl" : "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202309/28/00149510168377____2__1200x1200.jpg",
+                  "description": "Wet dog food with venison for adult dogs. Perfect for spoiling your beloved pet.",
+                  "price": 4.99 
+              },
+              {
+                  "foodName" : "Royal Canin",
+                  "imageUrl" : "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw2e41c5ff/images/pienso_perros_royal_canin_adult_medium_ROY152036_M_M24%20(1).jpeg?sw=780&sh=780&q=85",
+                  "description": "Food for adult dogs with moderate digestive problems, easy to digest and with ingredients that help strengthen defenses.",
+                  "price": 26.49 
+              }
+          ]
+              },
+              {
+                "_id": "k1L2m3N4o5",
+                "weight": 25,
+                "breed": [
+                  "Beagle",
+                  "Dachshund",
+                  "Cocker Spaniel",
+                  "Bulldog",
+                  "Whippet",
+                  "Basset Hound",
+                  "Havanes",
+                  "American Eskimo Dog",
+                  "Pug",
+                  "Shetland Sheepdog",
+                  "Keeshond",
+                  "Boxer"
+                ],
+                "food": [
+                  {
+                  "foodName" : "Harringtons",
+                  "imageUrl" : "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+                  "price": 31.99 
+              },
+              {
+                  "foodName" : "Hill's",
+                  "imageUrl" : "https://media.zooplus.com/bilder/5/400/105737_pla_hill_s_scienceplan_adult_medium_chicken_14kg_hs_01_5.jpg",
+                  "price": 52.99 
+              },
+              {
+                  "foodName" : "Royal Canin",
+                  "imageUrl" : "https://i.ebayimg.com/images/g/8yAAAOSw1HllN2QV/s-l400.jpg",
+                  "price": 28.99 
+              }
+          ]
+              },
+              {
+                "_id": "p6Q7r8S9t0",
+                "weight": 60,
+                "breed": [
+                  "Boxer",
+                  "Rottweiler",
+                  "Golden Retriever",
+                  "Labrador Retriever",
+                  "German Shepherd",
+                  "Border Collie",
+                  "Boxer",
+                  "Doberman",
+                  "Great Dane",
+                  "Bullmastiff",
+                  "Saint Bernard",
+                  "American Bulldog",
+                  "Kangal",
+                  "Cane Corso"
+                ],
+                "food": [
+                  {
+                  "foodName" : "Trusty",
+                  "imageUrl" : "https://www.aviproducts.co.za/wp-content/uploads/2024/05/trusty-adult-dog-food-product-img.png",
+                  "description" : "Trusty adult dog food is formulated as a healthy maintenance diet for your furry friends. Containing all the vitamins, minerals, and amino acids they need to sustain balanced health. Carefully selected, quality ingredients will ensure that your loyal friend will enjoy every mouthful.",
+                  "price": 60.99 
+              },
+              {
+                  "foodName" : "Complete Maintenance",
+                  "imageUrl" : "https://pawscafe.co.za/wp-content/uploads/2019/01/25kg-Maintenance-1.png",
+                  "description": "Quality dog food that contains all the essential vitamins and minerals to ensure the overall health and condition of you dog. Containing the ideal amount of protean for a healthy dog and is designed to suit your pocket. Include crude fat for energy and fibre to promote a healthy gut and digestive system.",
+                  "price": 62.99 
+              },
+              {
+                  "foodName" : "Royal Canin",
+                  "imageUrl" : "https://www.direct-vet.ie/2166-large_default/royal-canin-large-adult-over-25kg-dog-food-kibbles.jpg",
+                  "description": "Complete dietetic food for adult dogs that are sterilized or have a tendency to gain weight, of large breeds (over 25 kg) - From 15 months of age",
+                  "price": 26.14 
+              }
+          ]
+              },
+              {
+                "_id": "u1V2w3X4y5",
+                "weight": 100,
+                "breed": [
+                  "Great Dane",
+                  "Saint Bernard",
+                  "Mastiff",
+                  "Newfoundland",
+                  "Bernese Mountain Dog",
+                  "Bully Kutta",
+                  "Landseer"
+                ],
+                "food": [
+                  {
+                  "foodName" : "Pedigree",
+                  "imageUrl" : "https://whoof-whoof.com/wp-content/uploads/2021/07/61LVLCWLKCL._SL1000_.jpg",
+                  "description": "Complete & balanced dog food, a perfect food for adult dogs. Contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre. Provides strong muscles, bones & teeth and healthier & shinier coat",
+                  "price": 31.99 
+              },
+              {
+                  "foodName" : "Concept for life",
+                  "imageUrl" : "https://media.zooplus.com/bilder/7/800/75918_pla_concept_for_life_x_large_adult_12kg_7.jpg",
+                  "description": "Concept for Life X-Large Adult is specifically tailored to the needs of very large breed dogs and provides them with a balanced nutrient content so that they get everything they need from this food.",
+                  "price": 10.99 
+              }
+          ]
+              }
+            ],
+            "dogBaby": [
+              {
+                "_id" : "a1B2c3D4e5nmj6",
+                "food": [
+                    {
+                    "foodName" : "Hill's",
+                    "imageUrl" : "https://media.zooplus.com/bilder/6/400/106025_pla_hill_s_scienceplan_puppy_small_mini_chicken_1_5kg_hs_01_6.jpg",
+                    "description" : "Small breed puppy food for strong bones and teeth. Tasty recipe with chicken, quality proteins, selected minerals and antioxidants. Extra-small pellets .",
+                    "price": 34.64 
+                },
+                {
+                    "foodName" : "Proplan",
+                    "imageUrl" : "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
+                    "description" :"Wheat-free food for puppies (< 1 year) of small and very small breeds (<10kg), rich in omega 3 for normal skin, selected protein sources for good digestibility. ",
+                    "price": 20.99 
+                },
+                {
+                    "foodName" : "Royal Canin",
+                    "imageUrl" : "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
+                    "description" : "Royal Canin Mini Puppy is a complete and balanced food especially indicated for the daily feeding of small breed puppies (less than 10 kg of adult weight and up to 10 months).",
+                    "price": 25.49 
+                }
+            ]
+              }
+            ],
+            "cat": [
+                {
+                  "_id": "6Lp8z4X1uM",
+                  "weight": 6,
+                  "breed": [
+                    "Singapura",
+                    "Cornish Rex",
+                    "Devon Rex",
+                    "Oriental Shorthair",
+                    "American Curl",
+                    "Siamese",
+                    "Abyssinian",
+                    "Russian Blue",
+                    "Singapura",
+                    "Burmese",
+                    "Toyger"
+                  ],
+                  "food": [
+                    {
+                    "foodName" : "True Origins",
+                    "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0cc37dd6/images/pienso_para_gatos_esterilizados_salmon_true_origins_TRU88966_M.jpg?sw=780&sh=780&q=85",
+                    "description" : "Grain-free food for sterilized cats with salmon. Also suitable for adult cats, cats with low activity, older cats or overweight cats.",
+                    "price": 22.99 
+                    },
+                    {
+                    "foodName" : "Nath",
+                    "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwebff5cd6/images/pienso_gatos_nath_adult_sterilised_4kg_NTH88595.jpg?sw=780&sh=780&q=85",
+                    "description" : "Food for sterilized adult cats. This food with fresh chicken meat helps to care for the urinary tract and control the animal's weight.",
+                    "price": 44.99 
+                    }
+                  ]
+                },
+                {
+                  "_id":"7nY3r5K2vZ",
+                  "weight": 10,
+                  "breed": [
+                    "American Shorthair",
+                    "Bengal",
+                    "Burmese",
+                    "Siamese",
+                    "Scottish Fold",
+                    "Maine Coon",
+                    "Ragdoll",
+                    "British Shorthair",
+                    "Chartreux",
+                    "Siberian"
+                  ],
+                  "food": [
+                    {
+                    "foodName" : "Purina",
+                    "imageUrl" : "https://media.zooplus.com/bilder/1/400/112120_pla_purina_one_sensitive_turkeyrice_9_75kg_1.jpg",
+                    "description": "Purina One Sterilized is formulated by veterinarians and nutritionists. This product is adapted for neutered cats and spayed female cats. It is formulated with an increased protein/fat ratio to help control your cat's weight. With Omega 6 fatty acids, which act on the outside, helping your pet to have healthy skin and coat. ",
+                    "price": 43.99 
+                    },
+                    {
+                    "foodName" : "Smilla",
+                    "imageUrl" : "https://media.zooplus.com/bilder/3/800/110021_pla_smilla_sensitiveadult_poultry_4kg_3.jpg",
+                    "description" : "Smilla Sensitive - Grain-free Poultry is a premium complete food for adult cats with nutritional sensitivities. The tasty, grain-free recipe is packed with easy to digest poultry and also contains all the vitamins and nutrients your cat needs. It provides your cat with a balanced, appetising meal and helps to promote general well-being.",
+                    "price": 4.99 
+                    }
+                  ]
+                },
+                {
+                  "_id": "2Hk6u8F4bP",
+                  "weight": 20,
+                  "breed": [
+                    "Maine Coon",
+                    "Ragdoll",
+                    "Norwegian Forest Cat",
+                    "Siberian",
+                    "British Shorthair",
+                    "Savannah Cat",
+                    "Turkish Angora",
+                    "Ragamuffin"
+                  ],
+                  "food": [
+                    {
+                    "foodName" : "Concept for life",
+                    "imageUrl" : "https://media.zooplus.com/bilder/6/400/196907_pla_cfl_katze_indoorcat_3kg_1000x1000_2021_6.jpg",
+                    "description" : "Concept for Life Indoor Cats is perfectly tailored to your cat's needs and offers a nutritional balance for a complete supply. Concept for Life contributes to the health and well-being of your domestic cat! The moderate calorie content of Concept for Life Indoor Cats and the added L-carnitine help to maintain your cat's ideal weight. The anti-hairball function promotes the natural transport of ingested hair and thus minimises the formation of hairballs.",
+                    "price": 20.99 
+                    },
+                    {
+                    "foodName" : "Salvaje",
+                    "imageUrl" : "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw5b3ebb6d/images/comida_gatos_salvaje_adulto_esterilizado_aves_12kg_SAB1244.jpg?sw=780&sh=780&q=85",
+                    "description" : "Wild cat food. This product from Salvaje is a food for adult cats that are undergoing sterilization , as it helps them maintain their immune system in good condition and improves the health of their skin and hair . In addition, it prevents them from gaining weight after this operation.",
+                    "price": 24.99 
+                    }
+                  ]
+                }
+              ],
+            "catBaby": [
+              {
+                "_id" : "9dk7F3y5Q2",
+                "food": [
+                    {
+                    "foodName" : "Nath",
+                    "imageUrl" : "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw91a684fd/images/comida_humeda_gatitos_nath_kitten_pollo_gelatina_NTH40641.jpg?sw=780&sh=780&q=85",
+                    "description" : "Wet food with a succulent gelatinous texture for kittens. Ideal for offering a complete and balanced diet that provides optimal growth thanks to its taurine and EPA and DHA fatty acid content.",
+                    "price": 23.16 
+                },
+                {
+                    "foodName" : "Baby Blue",
+                    "imageUrl" : "https://www.catster.com/wp-content/uploads/2023/11/Blue-Buffalo-Healthy-Growth-Kitten-Chicken-Rice-Dry-Cat-Food-2024.jpg",
+                    "description" :"Support your kitten’s higher energy needs with our grain-free, high-protein Baby BLUE recipe. Starting with more protein-rich chicken, this natural recipe features wholesome fruits and veggies and is free of grains.",
+                    "price": 20.99 
+                },
+                {
+                    "foodName" : "Royal Canin",
+                    "imageUrl" : "https://thepetshack.ae/assets/uploads/2018/12/kitten_dry_2.jpg",
+                    "description" : "Royal Canin Kitten Dry cat food is formulated for the second stage of kittenhood (between 4 months and 1 year). Supports a kitten’s developing immune system development with an exclusive blend of antioxidants and vitamins EXCLUSIVE KIBBLE.",
+                    "price": 14.49 
+                }
+            ]
+              }
+            ]
+          }
     };
     var rules$1 = {
     	users: {

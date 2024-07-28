@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Search.module.css';
 import SearchList from './search-list/Search-list';
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function Search() {
     const [values, setValues] = useState({

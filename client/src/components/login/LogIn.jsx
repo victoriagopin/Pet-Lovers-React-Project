@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../UserContext";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const baseUrl = 'http://localhost:3030/users';
 
