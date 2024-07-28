@@ -10,12 +10,10 @@ export default function Details() {
     const { user } = useContext(UserContext);
     const { petId } = useParams();
     const [animal, setAnimal] = useState({});
-    const [ownerProfile, setOwnerProfile] = useState({});
+    const [ownerProfile, setOwnerProfile] = useState(null);
     const [hasProfile, sethasProifle] = useState(false);
     const [likes, setLikes] = useState(0);
     const [hasLiked, setHasLiked] = useState(false);
-
-    console.log(ownerProfile);
 
     const navigate = useNavigate();
 
@@ -46,27 +44,32 @@ export default function Details() {
         }
     }, [animal._ownerId]);
 
-    useEffect(() => {
+        if(ownerProfile){
         const getOwner = async () => {
             try{
                 const response = await fetch(`${baseUrl}/profiles/${ownerProfile._id}`);
-                const data = await response.json();
-              
-                if (data) {
+        
+                if (response.status == 200) {
+                    const data = await response.json();
                     sethasProifle(true);
-                }
+                } 
             } catch (err){
                 console.log(err.message);
             }
           
         };
         getOwner();
-    }, [animal._ownerId]);
+    }
+ 
 
     const onDeleteClick = async () => {
         try {
             await fetch(`${baseUrl}/pets/${animal._id}`, {
-                method: 'DELETE'
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Authorization' : user.accessToken
+                }
             });
         } catch (err){
             console.log(err.message);
@@ -118,7 +121,7 @@ export default function Details() {
                         {ownerProfile ? (
                             <Link className={styles['owner-btn']} to={`/profile/${ownerProfile._id}`}>See Your Profile</Link>
                         ) : (
-                            <Link className={styles['owner-btn']} to={`/setup-owner-profile/${ownerProfile._id}`}>Set Up Owner's Profile</Link>
+                            <Link className={styles['owner-btn']} to={`/setup-owner-profile`}>Set Up Owner's Profile</Link>
                         )}
                         <Link type="submit" to={`/edit/${animal._id}`} className={`${styles['edit-delete']} ${styles['submit']}`}>Edit</Link>
                         <button type="submit" className={`${styles['edit-delete']} ${styles['submit']}`} onClick={onDeleteClick}>Delete</button>

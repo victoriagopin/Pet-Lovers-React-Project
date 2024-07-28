@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function EditPet() {
+  const {user} = useContext(UserContext);
     const {petId} = useParams();
     const [petToEdit, setPetToEdit] = useState(null);
     const navigate = useNavigate();
@@ -33,6 +35,7 @@ export default function EditPet() {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
+                'X-Authorization' : user.accessToken
               },
               body: JSON.stringify(petToEdit),
             });

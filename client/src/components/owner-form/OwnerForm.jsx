@@ -6,7 +6,6 @@ const baseUrl = 'http://localhost:3030/data'
 
 export default function OwnerForm(){
   const {user} = useCallback(UserContext);
-  const {ownerId} = useParams();
 
   const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
