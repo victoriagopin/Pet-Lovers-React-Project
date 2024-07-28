@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
+import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/data'
 
 export default function EditProfile(){
+  const {user} = useContext(UserContext);
     const {id} = useParams();
     const [userToEdit, setUserToEdit] = useState(null);
     const navigate = useNavigate();
@@ -38,11 +40,12 @@ export default function EditProfile(){
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
+                'X-Authorization' : user.accessToken
               },
               body: JSON.stringify(userToEdit),
             });
             const result = await response.json();
-            navigate(`/profile/${result.identity}`);
+            navigate(`/profile/${result._id}`);
           } catch (error) {
             console.error('Error updating data:', error);
           }

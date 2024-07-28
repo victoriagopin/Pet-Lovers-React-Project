@@ -8,7 +8,6 @@ export default function CreatePet({
 }){
     const { user } = useContext(UserContext);
 
-    console.log(user.accessToken);
 
     const [formVaules, setFormValues] = useState({
       name:'',
