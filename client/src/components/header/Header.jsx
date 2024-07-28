@@ -2,24 +2,31 @@ import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../UserContext";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030'
 
 export default function Header(){
     const {user, setUser} = useContext(UserContext);
-    const [loggingOut, setLoggingOut] = useState(false);
     const navigate = useNavigate();
 
-    useEffect(() => {
-      if(loggingOut){
-        navigate('/');
-        setLoggingOut(false);
-      }
-    },[loggingOut]);
+    const logout = async ()=> {
+      try {
+        const req = await fetch(`${baseUrl}/users/logout`,{
+          method: 'GET',
+          headers : {
+            'Content-Type' : 'application/json',
+            'X-Authorization' : user.accessToken
+          }
+        })
 
-    const logout = ()=> {
-      setUser(null);
-      localStorage.clear();
-      setLoggingOut(true);
+        if(req.status == 204){
+          setUser(null);
+          localStorage.clear();
+          navigate('/');
+        }
+      } catch (err){
+        console.log(err.message);
+      }
+     
     }
 
     return(
