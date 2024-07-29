@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Search.module.css';
 import SearchList from './search-list/Search-list';
 
-const baseUrl = 'http://localhost:3030/data'
+const baseUrl = 'http://localhost:3030/data/foods'
 
 export default function Search() {
     const [values, setValues] = useState({
@@ -24,32 +24,32 @@ export default function Search() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-       try {
-            if(values.lifeStage == 'adult'){
-            const req = await fetch(`${baseUrl}/food/${values.animal}`);
-            const result = await req.json();
-
-            const accWeight = result.find(animal => {
-            return values.weight <= animal.weight;
-            });
-        
-            const accBreed = result.find(animal => {
-            return animal.breed.includes(values.breed);
+        if(values.lifeStage == 'adult'){
+        const params = new URLSearchParams({
+            where: `animalType="${values.animal}"`
         })
 
-        if(accWeight == accBreed){
-            setAnimalFood(accBreed);
+        const req = await fetch(`${baseUrl}?${params.toString()}`);
+    
+        const res = await req.json();
+        
+        const food = res.find(petWeight => values.weight <= petWeight.weight);
+        if(food.breeds.includes(values.breed)){
+            setAnimalFood(food);
         }
-        } else{
-            const req = await fetch(`${baseUrl}/food/dogBaby`);
-            const result = await req.json();
+    } else {
+        const params = new URLSearchParams({
+            where: `lifeStage="${values.lifeStage}"`
+        })
 
-            const babyFoods = result[0];
-            setAnimalFood(babyFoods);
-        }
-       } catch (err){
-        console.log(err.message);
-       }
+        const req = await fetch(`${baseUrl}?${params.toString()}`);
+    
+        const res = await req.json();
+
+        const food = res.find(petKind => values.animal == petKind.animalType);
+        setAnimalFood(food);
+    }
+   
     }
 
     return (
