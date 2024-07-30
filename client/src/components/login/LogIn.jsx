@@ -1,16 +1,17 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../../conetxts/UserContext";
 import { useNavigate} from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
+import { get, post } from "../../api/requester";
 
-const baseUrl = 'http://localhost:3030/users';
+// const baseUrl = 'http://localhost:3030/users';
 
 const initialFormValues = {
   email:'',
     password: ''
 }
 export default function LogIn(){
-  const {setUser} = useContext(UserContext);
+  const {user, setUser} = useContext(UserContext);
   const [errors, setErrors] = useState(false);
   const {values, changeHandler} = useForm(initialFormValues)
 
@@ -20,33 +21,17 @@ export default function LogIn(){
     e.preventDefault();
 
     try{
-    const req = await fetch(`${baseUrl}/login`, {
-      method : 'POST',
-      headers : {
-        'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify({
-        email: values.email,
-        password: values.password
-      })
-    });
-
-    if(req.status != 200){
+    const res = await post('users/login', values);
+  
+    if(typeof res == 'number') {
       setErrors(true);
-      setTimeout(() => setErrors(false), 3000);
-      return;
+        setTimeout(() => setErrors(false), 3000);
+        return;
     }
-
-    const curUser = await req.json();
-
-    if(!curUser){
-      setErrors(true);
-      setTimeout(() => setErrors(false), 3000);
-    } else {
-      const {password, ...user} = curUser;
-      setUser(user);
+    
+      setUser(res);
+      localStorage.setItem('auth', JSON.stringify(res.accessToken));
       navigate('/catalog');
-    }
   } catch(err){
     console.log(err.message);
   }

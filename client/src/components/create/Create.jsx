@@ -1,7 +1,8 @@
-import { useCallback, useContext, useState } from "react"
+import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../../conetxts/UserContext";
 import { useForm } from "../../hooks/useForm";
+import { post } from "../../api/requester";
 
 const baseUrl = 'http://localhost:3030/data'
 
@@ -20,30 +21,21 @@ export default function CreatePet({
 }){
     const { user } = useContext(UserContext);
 
-
     const {values, changeHandler} = useForm(initialFormValues);
 
     const navigate = useNavigate();
 
-   const createPet = async (e,petData) => {
+    const createPet = async (e) => {
       e.preventDefault();
      
       try{
-        const response = await fetch(`${baseUrl}/pets`,{
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Authorization': user.accessToken
-          } ,
-          body: JSON.stringify(values)
-      });
-  
-      const createdPet = await response.json();
-      navigate(`/catalog/${createdPet._id}`);
+        const response = await post('data/pets', values);
+        navigate(`/catalog/${response._id}`);
+
+        console.log(response);
       } catch (err){
         console.log(err.message);
-      }
-     
+      }     
 
    }
     return (
