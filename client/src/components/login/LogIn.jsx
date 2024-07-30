@@ -4,14 +4,12 @@ import { useNavigate} from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { get, post } from "../../api/requester";
 
-// const baseUrl = 'http://localhost:3030/users';
-
 const initialFormValues = {
   email:'',
     password: ''
 }
 export default function LogIn(){
-  const {user, setUser} = useContext(UserContext);
+  const {setUser} = useContext(UserContext);
   const [errors, setErrors] = useState(false);
   const {values, changeHandler} = useForm(initialFormValues)
 

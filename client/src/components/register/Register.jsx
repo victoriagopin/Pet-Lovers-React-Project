@@ -2,8 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../conetxts/UserContext";
 import { useForm } from "../../hooks/useForm";
-
-const baseUrl = 'http://localhost:3030/users';
+import { post } from "../../api/requester";
 
 const initialvalues = {
     email: '',
@@ -46,32 +45,21 @@ export default function Register(){
     }
 
     try{
-    const req = await fetch(`${baseUrl}/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: values.email,
-        password: values.password
-      })
-    });
+      const response = await post('users/register', values);
 
-    if(req.status != 200){
-      setIsAvaliable(false);
-      hasErrors = true;
-      setTimeout(() => setIsAvaliable(true), 3000);
-      return;
+      if(typeof response == 'number'){
+            setIsAvaliable(false);
+            hasErrors = true;
+            setTimeout(() => setIsAvaliable(true), 3000);
+            return;
+          }
+
+      setUser(response);
+      localStorage.setItem('auth', JSON.stringify(response.accessToken));
+      navigate('/catalog');
+    } catch(err){
+      console.log(err.message);
     }
-
-    const data = await req.json();
-    const {password, ...user} = data;
-    setUser(user);
-    navigate('/catalog');
-  } catch (err) {
-    console.log(err.message);
-  } 
- 
   }
 
     return (
@@ -92,7 +80,7 @@ export default function Register(){
                   
                   <div>
                     <input type="text" placeholder="Email" name="email" value={values.email || ''} onChange={changeHandler}/>
-                    {!isAvaliable && <p className="error">Email is already taken or the filed is empty!</p>}
+                    {!isAvaliable && <p className="error">Email is already taken!</p>}
                   </div>
                   <div>
                     <input type="password" placeholder="Password" name="password" value={values.password || ''} onChange={changeHandler}/>

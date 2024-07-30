@@ -1,10 +1,6 @@
-import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../conetxts/UserContext";
 import { useForm } from "../../hooks/useForm";
 import { post } from "../../api/requester";
-
-const baseUrl = 'http://localhost:3030/data'
 
 const initialFormValues = {
   name:'',
@@ -19,8 +15,6 @@ const initialFormValues = {
 
 export default function CreatePet({
 }){
-    const { user } = useContext(UserContext);
-
     const {values, changeHandler} = useForm(initialFormValues);
 
     const navigate = useNavigate();
