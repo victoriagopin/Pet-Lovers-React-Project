@@ -1,25 +1,27 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../UserContext";
 import { useNavigate} from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
 
 const baseUrl = 'http://localhost:3030/users';
 
+const initialFormValues = {
+  email:'',
+    password: ''
+}
 export default function LogIn(){
   const {setUser} = useContext(UserContext);
   const [errors, setErrors] = useState(false);
-  const [formValues, setFormValues] = useState({
-    email:'',
-    password: ''
-  })
+  const {values, changeHandler} = useForm(initialFormValues)
 
   const navigate = useNavigate();
 
-  const changeValues = (e) => {
-    setFormValues(oldValues => ({
-      ...oldValues,
-      [e.target.name] : e.target.value
-    }))
-  }
+  // const changeValues = (e) => {
+  //   setFormValues(oldValues => ({
+  //     ...oldValues,
+  //     [e.target.name] : e.target.value
+  //   }))
+  // }
 
   const onLoginClick = async (e) => {
     e.preventDefault();
@@ -31,8 +33,8 @@ export default function LogIn(){
         'Content-Type' : 'application/json'
       },
       body: JSON.stringify({
-        email: formValues.email,
-        password: formValues.password
+        email: values.email,
+        password: values.password
       })
     });
 
@@ -76,13 +78,13 @@ export default function LogIn(){
                   <div className="contact-form">
                     <form action="">
                       <div>
-                        <input type="email" name="email" placeholder="Email" value={formValues.email} onChange={(e) => changeValues(e)}/>
+                        <input type="email" name="email" placeholder="Email" value={values.email || ''} onChange={changeHandler}/>
                       </div>
                       <div>
-                        <input type="password" name="password" placeholder="Password" value={formValues.password} onChange={(e) => changeValues(e)}/>
+                        <input type="password" name="password" placeholder="Password" value={values.password || ''} onChange={changeHandler}/>
                       </div>
                       <div className="d-flex justify-content-center">
-                        <button type="submit" className="btn_on-hover submit" onClick={(e) => onLoginClick(e,formValues)}>
+                        <button type="submit" className="btn_on-hover submit" onClick={onLoginClick}>
                           Login
                         </button>
                       </div>
