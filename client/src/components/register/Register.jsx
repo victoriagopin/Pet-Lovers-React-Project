@@ -1,27 +1,22 @@
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
+import { useForm } from "../../hooks/useForm";
 
 const baseUrl = 'http://localhost:3030/users';
+
+const initialvalues = {
+    email: '',
+    password: '',
+    repass: ''
+}
 
 export default function Register(){
   const [isAvaliable, setIsAvaliable] = useState(true);
   const [isPasswordLongEnough, setIsPasswordLongEnough] = useState(true);
   const [passwordsMatch, setPasswordsMatch] = useState(true);
   const {setUser} = useContext(UserContext);
-  const [formValues, setFormValues] = useState({
-    email: '',
-    password: '',
-    repass: ''
-  });
-
-  const changeValues = (e) => {
-    setFormValues(oldValues => ({
-      ...oldValues,
-      [e.target.name]: e.target.value
-    }));
-
-  }
+  const {values, changeHandler} = useForm(initialvalues);
 
   const navigate = useNavigate();
 
@@ -30,20 +25,20 @@ export default function Register(){
 
     let hasErrors = false;
 
-    if(!formValues.email){
+    if(!values.email){
       setIsAvaliable(false);
         hasErrors = true;
         setTimeout(() => setIsAvaliable(true), 3000);
         return;
     }
-    if (formValues.password.length < 6) {
+    if (values.password.length < 6) {
       setIsPasswordLongEnough(false);
       hasErrors = true;
       setTimeout(() => setIsPasswordLongEnough(true), 3000);
       return;
     }
 
-    if (formValues.password !== formValues.repass) {
+    if (values.password !== values.repass) {
       setPasswordsMatch(false);
       hasErrors = true;
       setTimeout(() => setPasswordsMatch(true), 3000);
@@ -57,8 +52,8 @@ export default function Register(){
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email: formValues.email,
-        password: formValues.password
+        email: values.email,
+        password: values.password
       })
     });
 
@@ -96,19 +91,19 @@ export default function Register(){
                 <form action="">
                   
                   <div>
-                    <input type="text" placeholder="Email" name="email" value={formValues.email} onChange={changeValues}/>
+                    <input type="text" placeholder="Email" name="email" value={values.email || ''} onChange={changeHandler}/>
                     {!isAvaliable && <p className="error">Email is already taken or the filed is empty!</p>}
                   </div>
                   <div>
-                    <input type="password" placeholder="Password" name="password" value={formValues.password} onChange={changeValues}/>
+                    <input type="password" placeholder="Password" name="password" value={values.password || ''} onChange={changeHandler}/>
                     {!isPasswordLongEnough && <p className="error">Password must be at least 6 characters long!</p>}
                   </div>
                   <div>
-                    <input type="password" placeholder="Repeat Password" name="repass" value={formValues.repass} onChange={changeValues}/>
+                    <input type="password" placeholder="Repeat Password" name="repass" value={values.repass || ''} onChange={changeHandler}/>
                     {!passwordsMatch && <p className="error">Passwords do not match!</p>}
                   </div>
                   <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn_on-hover submit" onClick={(e) => onRegisterClick(e, formValues)}>
+                    <button type="submit" className="btn_on-hover submit" onClick={onRegisterClick}>
                       Register
                     </button>
                   </div>

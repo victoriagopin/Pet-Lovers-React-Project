@@ -16,13 +16,6 @@ export default function LogIn(){
 
   const navigate = useNavigate();
 
-  // const changeValues = (e) => {
-  //   setFormValues(oldValues => ({
-  //     ...oldValues,
-  //     [e.target.name] : e.target.value
-  //   }))
-  // }
-
   const onLoginClick = async (e) => {
     e.preventDefault();
 

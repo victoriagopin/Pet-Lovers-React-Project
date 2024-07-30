@@ -1,29 +1,24 @@
 import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../UserContext";
+import { useForm } from "../../hooks/useForm";
 
 const baseUrl = 'http://localhost:3030/data'
+
+const initialvalues = {
+  firstName: '',
+  lastName: '',
+  age: '',
+  occupation: '',
+  imageUrl :'',
+  aboutYou : ''
+}
 
 export default function OwnerForm(){
   const {user} = useContext(UserContext);
 
   const navigate = useNavigate();
-    const [formValues, setFormValues] = useState({
-        firstName: '',
-        lastName: '',
-        age: '',
-        occupation: '',
-        imageUrl :'',
-        aboutYou : ''
-      });
-    
-      const changeValues = (e) => {
-        setFormValues(oldValues => ({
-          ...oldValues,
-          [e.target.name]: e.target.value
-        }));
-    
-      }
+    const {values, changeHandler} = useForm(initialvalues);
 
       const onCreateProfile = async (e) => {
         e.preventDefault();
@@ -34,7 +29,7 @@ export default function OwnerForm(){
             'Content-Type' : 'application/json',
             'X-Authorization': user.accessToken
           },
-          body : JSON.stringify(formValues)
+          body : JSON.stringify(values)
         }) 
 
         const data = await response.json();
@@ -57,25 +52,25 @@ export default function OwnerForm(){
               <div className="contact-form">
                 <form action="">
                 <div>
-                    <input type="text" placeholder="First Name" name="firstName" value={formValues.firstName} onChange={changeValues}/>
+                    <input type="text" placeholder="First Name" name="firstName" value={values.firstName || ''} onChange={changeHandler}/>
                   </div>
                   <div>
-                    <input type="text" placeholder="Last Name" name="lastName" value={formValues.lastName} onChange={changeValues}/>
+                    <input type="text" placeholder="Last Name" name="lastName" value={values.lastName || ''} onChange={changeHandler}/>
                   </div>
                   <div>
-                    <input type="number" placeholder="Age" name="age" value={formValues.age} onChange={changeValues}/>
+                    <input type="number" placeholder="Age" name="age" value={values.age || ''} onChange={changeHandler}/>
                   </div>
                   <div>
-                    <input type="text" placeholder="Image URL" name="imageUrl" value={formValues.imageUrl} onChange={changeValues}/>
+                    <input type="text" placeholder="Image URL" name="imageUrl" value={values.imageUrl || ''} onChange={changeHandler}/>
                   </div>
                   <div>
-                    <input type="text" placeholder="Occupation" name="occupation" value={formValues.occupation} onChange={changeValues}/>
+                    <input type="text" placeholder="Occupation" name="occupation" value={values.occupation || ''} onChange={changeHandler}/>
                   </div>
                   <div>
-                    <input type="text" placeholder="Tell somethnig about yourself..." name="aboutYou" value={formValues.aboutYou} onChange={changeValues}/>
+                    <input type="text" placeholder="Tell somethnig about yourself..." name="aboutYou" value={values.aboutYou || ''} onChange={changeHandler}/>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn_on-hover submit" onClick={(e) => onCreateProfile(e, formValues)}>
+                    <button type="submit" className="btn_on-hover submit" onClick={onCreateProfile}>
                       Ready!
                     </button>
                   </div>
