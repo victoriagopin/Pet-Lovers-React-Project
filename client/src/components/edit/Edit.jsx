@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../../conetxts/UserContext";
+
 
 const baseUrl = 'http://localhost:3030/data'
 

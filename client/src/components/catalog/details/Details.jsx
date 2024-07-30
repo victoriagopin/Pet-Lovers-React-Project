@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../UserContext";
+
 import styles from './Details.module.css';
+import { UserContext } from "../../../conetxts/UserContext";
 
 const baseUrl = 'http://localhost:3030/data'
 

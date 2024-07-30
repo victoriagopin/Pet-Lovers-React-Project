@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from './Catalog-Item.module.css';
 import { useContext } from "react";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../../conetxts/UserContext";
+
 
 export default function CatalogItem({
     pet

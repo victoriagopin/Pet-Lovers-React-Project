@@ -1,11 +1,11 @@
 import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../../conetxts/UserContext";
 
 const baseUrl = 'http://localhost:3030'
 
 export default function Header(){
-    const {user, setUser} = useContext(UserContext);
+   const {user, setUser} = useContext(UserContext);
     const navigate = useNavigate();
 
     const logout = async ()=> {
