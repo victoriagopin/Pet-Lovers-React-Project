@@ -1385,6 +1385,16 @@
                 "likes": 1
             }
         },
+        likes : {
+            "23c62d76-8152-4626-8712-eeb96381be10" : {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "petId" : "RsT4567UvW"
+            },
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298" : {
+                "_ownerId" : "847ec027-f659-4086-8032-5173e2f9c93a",
+                "petId" : "RsT4567UvW"
+            }
+        },
         profiles: {
                 "35c62d76-8152-4626-8712-eeb96381bea7" : {
                     "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
