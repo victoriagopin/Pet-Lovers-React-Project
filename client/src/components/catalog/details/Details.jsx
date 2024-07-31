@@ -1,106 +1,44 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import styles from './Details.module.css';
 import { UserContext } from "../../../conetxts/UserContext";
-
-const baseUrl = 'http://localhost:3030/data'
+import { useGetPet } from "../../../hooks/useGetPet";
+import { useSetOwner } from "../../../hooks/useSetOwnerProfile";
+import { deletePetById } from "../../../api/petsAPI";
+import { createLike, getAllLikesPerPet } from "../../../api/likesAPI";
+import { useHasLiked } from "../../../hooks/useHasLiked";
 
 export default function Details() {
     const { user } = useContext(UserContext);
     const { petId } = useParams();
-    const [animal, setAnimal] = useState({});
-    const [ownerProfile, setOwnerProfile] = useState(null);
-    const [hasProfile, sethasProifle] = useState(false);
-    const [likes, setLikes] = useState(0);
-    const [hasLiked, setHasLiked] = useState(false);
+    const {animal, likes, incrementLikes} = useGetPet(petId);
+    const {ownerProfile, hasProfile}= useSetOwner(animal);
+    const {hasLiked, changeLikeState} = useHasLiked(petId, user?._id);
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const getAnimal = async () => {
-            const response = await fetch(`${baseUrl}/pets/${petId}`);
-            const data = await response.json();
-            setAnimal(data);
-            setLikes(data.likes || 0);
-            const likedAnimals = JSON.parse(localStorage.getItem('likedAnimals')) || {};
-            if (likedAnimals[petId]) {
-                setHasLiked(true);
-            }
-        };
-        getAnimal();
-    }, [petId]);
-
-    useEffect(() => {
-        if (animal._ownerId) {
-            const fetchOwnerProfile = async () => {
-                const response = await fetch(`${baseUrl}/profiles`);
-                const data = await response.json();
-                const profiles = Object.values(data);
-                const profile = profiles.find(profile => profile._ownerId === animal._ownerId);
-                setOwnerProfile(profile);
-            };
-            fetchOwnerProfile();
-        }
-    }, [animal._ownerId]);
-
-        if(ownerProfile){
-        const getOwner = async () => {
-            try{
-                const response = await fetch(`${baseUrl}/profiles/${ownerProfile._id}`);
-        
-                if (response.status == 200) {
-                    const data = await response.json();
-                    sethasProifle(true);
-                } 
-            } catch (err){
-                console.log(err.message);
-            }
-          
-        };
-        getOwner();
-    }
- 
-
     const onDeleteClick = async () => {
-        try {
-            await fetch(`${baseUrl}/pets/${animal._id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Authorization' : user.accessToken
-                }
-            });
+
+        try{
+            await deletePetById(petId);
         } catch (err){
-            console.log(err.message);
+            console.log(err.message)
         }
        
         navigate('/catalog');
     };
 
     const handleLike = async () => {
-        const updatedAnimal = { ...animal, likes: likes + 1 };
-        setLikes(likes + 1);
-        setHasLiked(true);
-
         try{
-            await fetch(`${baseUrl}/pets/${animal._id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(updatedAnimal)
-            });
+            await createLike({_ownerId : user?._id , petId });
+            changeLikeState(true);
+            const newLikesCount = await getAllLikesPerPet(petId);
+            incrementLikes(newLikesCount.length);
         } catch (err){
             console.log(err.message);
         }
-   
-
-        setAnimal(updatedAnimal);
-        const likedAnimals = JSON.parse(localStorage.getItem('likedAnimals')) || {};
-        likedAnimals[petId] = true;
-        localStorage.setItem('likedAnimals', JSON.stringify(likedAnimals));
     };
 
     return (
@@ -133,6 +71,7 @@ export default function Details() {
                         <button 
                           className={`${styles.like} ${hasLiked ? styles.disabled : ''}`} 
                           onClick={!hasLiked ? handleLike : null}
+                          disabled={hasLiked}
                         >
                           Like
                         </button>

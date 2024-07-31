@@ -16,8 +16,13 @@ export function useGetPet(id){
         getAnimal();
     }, [id, likes]);
 
+    const incrementLikes = (newLikeCount) => {
+        setLikes(newLikeCount);
+    }
+
     return {
         animal,
-        likes
+        likes,
+        incrementLikes
     }
 }
