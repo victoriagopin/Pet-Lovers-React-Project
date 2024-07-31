@@ -26,7 +26,6 @@ export default function CreatePet({
         const response = await post('data/pets', values);
         navigate(`/catalog/${response._id}`);
 
-        console.log(response);
       } catch (err){
         console.log(err.message);
       }     
