@@ -12,7 +12,7 @@ export function useGetPet(id){
             setAnimal(response);
             const likesPerPet = await getAllLikesPerPet(id);
             setLikes(likesPerPet.length);
-        };
+        }; 
         getAnimal();
     }, [id, likes]);
 

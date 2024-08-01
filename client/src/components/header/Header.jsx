@@ -1,6 +1,7 @@
-import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { NavLink,  useNavigate } from "react-router-dom";
+import { useContext} from "react";
 import { UserContext } from "../../conetxts/UserContext";
+
 
 const baseUrl = 'http://localhost:3030'
 
@@ -18,11 +19,10 @@ export default function Header(){
           }
         })
 
-        if(req.status == 204){
           setUser(null);
           localStorage.clear();
           navigate('/');
-        }
+  
       } catch (err){
         console.log(err.message);
       }

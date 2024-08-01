@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CatalogItem from "./catalog-item/CatalogItem";
 import styles from './Catalog.module.css';
 import { useGetPets } from "../../hooks/useGetPets";

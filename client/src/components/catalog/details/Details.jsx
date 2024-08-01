@@ -16,7 +16,6 @@ export default function Details() {
     const {animal, likes, incrementLikes} = useGetPet(petId);
     const {ownerProfile, hasProfile}= useSetOwner(animal);
     const {hasLiked, changeLikeState} = useHasLiked(petId, user?._id);
-
     const navigate = useNavigate();
 
     const onDeleteClick = async () => {
