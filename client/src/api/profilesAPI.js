@@ -1,4 +1,4 @@
-import { get } from "./requester";
+import { del, get, post, put } from "./requester";
 
 export async function getAllProfiles(){
     const profiles = await get('data/profiles');
@@ -8,4 +8,19 @@ export async function getAllProfiles(){
 export async function getProfileById(id){
     const profile = await get(`data/profiles/${id}`);
     return profile;
+}
+
+export async function updateProfile(id, data){
+    const updatedProfile = await put(`data/profiles/${id}`, data);
+    return updatedProfile;
+}
+
+export async function createProfile(data){
+    const createdProfile = await post(`data/profiles`, data);
+    return createdProfile;
+}
+
+export async function deleteProfile(id){
+    const deleted = await del(`data/profiles/${id}`);
+    return deleted;
 }

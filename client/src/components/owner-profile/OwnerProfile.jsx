@@ -1,45 +1,30 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from './Owner-Profile.module.css';
 import { UserContext } from "../../conetxts/UserContext";
-
-
-const baseUrl = 'http://localhost:3030/data'
+import { deleteProfile } from "../../api/profilesAPI";
+import { useGetProfile } from "../../hooks/useGetProfile";
 
 export default function OwnerProfile(){
   const {user} = useContext(UserContext);
-  const [profile, setProfile] = useState({});
-    const {ownerId} = useParams();
-    const navigate = useNavigate();
-
-    useEffect(() => {
-      (async () => {
-        try{
-          const response = await fetch(`${baseUrl}/profiles/${ownerId}`);
-          const data = await response.json();
-          setProfile(data);
-        } catch(err) {
-          console.log(err.message);
-        }
-       
-      })()
-    }, []);
+  const {ownerId} = useParams();
+  const {profile}= useGetProfile(ownerId);
+  const navigate = useNavigate();
     
     const onDeleteClick = async () => {
       try{
-        await fetch(`${baseUrl}/profiles/${profile._id}`, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type' : 'application/json',
-            'X-Authorization' : user.accessToken
-          }
-      });
+        await deleteProfile(profile._id);
       } catch (err){
         console.log(err.message);
       }
      
       navigate('/catalog');
   };
+
+  if (!profile) {
+    return <div>Loading...</div>;
+  }
+
     return (
       <>
         <h2 className={styles.heading}>Welcome to {`${profile.firstName}'s profile`}</h2>
