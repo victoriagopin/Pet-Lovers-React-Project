@@ -32,12 +32,11 @@ export default function About(){
         <div className="col-md-6 col-lg-3">
           <div className="info_contact">
             <h5>
-              CONTACT INFO
+              Having any torubles?
             </h5>
             <div>
-              <img src="images/call.png" alt="" />
               <p>
-                +01 1234567890
+                Contact us:
               </p>
             </div>
             <div>
@@ -51,16 +50,11 @@ export default function About(){
         <div className="col-md-6 col-lg-3">
           <div className="info_time">
             <h5>
-              Opening Hours Shop
+             POST AT ANY TIME
             </h5>
             <div>
               <p>
-                Monday to friday
-              </p>
-            </div>
-            <div>
-              <p>
-                07:00 am to 04:00 pm
+                Get to know fellow pet owners
               </p>
             </div>
           </div>
@@ -69,28 +63,13 @@ export default function About(){
         <div className="col-md-6 col-lg-3">
           <div className="info_social">
             <h5>
-              social media
+            &#x2764; Appreciation for our users
             </h5>
             <div className="social_container">
               <div>
-                <a href="">
-                  <img src="images/fb.png" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="images/twitter.png" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="images/linkedin.png" alt="" />
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <img src="images/instagram.png" alt="" />
-                </a>
+                <p>
+                  Thank you for choosing PetLovers!
+                </p>
               </div>
             </div>
           </div>
