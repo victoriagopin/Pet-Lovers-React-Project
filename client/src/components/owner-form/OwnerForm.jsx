@@ -1,9 +1,6 @@
-import { useContext, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { UserContext } from "../../conetxts/UserContext";
+import { useNavigate} from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
-
-const baseUrl = 'http://localhost:3030/data'
+import { createProfile } from "../../api/profilesAPI";
 
 const initialvalues = {
   firstName: '',
@@ -15,25 +12,19 @@ const initialvalues = {
 }
 
 export default function OwnerForm(){
-  const {user} = useContext(UserContext);
-
   const navigate = useNavigate();
-    const {values, changeHandler} = useForm(initialvalues);
+  const {values, changeHandler} = useForm(initialvalues);
 
-      const onCreateProfile = async (e) => {
+    const onCreateProfile = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`${baseUrl}/profiles`, {
-          method: 'POST',
-          headers: {
-            'Content-Type' : 'application/json',
-            'X-Authorization': user.accessToken
-          },
-          body : JSON.stringify(values)
-        }) 
-
-        const data = await response.json();
-        navigate(`/profile/${data._id}`);
+        try{
+          const createdProfile = await createProfile(values);
+          navigate(`/profile/${createdProfile._id}`);
+        } catch (err){
+          console.log(err.message);
+        }
+     
       }
 
     return (
