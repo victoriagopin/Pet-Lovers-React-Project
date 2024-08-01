@@ -21,7 +21,12 @@ export default function Details() {
     const onDeleteClick = async () => {
 
         try{
+            const hasConfirmed = confirm(`Are you sure you want to delete ${animal.name}?`);
+            if(hasConfirmed){
             await deletePetById(petId);
+            } else{
+                return;
+            }
         } catch (err){
             console.log(err.message)
         }
