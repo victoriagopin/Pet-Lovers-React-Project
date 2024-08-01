@@ -13,7 +13,12 @@ export default function OwnerProfile(){
     
     const onDeleteClick = async () => {
       try{
+        const hasConfirmed = confirm('Are you sure you want to delete your profile?');
+        if(hasConfirmed){
         await deleteProfile(profile._id);
+        } else{
+          return;
+        }
       } catch (err){
         console.log(err.message);
       }
