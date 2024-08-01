@@ -1,26 +1,13 @@
-import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { UserContext } from "../../conetxts/UserContext";
-
-
-const baseUrl = 'http://localhost:3030/data'
+import { usePetToEdit } from "../../hooks/usePetToEdit";
+import { updatePet } from "../../api/petsAPI";
 
 export default function EditPet() {
-  const {user} = useContext(UserContext);
     const {petId} = useParams();
-    const [petToEdit, setPetToEdit] = useState(null);
+    const {petToEdit, setPetToEdit} = usePetToEdit(petId);
     const navigate = useNavigate();
-    
-    useEffect(() => {
-        (async function getPet (){
-            const response = await fetch(`${baseUrl}/pets/${petId}`);
-            const pet = await response.json();
 
-            setPetToEdit(pet);
-        })()
-    },[])
-
-    const handleChange =(e) => {
+    const handleChange = (e) => {
         const {name, value} = e.target;
         setPetToEdit((prevPet) => ({
             ...prevPet,
@@ -32,16 +19,8 @@ export default function EditPet() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${baseUrl}/pets/${petId}`, {
-              method: 'PUT',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-Authorization' : user.accessToken
-              },
-              body: JSON.stringify(petToEdit),
-            });
-            const result = await response.json();
-            navigate(`/catalog/${result._id}`);
+          const updatedPet = await updatePet(petId, petToEdit);
+            navigate(`/catalog/${updatedPet._id}`);
           } catch (error) {
             console.error('Error updating data:', error);
           }
@@ -50,6 +29,7 @@ export default function EditPet() {
     if (!petToEdit) {
         return <p>Loading...</p>;
       }
+      
   return (
     <section className="contact_section">
       <div className="container">

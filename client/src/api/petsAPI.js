@@ -10,6 +10,11 @@ export async function getPetById(id){
     return pet;
 }
 
+export async function updatePet(id, data){
+    const updatedPet = await put(`data/pets/${id}`, data);
+    return updatedPet;
+}
+
 export async function deletePetById(id){
     const deleted = await del(`data/pets/${id}`);
     return deleted;
