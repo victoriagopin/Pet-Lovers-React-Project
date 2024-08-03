@@ -14,6 +14,7 @@ import Footer from "./components/footer/Footer";
 import EditProfile from "./components/edit-profile/EditProfile";
 import Search from "./components/search/Search";
 import HasAccess from "./components/hasAccess/HasAccess";
+import Error from "./components/error/Error";
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/login" element={< LogIn/>}/>
         <Route path="/register" element={< Register/>}/>
         <Route path="/about" element={< About/>}/>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
 
       <Footer />

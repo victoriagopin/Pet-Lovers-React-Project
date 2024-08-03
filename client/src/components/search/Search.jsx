@@ -24,31 +24,36 @@ export default function Search() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if(values.lifeStage == 'adult'){
-        const params = new URLSearchParams({
-            where: `animalType="${values.animal}"`
-        })
+      
 
-        const req = await fetch(`${baseUrl}?${params.toString()}`);
+        try{
+            if(values.lifeStage == 'adult'){
+                const params = new URLSearchParams({
+                    where: `animalType="${values.animal}"`
+                })
+                const req = await fetch(`${baseUrl}?${params.toString()}`);
     
-        const res = await req.json();
+                const res = await req.json();
         
-        const food = res.find(petWeight => values.weight <= petWeight.weight);
-        if(food.breeds.includes(values.breed)){
-            setAnimalFood(food);
-        }
-    } else {
-        const params = new URLSearchParams({
-            where: `lifeStage="${values.lifeStage}"`
-        })
+                const food = res.find(petWeight => values.weight <= petWeight.weight);
+                if(food.breeds.includes(values.breed)){
+                setAnimalFood(food);
+                }
+            } else {
+            const params = new URLSearchParams({
+                where: `lifeStage="${values.lifeStage}"`
+                })
 
-        const req = await fetch(`${baseUrl}?${params.toString()}`);
+                const req = await fetch(`${baseUrl}?${params.toString()}`);
     
-        const res = await req.json();
+                const res = await req.json();
 
-        const food = res.find(petKind => values.animal == petKind.animalType);
-        setAnimalFood(food);
-    }
+                const food = res.find(petKind => values.animal == petKind.animalType);
+                setAnimalFood(food);
+            }
+        } catch(err){
+    console.log(err.message);
+}
    
     }
 
