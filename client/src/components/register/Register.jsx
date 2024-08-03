@@ -14,7 +14,7 @@ export default function Register(){
   const [isAvaliable, setIsAvaliable] = useState(true);
   const [isPasswordLongEnough, setIsPasswordLongEnough] = useState(true);
   const [passwordsMatch, setPasswordsMatch] = useState(true);
-  const {setUser} = useContext(UserContext);
+  const {setUser, updateIsAuthenticated} = useContext(UserContext);
   const {values, changeHandler} = useForm(initialvalues);
 
   const navigate = useNavigate();
@@ -55,6 +55,7 @@ export default function Register(){
           }
 
       setUser(response);
+      updateIsAuthenticated();
       localStorage.setItem('auth', JSON.stringify(response.accessToken));
       navigate('/catalog');
     } catch(err){

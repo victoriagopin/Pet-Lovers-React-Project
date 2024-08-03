@@ -9,7 +9,7 @@ const initialFormValues = {
     password: ''
 }
 export default function LogIn(){
-  const {setUser} = useContext(UserContext);
+  const {updateIsAuthenticated, setUser} = useContext(UserContext);
   const [errors, setErrors] = useState(false);
   const {values, changeHandler} = useForm(initialFormValues)
 
@@ -28,6 +28,7 @@ export default function LogIn(){
     }
     
       setUser(res);
+      updateIsAuthenticated();
       localStorage.setItem('auth', JSON.stringify(res.accessToken));
       navigate('/catalog');
   } catch(err){

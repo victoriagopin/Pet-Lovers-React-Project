@@ -13,6 +13,7 @@ import EditPet from "./components/edit/Edit";
 import Footer from "./components/footer/Footer";
 import EditProfile from "./components/edit-profile/EditProfile";
 import Search from "./components/search/Search";
+import HasAccess from "./components/hasAccess/HasAccess";
 
 
 
@@ -26,15 +27,17 @@ function App() {
         <Route path="/" element={< Home />}/>
         <Route path="/search" element={< Search />} />
         <Route path="/catalog" element={< Catalog/>}/>
+        <Route element={<HasAccess />}>
         <Route path="/catalog/:petId" element={< Details/>}/>
         <Route path="/edit/:petId" element={<EditPet />} />
         <Route path="/create" element={< CreatePet/>}/>
-        <Route path="/login" element={< LogIn/>}/>
-        <Route path="/register" element={< Register/>}/>
-        <Route path="/about" element={< About/>}/>
         <Route path="/setup-owner-profile" element={<OwnerForm />}/>
         <Route path="/profile/:ownerId" element={<OwnerProfile/>} />
         <Route path="/edit-profile/:id" element={<EditProfile />} />
+        </Route>
+        <Route path="/login" element={< LogIn/>}/>
+        <Route path="/register" element={< Register/>}/>
+        <Route path="/about" element={< About/>}/>
       </Routes>
 
       <Footer />
