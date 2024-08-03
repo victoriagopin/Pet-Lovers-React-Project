@@ -21,6 +21,10 @@ export async function requester(method, url, data){
     try{
         const response = await fetch(`${baseURL}/${url}`,options);
 
+        if(response.status == 204){
+            return 'success'
+        }
+
         if(!response.ok){
             return response.status;
         } else {

@@ -24,3 +24,8 @@ export async function deleteProfile(id){
     const deleted = await del(`data/profiles/${id}`);
     return deleted;
 }
+
+export async function logout(){
+    const res = await get('users/logout');
+    return res;
+}

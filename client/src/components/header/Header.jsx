@@ -1,25 +1,18 @@
 import { NavLink,  useNavigate } from "react-router-dom";
 import { useContext} from "react";
 import { UserContext } from "../../conetxts/UserContext";
-
-
-const baseUrl = 'http://localhost:3030'
+import { logout } from "../../api/profilesAPI.js";
 
 export default function Header(){
-   const {user, setUser} = useContext(UserContext);
+   const {user, setUser, updateIsAuthenticated} = useContext(UserContext);
     const navigate = useNavigate();
 
-    const logout = async ()=> {
+    const loggingOut = async ()=> {
       try {
-        const req = await fetch(`${baseUrl}/users/logout`,{
-          method: 'GET',
-          headers : {
-            'Content-Type' : 'application/json',
-            'X-Authorization' : user.accessToken
-          }
-        })
+        await logout();
 
           setUser(null);
+          updateIsAuthenticated();
           localStorage.clear();
           navigate('/');
   
@@ -61,7 +54,7 @@ export default function Header(){
                     <NavLink className="nav-link" to="/create" > Add Pet </NavLink>
                   </li> 
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="#" onClick={logout}>Log Out</NavLink>
+                    <NavLink className="nav-link" to="#" onClick={loggingOut}>Log Out</NavLink>
                   </li>
                   </>
                   : <>
