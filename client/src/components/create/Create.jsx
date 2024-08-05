@@ -21,6 +21,7 @@ export default function CreatePet({
     const [isBreedLongEnough, setIsBreedLongEnough] = useState(true);
     const [isOriginLongEnoug, setIsOriginLongEnough] = useState(true);
     const [isAgeValid, setIsAgeValid] = useState(true);
+    const [isImageValid, setIsImageValid] = useState(true);
     const [isEyeColorLongEnough, setIsEyeColorLongEnough] = useState(true);
     const [isStoryInRange, setIsStoryInRange] = useState(true);
 
@@ -28,7 +29,6 @@ export default function CreatePet({
 
     const createPet = async (e) => {
       e.preventDefault();
-
 
     if(values.name.length < 2){
       setIsNameLongEnough(false);
@@ -53,6 +53,12 @@ export default function CreatePet({
     if(values.eyeColor.length < 2){
       setIsEyeColorLongEnough(false);
       setTimeout(() => setIsEyeColorLongEnough(true), 3000);
+    }
+
+    if(values.imageUrl == ''){
+      setIsImageValid(false);
+      setTimeout(() => setIsImageValid(true), 3000);
+      return;
     }
 
     if(values.funStory.length < 5 || values.funStory.length > 500){
@@ -106,6 +112,7 @@ export default function CreatePet({
                       <input type="text" name="eyeColor" placeholder="Eye Color" value={values.eyeColor || ''} onChange={changeHandler}/>
                     </div>
                     <div>
+                    {!isImageValid && <p className="error">Image can't be an empty filed!</p>}
                       <input type="text" name="imageUrl" placeholder="Image URL" value={values.imageUrl || ''} onChange={changeHandler}/>
                     </div>
                     <div>
