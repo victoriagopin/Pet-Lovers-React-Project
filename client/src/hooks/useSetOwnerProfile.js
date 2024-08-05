@@ -8,9 +8,13 @@ export function useSetOwner(animal){
     useEffect(() => {
         if (animal._ownerId) {
             const fetchOwnerProfile = async () => {
+                try{
                 const profiles = await getAllProfiles();
                 const profile = profiles.find(profile => profile._ownerId === animal._ownerId);
                 setOwnerProfile(profile);
+                } catch (err){
+                    console.log(err.message);
+                }
             };
             fetchOwnerProfile();
         }

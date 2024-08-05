@@ -6,8 +6,12 @@ export function usePetToEdit(id){
 
     useEffect(() => {
         (async function getPet (){
+            try{
             const pet = await getPetById(id);
             setPetToEdit(pet);
+            } catch (err){
+                console.log(err.message);
+            }
         })()
     },[])
 

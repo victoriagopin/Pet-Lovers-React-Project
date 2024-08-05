@@ -6,8 +6,12 @@ export function useGetPets(){
 
        useEffect(() => {
       (async function getPets(){
+        try{
         const response = await getAllPets(); 
         setPets(response);
+        } catch (err){
+          console.log(err.message);
+        }
       })();
     },[]);
 

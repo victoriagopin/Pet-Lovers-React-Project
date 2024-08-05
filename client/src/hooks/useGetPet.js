@@ -8,10 +8,14 @@ export function useGetPet(id){
 
     useEffect(() => {
         const getAnimal = async () => {
+            try{
             const response = await getPetById(id);
             setAnimal(response);
             const likesPerPet = await getAllLikesPerPet(id);
             setLikes(likesPerPet.length);
+            } catch(err){
+                console.log(err.message);
+            }
         }; 
         getAnimal();
     }, [id, likes]);

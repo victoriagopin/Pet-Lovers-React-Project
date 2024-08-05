@@ -24,8 +24,6 @@ export default function Search() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-      
-
         try{
             if(values.lifeStage == 'adult'){
                 const params = new URLSearchParams({
@@ -50,10 +48,10 @@ export default function Search() {
 
                 const food = res.find(petKind => values.animal == petKind.animalType);
                 setAnimalFood(food);
-            }
+             }
         } catch(err){
-    console.log(err.message);
-}
+             console.log(err.message);
+        }
    
     }
 

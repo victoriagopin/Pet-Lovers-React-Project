@@ -8,7 +8,7 @@ const initialvalues = {
     email: '',
     password: '',
     repass: ''
-}
+} 
 
 export default function Register(){
   const [isAvaliable, setIsAvaliable] = useState(true);
