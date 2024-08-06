@@ -1348,18 +1348,18 @@
                 "age": 3,
                 "eyeColor": "Brown",
                 "funStory": "Bella loves to swim in the lake near our house. One time, she found an old tennis ball floating and proudly brought it back to us like she had discovered treasure.",
-                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "likes" : 4
             },
             "G5hI6789Jk" : {
                 "name": "Max",
                 "breed": "Siamese",
                 "origin": "Thailand",
-                "imageUrl":"https://www.litter-robot.com/media/blog/alex-meier-siamese.jpg",
+                "imageUrl":"https://www.thesprucepets.com/thmb/whKzl1xKIoteNjQAncP9o84mYIU=/4500x0/filters:no_upscale():strip_icc()/facts-about-siamese-cats-4173491-hero-5a607df9e57b40a58c803a76859b6694.jpg",
                 "age": 4,
                 "eyeColor": "Blue",
                 "funStory": "Max has a knack for opening doors. We once came home to find him lounging in the pantry, having snacked on his favorite treats.",
-                "_ownerId":"60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "_ownerId":"847ec027-f659-4086-8032-5173e2f9c93a",
                 "likes": 15
             },
             "LmN0123Opq" : {
@@ -1377,7 +1377,7 @@
                 "name": "Charlie",
                 "breed": "Beagle",
                 "origin": "England",
-                "imageUrl": "https://www.thesprucepets.com/thmb/slg48hln7ejv_3XYrcdLG8ooKwE=/2119x0/filters:no_upscale():strip_icc()/GettyImages-475324140-292c4ecfd73c4c8483efe31193f8189a.jpg",
+                "imageUrl": "https://www.akc.org/wp-content/uploads/2021/01/Beagle-puppy-on-leash-walking-in-the-grass.jpeg",
                 "age": 5,
                 "eyeColor": "Hazel",
                 "funStory": "Charlie has an incredible sense of smell. Once, he led us on a mini adventure through the park to find a hidden picnic basket someone had left behind.",
@@ -1432,19 +1432,19 @@
                 "food": [
                   {
                     "foodName": "Concept for life",
-                    "imageUrl": "https://media.zooplus.com/bilder/2/400/1_5kg_minijunior_1000x1000_2.jpg",
+                    "imageUrl": "./images/minijunior.jpeg",
                     "description": "Food for puppies and young dogs of small breeds, for healthy growth and to strengthen defenses, with high digestive safety and suitable for pregnant or lactating dogs.",
                     "price": 29.99
                   },
                   {
                     "foodName": "Hill's Adult",
-                    "imageUrl": "https://media.zooplus.com/bilder/3/400/106000_pla_hill_s_scienceplan_adult_small_mini_chicken_1_5kg_hs_01_3.jpg",
+                    "imageUrl": "./images/pla.jpeg",
                     "description": "Balanced chicken-rich food for adult small breed dogs aged 1 to 6 years who prefer kibble in a suitable size. With a unique combination of antioxidants and omega 6.",
                     "price": 27.19
                   },
                   {
                     "foodName": "Purina",
-                    "imageUrl": "https://media.zooplus.com/bilder/7/400/99296_pla_purina_proplan_small_mini_adult_optibalance_7kg_hs_01_7.jpg",
+                    "imageUrl": "./images/purina.jpeg",
                     "description": "Complete dry food for adult dogs of small breeds, with vitamin D for normal teeth and bones, omega-3 fatty acids for skin and hair. It is rich in protein and is made from high-quality chicken pieces. It contains essential omega-3 fatty acids from fish oil.",
                     "price": 25.49
                   }
@@ -1468,19 +1468,19 @@
                 "food": [
                   {
                     "foodName": "Harringtons",
-                    "imageUrl": "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+                    "imageUrl": "./images/just.webp",
                     "description": "Just 6 Carefully Selected Ingredients for taste, nutrition & digestion. Complete, grain-free dry dog food with over 50% chicken & salmon and added tasty fresh baked bites.",
                     "price": 58.90
                   },
                   {
                     "foodName": "Dog's love",
-                    "imageUrl": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202309/28/00149510168377____2__1200x1200.jpg",
+                    "imageUrl": "./images/love.jpeg",
                     "description": "Wet dog food with venison for adult dogs. Perfect for spoiling your beloved pet.",
                     "price": 4.99
                   },
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://www.tiendanimal.es/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw2e41c5ff/images/pienso_perros_royal_canin_adult_medium_ROY152036_M_M24%20(1).jpeg?sw=780&sh=780&q=85",
+                    "imageUrl": "./images/pienso.webp",
                     "description": "Food for adult dogs with moderate digestive problems, easy to digest and with ingredients that help strengthen defenses.",
                     "price": 26.49
                   }
@@ -1507,19 +1507,19 @@
                 "food": [
                   {
                     "foodName": "Harringtons",
-                    "imageUrl": "https://www.harringtonspetfood.com/cdn/shop/products/just6_chicken_6kg.png?v=1655386953&width=1600",
+                    "imageUrl": "./images/just.webp",
                     "description" : "Our delicious grain-free recipe makes sure you can trust what your dog is eating and helps manage food sensitivities naturally. The combination of simple ingredients, carbohydrates and minerals naturally promotes better gut-health.",
                     "price": 31.99
                   },
                   {
                     "foodName": "Hill's",
-                    "imageUrl": "https://media.zooplus.com/bilder/5/400/105737_pla_hill_s_scienceplan_adult_medium_chicken_14kg_hs_01_5.jpg",
+                    "imageUrl": "./images/hill.jpeg",
                     "description" : "This food is ideal for dogs of different breeds, especially for medium-sized breeds, although it is also ideal for small dogs as its kibbles adapt perfectly to their size. This recipe contains an adequate level of protein that helps your pet maintain a healthy physical condition ; proteins contribute to the proper development of muscle mass. ",
                     "price": 52.99
                   },
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://i.ebayimg.com/images/g/8yAAAOSw1HllN2QV/s-l400.jpg",
+                    "imageUrl": "./images/si.jpeg",
                     "description" : "Fights the first signs of aging with an exclusive blend of antioxidants for long life vitality. Helps support bones and joint health in older large breed dogs. Promotes healthy digestion through easy-to-digest proteins and a balanced blend of fibers",
                     "price": 28.99
                   }
@@ -1548,19 +1548,19 @@
                 "food": [
                   {
                     "foodName": "Trusty",
-                    "imageUrl": "https://www.aviproducts.co.za/wp-content/uploads/2024/05/trusty-adult-dog-food-product-img.png",
+                    "imageUrl": "./images/trusty.png",
                     "description": "Trusty adult dog food is formulated as a healthy maintenance diet for your furry friends. Containing all the vitamins, minerals, and amino acids they need to sustain balanced health. Carefully selected, quality ingredients will ensure that your loyal friend will enjoy every mouthful.",
                     "price": 60.99
                   },
                   {
                     "foodName": "Complete Maintenance",
-                    "imageUrl": "https://pawscafe.co.za/wp-content/uploads/2019/01/25kg-Maintenance-1.png",
+                    "imageUrl": "./images/maintenance.png",
                     "description": "Quality dog food that contains all the essential vitamins and minerals to ensure the overall health and condition of your dog. Containing the ideal amount of protein for a healthy dog and is designed to suit your pocket. Includes crude fat for energy and fibre to promote a healthy gut and digestive system.",
                     "price": 62.99
                   },
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://www.direct-vet.ie/2166-large_default/royal-canin-large-adult-over-25kg-dog-food-kibbles.jpg",
+                    "imageUrl": "./images/large.jpeg",
                     "description": "Complete dietetic food for adult dogs that are sterilized or have a tendency to gain weight, of large breeds (over 25 kg) - From 15 months of age",
                     "price": 26.14
                   }
@@ -1582,19 +1582,19 @@
                 "food": [
                   {
                     "foodName": "Pedigree",
-                    "imageUrl": "https://whoof-whoof.com/wp-content/uploads/2021/07/61LVLCWLKCL._SL1000_.jpg",
+                    "imageUrl": "./images/pedi.jpg",
                     "description": "Complete & balanced dog food, a perfect food for adult dogs. Contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre. Provides strong muscles, bones & teeth and healthier & shinier coat.",
                     "price": 31.99
                   },
                   {
                     "foodName": "Concept for life",
-                    "imageUrl": "https://media.zooplus.com/bilder/7/800/75918_pla_concept_for_life_x_large_adult_12kg_7.jpg",
+                    "imageUrl": "./images/concept.jpeg",
                     "description": "Concept for Life X-Large Adult is specifically tailored to the needs of very large breed dogs and provides them with a balanced nutrient content so that they receive comprehensive care. With Concept for Life, the health and well-being of your dog are well supported.",
                     "price": 62.90
                   },
                   {
                     "foodName": "Acana Classic Red",
-                    "imageUrl": "https://i0.wp.com/www.trendypetshop.com/wp-content/uploads/2020/06/acana-adult-large-breed-114-kg.jpg?fit=1024%2C1024&ssl=1",
+                    "imageUrl": "./images/acana.webp",
                     "description": "Acana Classic Red Dog is a wholesome food for adult dogs of all breeds and sizes. The recipe is packed with protein-rich ingredients (like lamb, beef, and pork) which helps your dog maintain a healthy weight and develop strong muscles.",
                     "price": 75.99
                   }
@@ -1619,19 +1619,19 @@
                 "food": [
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://media.royalcanin-weshare-online.io/R13YAGsBaxEApSx_3lxq/v1/fhn_cat_and_kitten_lifestyle-health_indoor-life_health_nutrition_product-bag-front_adult",
+                    "imageUrl": "./images/indoor.jpeg",
                     "description": "Helps maintain ideal weight and digestive health with optimal energy levels and highly digestible proteins. Helps support urinary health.",
                     "price": 22.99
                   },
                   {
                     "foodName": "Purina One",
-                    "imageUrl": "https://i.ebayimg.com/images/g/NBIAAOSwnbldW6fE/s-l400.jpg",
+                    "imageUrl": "./images/nestle.jpeg",
                     "description": "Helps support natural defenses. Contains prebiotics for a balanced gut microbiome. Helps support vital functions supported by vitamins E & C. Healthy urinary tract supported by balanced minerals. High nutrient absorption. Made with tasty, high quality ingredients. No added colorants, no added artificial flavors.",
                     "price": 19.99
                   },
                   {
                     "foodName": "Hills",
-                    "imageUrl": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202210/28/00169510166015____1__1200x1200.jpg",
+                    "imageUrl": "./images/adul.jpeg",
                     "description": "Great tasting natural ingredients. Hill’s™ Science Plan™ Mature Adult Chicken is formulated to support healthy skin, coat, and stool. With clinically proven antioxidants, lean proteins, and omega 3’s. Recommended for Adult cats from 1 to 6 years old.",
                     "price": 21.99
                   }
@@ -1656,26 +1656,26 @@
                 "food": [
                   {
                     "foodName": "Purina One",
-                    "imageUrl": "https://i.ebayimg.com/images/g/NBIAAOSwnbldW6fE/s-l400.jpg",
+                    "imageUrl": "./images/one.jpeg",
                     "description": "Helps support natural defenses. Contains prebiotics for a balanced gut microbiome. Helps support vital functions supported by vitamins E & C. Healthy urinary tract supported by balanced minerals. High nutrient absorption. Made with tasty, high quality ingredients. No added colorants, no added artificial flavors.",
                     "price": 19.99
                   },
                   {
                     "foodName": "Iams for Vitality",
-                    "imageUrl": "https://i.ebayimg.com/images/g/Lv4AAOSwG3pkOUCG/s-l400.jpg",
+                    "imageUrl": "./images/iams.jpeg",
                     "description": "IAMS for Vitality with Fresh Chicken for Adult and Senior Cats is a 100% complete and balanced food for your cat. Promoting healthy vitality, IAMS supports your cat with expert nutrition they naturally need to support 7 signs of healthy vitality.",
                     "price": 18.99
                   },
                   {
                     "foodName": "Perfect Fit",
-                    "imageUrl": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104589795/fee_325_225_png",
+                    "imageUrl": "./images/perf.jpeg",
                     "description": "Perfect Fit is advanced cat dry nutrition is designed to nurture your cat’s youthful spirit throughout her life. Developed with our vets and pet nutritionists, Perfect Fit combines benefits addressing 5 of the most common health needs of all cats, regardless of age or lifestyle, in its unique Total 5 formula for all-around protection.",
                     "price": 15.99
                   }
                 ]
               },
               "j1K2l3M4n5" : {
-                "weight": 20,
+                "weight": 30,
                 "breeds": [
                     "Maine Coon",
                     "Ragdoll",
@@ -1691,19 +1691,19 @@
                 "food": [
                   {
                     "foodName": "Hills",
-                    "imageUrl": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202210/28/00169510166015____1__1200x1200.jpg",
+                    "imageUrl": "./images/sc.jpeg",
                     "description": "Great tasting natural ingredients. Hill’s™ Science Plan™ Mature Adult Chicken is formulated to support healthy skin, coat, and stool. With clinically proven antioxidants, lean proteins, and omega 3’s. Recommended for Adult cats from 1 to 6 years old.",
                     "price": 21.99
                   },
                   {
                     "foodName": "Iams for Vitality",
-                    "imageUrl": "https://i.ebayimg.com/images/g/Lv4AAOSwG3pkOUCG/s-l400.jpg",
+                    "imageUrl": "./images/iams.jpeg",
                     "description": "IAMS for Vitality with Fresh Chicken for Adult and Senior Cats is a 100% complete and balanced food for your cat. Promoting healthy vitality, IAMS supports your cat with expert nutrition they naturally need to support 7 signs of healthy vitality.",
                     "price": 18.99
                   },
                   {
                     "foodName": "Perfect Fit",
-                    "imageUrl": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104589795/fee_325_225_png",
+                    "imageUrl": "./images/perf.jpeg",
                     "description": "Perfect Fit is advanced cat dry nutrition is designed to nurture your cat’s youthful spirit throughout her life. Developed with our vets and pet nutritionists, Perfect Fit combines benefits addressing 5 of the most common health needs of all cats, regardless of age or lifestyle, in its unique Total 5 formula for all-around protection.",
                     "price": 15.99
                   }
@@ -1716,19 +1716,19 @@
                 "food": [
                   {
                     "foodName": "Hill's",
-                    "imageUrl": "https://media.zooplus.com/bilder/6/400/106025_pla_hill_s_scienceplan_puppy_small_mini_chicken_1_5kg_hs_01_6.jpg",
+                    "imageUrl": "./images/baby.jpeg",
                     "description": "Small breed puppy food for strong bones and teeth. Tasty recipe with chicken, quality proteins, selected minerals and antioxidants. Extra-small pellets.",
                     "price": 34.64
                   },
                   {
                     "foodName": "Proplan",
-                    "imageUrl": "https://media.zooplus.com/bilder/0/400/67032_pla_purina_proplan_small_mini_puppy_sensitive_skin_optiderma_hs_01_0.jpg",
+                    "imageUrl": "./images/propl.jpeg",
                     "description": "Wheat-free food for puppies (< 1 year) of small and very small breeds, rich in omega 3 for normal skin, selected protein sources for good digestibility.",
                     "price": 20.99
                   },
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://media.zooplus.com/bilder/6/400/252997_252306_253096_pla_royalcanin_dog_mini_puppy_hs_01_6.jpg",
+                    "imageUrl": "./images/pup.jpeg",
                     "description": "Royal Canin Mini Puppy is a complete and balanced food especially indicated for the daily feeding of small breed puppies (less than 10 kg of adult weight and up to 10 months).",
                     "price": 25.49
                   }
@@ -1741,19 +1741,19 @@
                 "food": [
                   {
                     "foodName": "Nath",
-                    "imageUrl": "https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw91a684fd/images/comida_humeda_gatitos_nath_kitten_pollo_gelatina_NTH40641.jpg?sw=780&sh=780&q=85",
+                    "imageUrl": "./images/nath.webp",
                     "description": "Wet food with a succulent gelatinous texture for kittens. Ideal for offering a complete and balanced diet that provides optimal growth thanks to its taurine and EPA and DHA fatty acid content.",
                     "price": 23.16
                   },
                   {
                     "foodName": "Baby Blue",
-                    "imageUrl": "https://www.catster.com/wp-content/uploads/2023/11/Blue-Buffalo-Healthy-Growth-Kitten-Chicken-Rice-Dry-Cat-Food-2024.jpg",
+                    "imageUrl": "./images/blue.jpeg",
                     "description": "Support your kitten’s higher energy needs with our grain-free, high-protein Baby BLUE recipe. Starting with more protein-rich chicken, this natural recipe features wholesome fruits and veggies and is free of grains.",
                     "price": 20.99
                   },
                   {
                     "foodName": "Royal Canin",
-                    "imageUrl": "https://thepetshack.ae/assets/uploads/2018/12/kitten_dry_2.jpg",
+                    "imageUrl": "./images/kitt.jpeg",
                     "description": "Royal Canin Kitten Dry cat food is formulated for the second stage of kittenhood (between 4 months and 1 year). Supports a kitten’s developing immune system development with an exclusive blend of antioxidants and vitamins EXCLUSIVE KIBBLE.",
                     "price": 14.49
                   }
