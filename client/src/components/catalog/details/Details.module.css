@@ -40,13 +40,13 @@ span.make-yellow {
 }
 
 .owner-btn {
-    margin-left: 136px;
+    margin-left: 143px;
     font-size: large;
     text-decoration: underline;
 }
 .no-owner{
     color: #007bff;
-    margin-left: 100px;
+    text-align: center;
   }
 
 .submit {
@@ -73,12 +73,12 @@ span.make-yellow {
   }
   .likes{
     color: #e7d619;
-    margin-left: 175px;
+    text-align: center;
     margin-top: 10px;
   }
   .like{
     display: block;
-    margin-left: 146px;
+    margin-left: 163px;
     padding: 6px 45px;
     margin-bottom: 10px;
     border: 1px solid #e7d619;

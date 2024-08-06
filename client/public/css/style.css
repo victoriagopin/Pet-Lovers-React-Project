@@ -1180,3 +1180,9 @@ p.error{
   animation: showAndHide 2s forwards;
  }
 
+ p.error-search{
+  font-weight: bold;
+  font-style: italic;
+  
+ }
+
