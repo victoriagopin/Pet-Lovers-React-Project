@@ -22,7 +22,7 @@ export default function LogIn(){
     const res = await post('users/login', values);
   
     if(typeof res == 'number') {
-      setErrors(true);
+        setErrors(true);
         setTimeout(() => setErrors(false), 3000);
         return;
     }
