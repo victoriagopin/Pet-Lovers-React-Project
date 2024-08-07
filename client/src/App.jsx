@@ -26,9 +26,9 @@ function App() {
 
       <Routes >
         <Route path="/" element={< Home />}/>
-        <Route path="/search" element={< Search />} />
         <Route path="/catalog" element={< Catalog/>}/>
         <Route element={<HasAccess />}>
+        <Route path="/search" element={< Search />} />
         <Route path="/catalog/:petId" element={< Details/>}/>
         <Route path="/edit/:petId" element={<EditPet />} />
         <Route path="/create" element={< CreatePet/>}/>

@@ -58,10 +58,9 @@ export default function CreatePet({
     if(values.imageUrl == ''){
       setIsImageValid(false);
       setTimeout(() => setIsImageValid(true), 3000);
-      return;
     }
 
-    if(values.funStory.length < 5 || values.funStory.length > 500){
+    if(values.funStory.length < 5 || values.funStory.length > 500 || values.funStory == ''){
       setIsStoryInRange(false);
       setTimeout(() => setIsStoryInRange(true), 3000);
       return;
