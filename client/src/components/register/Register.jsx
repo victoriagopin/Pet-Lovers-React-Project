@@ -80,16 +80,16 @@ export default function Register(){
                 <form action="">
                   
                   <div>
+                  {!isAvaliable && <p className="error">Email is already taken!</p>}
                     <input type="text" placeholder="Email" name="email" value={values.email || ''} onChange={changeHandler}/>
-                    {!isAvaliable && <p className="error">Email is already taken!</p>}
                   </div>
                   <div>
+                  {!isPasswordLongEnough && <p className="error">Password must be at least 6 characters long!</p>}
                     <input type="password" placeholder="Password" name="password" value={values.password || ''} onChange={changeHandler}/>
-                    {!isPasswordLongEnough && <p className="error">Password must be at least 6 characters long!</p>}
                   </div>
                   <div>
+                  {!passwordsMatch && <p className="error">Passwords do not match!</p>}
                     <input type="password" placeholder="Repeat Password" name="repass" value={values.repass || ''} onChange={changeHandler}/>
-                    {!passwordsMatch && <p className="error">Passwords do not match!</p>}
                   </div>
                   <div className="d-flex justify-content-center">
                     <button type="submit" className="btn_on-hover submit" onClick={onRegisterClick}>
