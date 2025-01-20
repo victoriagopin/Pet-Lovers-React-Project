@@ -17,7 +17,7 @@ export default function Home(){
                   Welcome to PetLovers, the ultimate online community for pets enthusiasts!
                 </h2>
               </div>
-              <p>
+              <p className="home-para">
                 Here, you can share adorable photos of your furry friend and explore a vibrant gallery of animals from fellow pet lovers around the world.
               </p>
               <div className="btn-box">
