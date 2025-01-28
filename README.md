@@ -40,4 +40,15 @@ PetLovers is a Single Page Application (SPA) built using React.js. It provides a
   - Edit or delete their own posts
   - Search suitable foods for their pets
 
+## Images
+
+![Home Page](client/public/images/demo-1.png)
+![Catalog Page](client/public/images/demo-2.png)
+![Pet Details Page](client/public/images/demo-3.png)
+![Edit Pet Page](client/public/images/demo-4.png)
+![Owner Profile Page](client/public/images/demo-5.png)
+![Create Pet Page](client/public/images/demo-6.png)
+![Search Page](client/public/images/demo-7.png)
+![About Page](client/public/images/demo-8.png)
+
 
