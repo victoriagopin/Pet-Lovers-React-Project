@@ -68,3 +68,13 @@
     margin-top: 13px;
     margin-bottom: 60px; 
   }
+
+
+@media (max-width: 497px){
+  .input-group {
+    display: inline-block;
+  }
+  ._btn{
+    text-align: start;
+  }
+}

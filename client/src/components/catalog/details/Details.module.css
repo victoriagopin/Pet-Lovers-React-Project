@@ -40,7 +40,9 @@ span.make-yellow {
 }
 
 .owner-btn {
-    margin-left: 143px;
+    /* margin-left: 143px; */
+    display: block;
+    text-align: center;
     font-size: large;
     text-decoration: underline;
 }
@@ -78,7 +80,8 @@ span.make-yellow {
   }
   .like{
     display: block;
-    margin-left: 163px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 6px 45px;
     margin-bottom: 10px;
     border: 1px solid #e7d619;
@@ -98,3 +101,14 @@ span.make-yellow {
     cursor: not-allowed;
     border: none;
   }
+
+@media (max-width: 800px){
+  .edit-delete{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    display: block;
+    width: 157px;
+    text-align: center;
+  }
+}

@@ -10035,4 +10035,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+@media (max-width: 500px){
+  .container{
+    padding-top: 0;
+  }
+}
 /*# sourceMappingURL=bootstrap.css.map */

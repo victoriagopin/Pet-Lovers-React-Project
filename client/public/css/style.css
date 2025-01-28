@@ -947,6 +947,7 @@ a:focus {
 
 .contact_section {
   position: relative;
+  margin-bottom: 57px;
 }
 
 .contact_section .form_container {
@@ -1116,6 +1117,7 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e7d619;
+  /* margin-top: 65px; */
 }
 
 .footer_section p {
@@ -1217,12 +1219,23 @@ p.error{
   nav.navbar.navbar-expand-lg.custom_nav-container.pt-3 {
     justify-content: center;
   }
-  section.container-fluid.footer_section {
+  /* section.container-fluid.footer_section {
     margin-top: 20px;
-  }
+  } */
   header.header_section {
     padding-bottom: 17px;
   }
+  .layout_padding {
+    padding-top: 50px;
+    padding-bottom: 140px;
+  }
+  .about_section .detail-box p {
+    text-align: justify;
+  }
+  .about_section .detail-box .btn-box a {
+    display: inline-block;
+  }
+
 }
 
 @media (max-width: 380px){
@@ -1242,3 +1255,12 @@ p.error{
     font-size: small;
   }
 }
+
+/* @media (max-width: 500px){
+  .contact_section button{
+    margin-top: -16px;
+  }
+  .food_section{
+    margin-top: 44px;
+  }
+} */
